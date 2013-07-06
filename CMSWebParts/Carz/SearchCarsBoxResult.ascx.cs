@@ -144,7 +144,7 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
                 {
                     if (ds_.Tables[0].Rows.Count <= 0)
                     {
-                        LiteralResultDetail.Text = "<div class='ResultTitle'><p><h1>Sorry, no car found.</h1></p></div>";
+                        LiteralResultDetail.Text = "<div class='ResultTitle'><h1>Crash and Burn</h1><p>Sorry, the car was not found. Please try another car.</p></div>";
                         Session["list_result"] = null;
 						 debug+="9";
                         //Uri url = Request.Url;
@@ -426,7 +426,7 @@ debug+="-11";
 
             previewimage = (link_media != "" ? link_media : default_image);
             if (previewimage != "") previewimage = string.Format("<div class='ResultImage'><img   border='0'  alt='' src='{0}'/></div>", previewimage);
-            string view_de = " {0}<div class='ResultTitle'><p>0482</p><p>Rank: #{1}</p><p>Class:  <a href='{2}' title='{3}'>{3}</a></p><p>0-60 Time: {4} seconds</p></div><div class='clear'></div>";
+            string view_de = " {0}<div class='ResultTitle'><p>0482</p><p><strong>Rank:</strong> #{1}</p><p><strong>Class:</strong>  <a href='{2}' title='{3}'>{3}</a></p><p><strong>0-60 Time:</strong> {4} seconds</p></div><div class='clear'></div>";
 
             view_de = string.Format(view_de, previewimage, rank, custompath, CarzHelpers.URLDecode(class_, true).Replace("-", " "), Parse_double(dr["Best060Time"].ToString()).ToString("0.0"));
 
@@ -456,23 +456,25 @@ debug+="-11";
 //--------*** This sets up the vehicle info/ perf stats on the detail page--------
 
                 string html = "<div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
-                LiteralResultDetail2.Text = string.Format(html, "<p>Year: " + dr["Year"].ToString() +
-                    "</p>" + "<p>Make: " + dr["Make"].ToString() + "</p>" +
-                    "<p>Model: " + dr["Model"].ToString() + "</p>" +
-                    "<p>Engine: " + dr["Engine"].ToString() + "</p>" +
-                    "<p>Horsepower: " + Parse_double(dr["Horsepower"].ToString()).ToString("0") + "</p>" +
-                    "<p>Torque: " + dr["Torque"].ToString() + "</p>" +
-                    "<p>Transmission: " + dr["Transmission"].ToString() + "</p>" +                   
-                    "<p>Curb Weight: " + dr["CurbWeight"].ToString() + "</p>" +
-                    "<p>City MPG: " + dr["MPGCity"].ToString() + "</p>" +
-                    "<p>Highway MPG: " + dr["MPG"].ToString() + "</p>" +
-                    "<p>MSRP: $" + Parse_double(dr["MSRP"].ToString()).ToString("0,0") + "</p>",
-                    "<p>Tags: " + dr["Tags"].ToString() + "</p>" +
-      "<p>Class: <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a></p>" + "<p>Rank: #" + dr["TimeClassRank"].ToString() + "</p>" +
-      "<p>Best 0-60 Time: " + Parse_double(dr["Best060Time"].ToString()).ToString("0.0") + " seconds </p>" +
-     "<p>Best &#188;  Mile: " + Parse_double(dr["Best1of4MileTime"].ToString()).ToString("0.0") + " seconds </p>" +
-     "<p>Best  &#188;  Mile speed: " + Parse_double(dr["Best1of4MileSpeed"].ToString()).ToString("0.0") + " mph </p>" +
-     "<p>Best Top Speed: " + Parse_double(dr["BestTopSpeed"].ToString()).ToString("0.0") + " mph </p>"
+                LiteralResultDetail2.Text = string.Format(html, "<p><strong>Year:</strong> " + dr["Year"].ToString() + "</p>" + 
+                    "<p><strong>Make:</strong> " + dr["Make"].ToString() + "</p>" +
+                    "<p><strong>Model:</strong> " + dr["Model"].ToString() + "</p>" +
+                    "<p><strong>Engine:</strong> " + dr["Engine"].ToString() + "</p>" +
+                    "<p><strong>Horsepower:</strong> " + Parse_double(dr["Horsepower"].ToString()).ToString("0") + "</p>" +
+                    "<p><strong>Torque:</strong> " + dr["Torque"].ToString() + "</p>" +
+                    "<p><strong>Transmission:</strong> " + dr["Transmission"].ToString() + "</p>" +                   
+                    "<p><strong>Curb Weight:</strong> " + dr["CurbWeight"].ToString() + "</p>" +
+                    "<p><strong>City MPG:</strong> " + dr["MPGCity"].ToString() + "</p>" +
+                    "<p><strong>Highway MPG:</strong> " + dr["MPG"].ToString() + "</p>" +
+                    "<p><strong>MSRP:</strong> $" + Parse_double(dr["MSRP"].ToString()).ToString("0,0") + "</p>",
+                    "<p><strong>Tags:</strong> " + dr["Tags"].ToString() + "</p>" +
+     "<p><strong>Class:</strong> <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a></p>" + 
+     "<p><strong>Rank:</strong> #" + dr["TimeClassRank"].ToString() + "</p>" +
+     "<p><strong>Best 0-60 Time:</strong> " + Parse_double(dr["Best060Time"].ToString()).ToString("0.0") + " seconds </p>" +
+     "<p><strong>Best &#188;  Mile:</strong> " + Parse_double(dr["Best1of4MileTime"].ToString()).ToString("0.0") + " seconds </p>" +
+     "<p><strong>@  speed:</strong> " + Parse_double(dr["Best1of4MileSpeed"].ToString()).ToString("0.0") + " mph </p>" +
+     "<p><strong>Best Top Speed:</strong> " + Parse_double(dr["BestTopSpeed"].ToString()).ToString("0.0") + " mph </p>"
+     "<p><strong>Best Skid Pad:</strong> " + Parse_double(dr["BestSkidPad"].ToString()).ToString("0.0") + " ft/s </p>"
                     );
 
 
@@ -509,7 +511,7 @@ debug+="-11";
                 LiteralResultDetail2.Visible = true;
                 LiteralTitle.Text = "<h1>" + h1 + "</h1>";
 
-//--------*** This sets up the individual car profile text on the detail page--------
+//--------*** This sets up the individual subnav on the detail page--------
 
 
                 string back = "<a title='Back to Results' href='" + (Session["path_result"] != null ? Session["path_result"].ToString() : "javascript:history.back();") + "'>Back to Results</a> | ";
@@ -731,6 +733,7 @@ debug+="-11";
 
             sort = string.Format(sort, "~/App_Themes/carz/images/bg.png", "Order");
 
+//--------*** This sets up the column headings on the results page--------
 
             // Add the image to the appropriate header cell.
             e.Row.Cells[0].Controls[0].Controls.Add(new LiteralControl("Rank<span style='margin-left: 5px;' >" + sort + "</span>"));
@@ -879,8 +882,6 @@ debug+="-11";
         string name = (year != "" ? year : "") + (make != "" ? (year != "" ? " " + CarzHelpers.URLDecode(make) : CarzHelpers.URLDecode(make)) : "") + (model != "" ? (year != "" ? " " + CarzHelpers.URLDecode(model, true).Replace("_", "-") : (make != "" ? " " + CarzHelpers.URLDecode(model, true).Replace("_", "-") : CarzHelpers.URLDecode(model, true).Replace("_", "-"))) : "");
 
 //--------*** This sets up the meta title headings on the results page--------
-
-
 
         if (Request.Params["searchtext"] == null)
         {

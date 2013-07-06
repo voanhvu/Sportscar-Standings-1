@@ -66,19 +66,22 @@ namespace Custom
                                " Best060Time float, \n" +
 								"Best1of4MileTime float, \n" +
 								"Best1of4MileSpeed float, \n" +
-								"BestTopSpeed float); \n" +
-                           " INSERT INTO @TempTableVariable (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed) \n" +
+								"BestTopSpeed float, \n" +
+								"BestSkidPad float); \n" +
+                           " INSERT INTO @TempTableVariable (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed,BestSkidPad) \n" +
                                " SELECT ItemID, \n" +
 								" iif(RT060Time is null,1000,RT060Time) as Best060Time, \n" +
 								" iif(RT1of4MileTime is null,1000,RT1of4MileTime) as Best1of4MileTime, \n" +
 								" iif(RT1of4MileSpeed is null,1000,RT1of4MileSpeed) as Best1of4MileSpeed, \n" +
-								" iif(RTTopSpeed is null,1000,RTTopSpeed) as BestTopSpeed \n" +
+								" iif(RTTopSpeed is null,1000,RTTopSpeed) as BestTopSpeed, \n" +
+								" iif(RTSkidPad is null,1000,RTSkidPad) as BestSkidPad \n" +
 								"   FROM [dbo].[customtable_carz]  \n" +
                                 " Update [dbo].[customtable_carz] SET  \n" +
 								"  Best060Time=[@TempTableVariable].Best060Time, \n" +
 								"  Best1of4MileTime=[@TempTableVariable].Best1of4MileTime, \n" +
 								"  Best1of4MileSpeed=[@TempTableVariable].Best1of4MileSpeed, \n" +
-								"  BestTopSpeed=[@TempTableVariable].BestTopSpeed \n" +
+								"  BestTopSpeed=[@TempTableVariable].BestTopSpeed, \n" +
+								"  BestSkidPad=[@TempTableVariable].BestSkidPad \n" +
                            " FROM [dbo].[customtable_carz] \n" +
                           "  RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID]; \n" +
 "Declare @TempTableVariable1 TABLE(  \n" +
@@ -86,19 +89,22 @@ namespace Custom
                             "   Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
 							" 	Best1of4MileSpeed float, \n" +
-							" 	BestTopSpeed float); \n" +
-                          "   INSERT INTO @TempTableVariable1 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed) \n" +
+							" 	BestTopSpeed float, \n" +
+							"	BestSkidPad float); \n" +
+                          "   INSERT INTO @TempTableVariable1 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed,BestSkidPad) \n" +
                            "      SELECT ItemID, \n" +
 							" 	 iif(MT060Time is null,Best060Time,iif(MT060Time<Best060Time,MT060Time,Best060Time)) as Best060Time, \n" +
 							" 	 iif(MT1of4MileTime is null,Best1of4MileTime,iif(MT1of4MileTime<Best1of4MileTime,MT1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 							" 	 iif(MT1of4MileSpeed is null,Best1of4MileSpeed,iif(MT1of4MileSpeed<Best1of4MileSpeed,MT1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-							" 	 iif(MTTopSpeed is null,BestTopSpeed,iif(MTTopSpeed<BestTopSpeed,MTTopSpeed,BestTopSpeed)) as BestTopSpeed \n" +
+							" 	 iif(MTTopSpeed is null,BestTopSpeed,iif(MTTopSpeed<BestTopSpeed,MTTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+							" 	 iif(MTSkidPad is null,BestSkidPad,iif(MTSkidPad<BestSkidPad,MTSkidPad,BestSkidPad)) as BestSkidPad \n" +
                              "        FROM [dbo].[customtable_carz]  \n" +
                              "     Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable1].Best060Time, \n" +
 								"   Best1of4MileTime=[@TempTableVariable1].Best1of4MileTime, \n" +
 								"   Best1of4MileSpeed=[@TempTableVariable1].Best1of4MileSpeed, \n" +
-								"   BestTopSpeed=[@TempTableVariable1].BestTopSpeed \n" +
+								"   BestTopSpeed=[@TempTableVariable1].BestTopSpeed, \n" +
+								"   BestSkidPad=[@TempTableVariable1].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable1 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable1].[ItemID]; \n" +
 " Declare @TempTableVariable2 TABLE(  \n" +
@@ -106,19 +112,22 @@ namespace Custom
                              "    Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
 							" 	Best1of4MileSpeed float, \n" +
-							" 	BestTopSpeed float); \n" +
-                           "  INSERT INTO @TempTableVariable2 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed) \n" +
+							" 	BestTopSpeed float, \n" +
+							"	BestSkidPad float); \n" +
+                           "  INSERT INTO @TempTableVariable2 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed,BestSkidPad) \n" +
                             "     SELECT ItemID, \n" +
 								"  iif(CD060Time is null,Best060Time,iif(CD060Time<Best060Time,CD060Time,Best060Time)) as Best060Time, \n" +
 								"  iif(CD1of4MileTime is null,Best1of4MileTime,iif(CD1of4MileTime<Best1of4MileTime,CD1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 								"  iif(CD1of4MileSpeed is null,Best1of4MileSpeed,iif(CD1of4MileSpeed<Best1of4MileSpeed,CD1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-								"  iif(CDTopSpeed is null,BestTopSpeed,iif(CDTopSpeed<BestTopSpeed,CDTopSpeed,BestTopSpeed)) as BestTopSpeed \n" +
+								"  iif(CDTopSpeed is null,BestTopSpeed,iif(CDTopSpeed<BestTopSpeed,CDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+								"  iif(CDSkidPad is null,BestSkidPad,iif(CDSkidPad<BestSkidPad,CDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                "      FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable2].Best060Time, \n" +
 								"   Best1of4MileTime=[@TempTableVariable2].Best1of4MileTime, \n" +
 								"   Best1of4MileSpeed=[@TempTableVariable2].Best1of4MileSpeed, \n" +
-								"   BestTopSpeed=[@TempTableVariable2].BestTopSpeed \n" +
+								"   BestTopSpeed=[@TempTableVariable2].BestTopSpeed, \n" +
+								"   BestSkidPad=[@TempTableVariable2].BestSkidPad \n" +
                             " FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable2 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable2].[ItemID]; \n" +
 " Declare @TempTableVariable3 TABLE(  \n" +
@@ -126,19 +135,22 @@ namespace Custom
                                "  Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
 							" 	Best1of4MileSpeed float, \n" +
-							" 	BestTopSpeed float); \n" +
-                          "   INSERT INTO @TempTableVariable3 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed) \n" +
+							" 	BestTopSpeed float, \n" +
+							"	BestSkidPad float); \n" +
+                          "   INSERT INTO @TempTableVariable3 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed,BestSkidPad) \n" +
                             "     SELECT ItemID, \n" +
 								"  iif(ED060Time is null,Best060Time,iif(ED060Time<Best060Time,ED060Time,Best060Time)) as Best060Time, \n" +
 								"  iif(ED1of4MileTime is null,Best1of4MileTime,iif(ED1of4MileTime<Best1of4MileTime,ED1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 								"  iif(ED1of4MileSpeed is null,Best1of4MileSpeed,iif(ED1of4MileSpeed<Best1of4MileSpeed,ED1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-								"  iif(EDTopSpeed is null,BestTopSpeed,iif(EDTopSpeed<BestTopSpeed,EDTopSpeed,BestTopSpeed)) as BestTopSpeed \n" +
+								"  iif(EDTopSpeed is null,BestTopSpeed,iif(EDTopSpeed<BestTopSpeed,EDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+								"  iif(EDSkidPad is null,BestSkidPad,iif(EDSkidPad<BestSkidPad,EDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable3].Best060Time, \n" +
 								"   Best1of4MileTime=[@TempTableVariable3].Best1of4MileTime, \n" +
 								"   Best1of4MileSpeed=[@TempTableVariable3].Best1of4MileSpeed, \n" +
-								"   BestTopSpeed=[@TempTableVariable3].BestTopSpeed \n" +
+								"   BestTopSpeed=[@TempTableVariable3].BestTopSpeed, \n" +
+								"   BestSkidPad=[@TempTableVariable3].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable3 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable3].[ItemID]; \n" +
 " Declare @TempTableVariable4 TABLE(  \n" +
@@ -146,19 +158,22 @@ namespace Custom
                                "  Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
 							" 	Best1of4MileSpeed float, \n" +
-							" 	BestTopSpeed float); \n" +
-                          "   INSERT INTO @TempTableVariable4 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed) \n" +
+							" 	BestTopSpeed float, \n" +
+							"	BestSkidPad float); \n" +
+                          "   INSERT INTO @TempTableVariable4 (ItemID,Best060Time,Best1of4MileTime,Best1of4MileSpeed,BestTopSpeed,BestSkidPad) \n" +
                             "     SELECT ItemID, \n" +
 							" 	 iif(Other060Time is null,iif(Best060Time = 1000,0,Best060Time),iif(Other060Time<Best060Time,Other060Time,Best060Time)) as Best060Time, \n" +
 							" 	 iif(Other1of4MileTime is null,iif(Best1of4MileTime = 1000,0,Best1of4MileTime),iif(Other1of4MileTime<Best1of4MileTime,Other1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 							" 	 iif(Other1of4MileSpeed is null,iif(Best1of4MileSpeed = 1000,0,Best1of4MileSpeed),iif(Other1of4MileSpeed<Best1of4MileSpeed,Other1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-							" 	 iif(OtherTopSpeed is null,iif(BestTopSpeed = 1000,0,BestTopSpeed),iif(OtherTopSpeed<BestTopSpeed,OtherTopSpeed,BestTopSpeed)) as BestTopSpeed \n" +
+							" 	 iif(OtherTopSpeed is null,iif(BestTopSpeed = 1000,0,BestTopSpeed),iif(OtherTopSpeed<BestTopSpeed,OtherTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+							" 	 iif(OtherSkidPad is null,iif(BestSkidPad = 1000,0,BestSkidPad),iif(OtherSkidPad<BestSkidPad,OtherSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable4].Best060Time, \n" +
 								"   Best1of4MileTime=[@TempTableVariable4].Best1of4MileTime, \n" +
 								"   Best1of4MileSpeed=[@TempTableVariable4].Best1of4MileSpeed, \n" +
-								"   BestTopSpeed=[@TempTableVariable4].BestTopSpeed \n" +
+								"   BestTopSpeed=[@TempTableVariable4].BestTopSpeed, \n" +
+								"   BestSkidPad=[@TempTableVariable4].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable4 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable4].[ItemID];";
             GeneralConnection cn = ConnectionHelper.GetConnection();
