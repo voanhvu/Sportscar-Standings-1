@@ -473,8 +473,8 @@ debug+="-11";
      "<p><strong>Best 0-60 Time:</strong> " + Parse_double(dr["Best060Time"].ToString()).ToString("0.0") + " seconds </p>" +
      "<p><strong>Best &#188;  Mile:</strong> " + Parse_double(dr["Best1of4MileTime"].ToString()).ToString("0.0") + " seconds </p>" +
      "<p><strong>@  speed:</strong> " + Parse_double(dr["Best1of4MileSpeed"].ToString()).ToString("0.0") + " mph </p>" +
-     "<p><strong>Best Top Speed:</strong> " + Parse_double(dr["BestTopSpeed"].ToString()).ToString("0.0") + " mph </p>"
-     "<p><strong>Best Skid Pad:</strong> " + Parse_double(dr["BestSkidPad"].ToString()).ToString("0.0") + " ft/s </p>"
+     "<p><strong>Best Top Speed:</strong> " + Parse_double(dr["BestTopSpeed"].ToString()).ToString("0.0") + " mph </p>" +
+     "<p><strong>Best Skid Pad:</strong> " + Parse_double(dr["BestSkidPad"].ToString()).ToString("0.0") + " fts </p>"
                     );
 
 
