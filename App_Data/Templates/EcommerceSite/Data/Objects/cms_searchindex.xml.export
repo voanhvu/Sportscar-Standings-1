@@ -1,0 +1,52 @@
+﻿<cms_searchindex version="7.0">
+  <NewDataSet>
+    <cms_searchindex>
+      <IndexID>244</IndexID>
+      <IndexName>EcommerceSite.Products</IndexName>
+      <IndexDisplayName>E-commerce Site - Products</IndexDisplayName>
+      <IndexAnalyzerType>subset</IndexAnalyzerType>
+      <IndexIsCommunityGroup>false</IndexIsCommunityGroup>
+      <IndexSettings>&lt;index&gt;&lt;item inclblogcomm="False" type="allowed" inclforums="False" id="a2c75281-9acf-46c2-9450-000ded9c7043" inclcats="False" classnames="CMSProduct.Book;CMSProduct.CellPhone;CMSProduct.Computer;CMSProduct.Cup;CMSProduct.Laptop;CMSProduct.MediaPlayer;CMSProduct.Pants;CMSProduct.Perfume;CMSProduct.Shoes;CMSProduct.Tablet;CMSProduct.Tshirt;CMSProduct.TV;CMSProduct.Watch;CMS.Product" path="/Products/%" inclmessagecomm="False" /&gt;&lt;item inclblogcomm="False" type="excluded" inclforums="False" id="8383e1fa-2777-47e0-941a-2b3da96e27f8" inclcats="False" classnames="" path="/Products/Donations/%" inclmessagecomm="False" /&gt;&lt;/index&gt;</IndexSettings>
+      <IndexGUID>f180361d-3d67-41f4-863c-5feb811007bf</IndexGUID>
+      <IndexLastModified>2012-08-29T10:32:26.587+02:00</IndexLastModified>
+      <IndexLastRebuildTime>2012-08-29T10:32:26.587+02:00</IndexLastRebuildTime>
+      <IndexType>cms.document</IndexType>
+      <IndexStopWordsFile></IndexStopWordsFile>
+      <IndexCustomAnalyzerAssemblyName></IndexCustomAnalyzerAssemblyName>
+      <IndexCustomAnalyzerClassName></IndexCustomAnalyzerClassName>
+      <IndexBatchSize>10000</IndexBatchSize>
+    </cms_searchindex>
+    <cms_searchindex>
+      <IndexID>280</IndexID>
+      <IndexName>EcommerceSite.Sections</IndexName>
+      <IndexDisplayName>E-commerce Site - Sections</IndexDisplayName>
+      <IndexAnalyzerType>subset</IndexAnalyzerType>
+      <IndexIsCommunityGroup>false</IndexIsCommunityGroup>
+      <IndexSettings>&lt;index&gt;&lt;item type="allowed" inclmessagecomm="False" inclforums="False" classnames="CMS.MenuItem" inclblogcomm="False" id="575cbda3-152c-44a8-a542-c09145830e74" path="/Products/%" /&gt;&lt;item inclblogcomm="False" type="excluded" inclforums="False" id="f552145b-65b9-466a-9f25-08e1dd582b3f" inclcats="False" classnames="" path="/Products/Donations" inclmessagecomm="False" /&gt;&lt;/index&gt;</IndexSettings>
+      <IndexGUID>ec302ba8-c771-464a-bdb7-d2996f06e225</IndexGUID>
+      <IndexLastModified>2012-08-06T14:56:02.237+02:00</IndexLastModified>
+      <IndexLastRebuildTime>2012-08-06T14:56:02.227+02:00</IndexLastRebuildTime>
+      <IndexType>cms.document</IndexType>
+      <IndexStopWordsFile></IndexStopWordsFile>
+      <IndexCustomAnalyzerAssemblyName></IndexCustomAnalyzerAssemblyName>
+      <IndexCustomAnalyzerClassName></IndexCustomAnalyzerClassName>
+      <IndexBatchSize>10000</IndexBatchSize>
+    </cms_searchindex>
+    <cms_searchindexculture>
+      <IndexID>244</IndexID>
+      <IndexCultureID>50</IndexCultureID>
+    </cms_searchindexculture>
+    <cms_searchindexculture>
+      <IndexID>280</IndexID>
+      <IndexCultureID>50</IndexCultureID>
+    </cms_searchindexculture>
+    <cms_searchindexsite>
+      <IndexID>244</IndexID>
+      <IndexSiteID>135</IndexSiteID>
+    </cms_searchindexsite>
+    <cms_searchindexsite>
+      <IndexID>280</IndexID>
+      <IndexSiteID>135</IndexSiteID>
+    </cms_searchindexsite>
+  </NewDataSet>
+</cms_searchindex>

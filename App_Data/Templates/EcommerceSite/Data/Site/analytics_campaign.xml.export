@@ -1,0 +1,27 @@
+﻿<analytics_campaign version="7.0">
+  <NewDataSet>
+    <analytics_campaign>
+      <CampaignID>378</CampaignID>
+      <CampaignName>MVT_home_page</CampaignName>
+      <CampaignDisplayName>MVT home page</CampaignDisplayName>
+      <CampaignDescription>This campaign measures dependency of added items and finished orders according to variant of featured product listing on home page.</CampaignDescription>
+      <CampaignSiteID>135</CampaignSiteID>
+      <CampaignGUID>2b85823c-2817-400a-8dee-1884c5545bec</CampaignGUID>
+      <CampaignLastModified>2012-08-10T09:04:22.897+02:00</CampaignLastModified>
+      <CampaignUseAllConversions>false</CampaignUseAllConversions>
+      <CampaignEnabled>true</CampaignEnabled>
+      <CampaignGoalVisitorsPercent>false</CampaignGoalVisitorsPercent>
+      <CampaignGoalConversionsPercent>false</CampaignGoalConversionsPercent>
+      <CampaignGoalValuePercent>false</CampaignGoalValuePercent>
+      <CampaignGoalPerVisitorPercent>false</CampaignGoalPerVisitorPercent>
+    </analytics_campaign>
+    <analytics_conversioncampaign>
+      <CampaignID>378</CampaignID>
+      <ConversionID>467</ConversionID>
+    </analytics_conversioncampaign>
+    <analytics_conversioncampaign>
+      <CampaignID>378</CampaignID>
+      <ConversionID>468</ConversionID>
+    </analytics_conversioncampaign>
+  </NewDataSet>
+</analytics_campaign>

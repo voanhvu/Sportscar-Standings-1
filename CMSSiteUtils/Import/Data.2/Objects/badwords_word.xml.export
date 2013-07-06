@@ -1,0 +1,25 @@
+﻿<badwords_word version="6.0">
+  <NewDataSet>
+    <badwords_word>
+      <WordID>177</WordID>
+      <WordGUID>92998051-6789-4c4e-becf-62d70f777f1d</WordGUID>
+      <WordLastModified>2011-10-06T16:57:26-06:00</WordLastModified>
+      <WordExpression>arse</WordExpression>
+      <WordIsGlobal>false</WordIsGlobal>
+      <WordIsRegularExpression>false</WordIsRegularExpression>
+      <WordMatchWholeWord>true</WordMatchWholeWord>
+    </badwords_word>
+    <badwords_wordculture>
+      <WordID>177</WordID>
+      <CultureID>1</CultureID>
+    </badwords_wordculture>
+    <badwords_wordculture>
+      <WordID>177</WordID>
+      <CultureID>2</CultureID>
+    </badwords_wordculture>
+    <badwords_wordculture>
+      <WordID>177</WordID>
+      <CultureID>3</CultureID>
+    </badwords_wordculture>
+  </NewDataSet>
+</badwords_word>

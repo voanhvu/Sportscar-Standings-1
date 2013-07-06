@@ -1,0 +1,21 @@
+﻿<boardmessage_5f2edb2f-db55-4e16-a6d0-bfbed7f2de14 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3198</MessageID>
+      <MessageUserName>Willson</MessageUserName>
+      <MessageText>Oh my, must have this one!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4054</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T01:21:07.24+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T01:21:07.243+02:00</MessageLastModified>
+      <MessageGUID>42fb8725-371c-4f69-b79f-13a0bba04514</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_5f2edb2f-db55-4e16-a6d0-bfbed7f2de14>

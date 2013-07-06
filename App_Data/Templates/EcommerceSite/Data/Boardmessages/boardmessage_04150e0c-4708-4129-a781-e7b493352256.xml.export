@@ -1,0 +1,21 @@
+﻿<boardmessage_04150e0c-4708-4129-a781-e7b493352256 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3194</MessageID>
+      <MessageUserName>Michael</MessageUserName>
+      <MessageText>Top class. I can recommend them.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4051</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T01:12:31.56+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T01:12:31.563+02:00</MessageLastModified>
+      <MessageGUID>43aa6478-5124-4d70-961c-c27008d6af95</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_04150e0c-4708-4129-a781-e7b493352256>

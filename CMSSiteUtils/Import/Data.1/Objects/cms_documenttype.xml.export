@@ -1,0 +1,230 @@
+﻿<cms_documenttype version="7.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>4455</ClassID>
+      <ClassDisplayName>Vehicle</ClassDisplayName>
+      <ClassName>custom.vehicle</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="custom_vehicle"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="VehicleID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="vehicleName" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//custom_vehicle" /&gt;
+      &lt;xs:field xpath="VehicleID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="VehicleID" fieldcaption="VehicleID" columntype="integer" fieldtype="CustomUserControl" isPK="true" publicfield="false" guid="114b8560-7980-4fa2-b274-58f698503743"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="vehicleName" fieldcaption="vehicle name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="200" publicfield="false" guid="31b812b0-7a87-48c6-9a0f-db732553ead6" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource>vehicleName</ClassNodeNameSource>
+      <ClassTableName>custom_vehicle</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2013-03-17T21:37:49.92-05:00</ClassLastModified>
+      <ClassGUID>c9eddfe9-6f5b-4413-80d8-06bfc18e6b1a</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item content="False" id="404e87c1-787e-46a3-8da8-3fbae7772fab" searchable="True" tokenized="False" name="VehicleID" /&gt;&lt;item content="True" id="6ee92f7e-1d04-44fe-addd-62374d7348f0" searchable="False" tokenized="True" name="vehicleName" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>false</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+    <cms_transformation>
+      <TransformationID>4662</TransformationID>
+      <TransformationName>AtomItem</TransformationName>
+      <TransformationCode>&lt;entry&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;link href="&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;"/&gt;
+  &lt;id&gt;urn:uuid:&lt;%# Eval("NodeGUID") %&gt;&lt;/id&gt;
+  &lt;published&gt;&lt;%# GetAtomDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/published&gt;
+  &lt;updated&gt;&lt;%# GetAtomDateTime(Eval("DocumentModifiedWhen")) %&gt;&lt;/updated&gt;
+  &lt;author&gt;
+    &lt;name&gt;&lt;%# Eval("NodeOwnerFullName") %&gt;&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;summary&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/summary&gt;
+&lt;/entry&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4455</TransformationClassID>
+      <TransformationVersionGUID>1df33daf-7c5a-4ef6-ba26-f2a856557033</TransformationVersionGUID>
+      <TransformationGUID>427cf409-6539-4acb-b2ec-596df5ff5ce9</TransformationGUID>
+      <TransformationLastModified>2013-03-17T21:37:48.187-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4659</TransformationID>
+      <TransformationName>Default</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;vehicle name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("vehicleName") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4455</TransformationClassID>
+      <TransformationVersionGUID>010a5e95-522d-4a58-8407-99304b51504c</TransformationVersionGUID>
+      <TransformationGUID>a1b16979-db5e-4b11-9805-722af624b6af</TransformationGUID>
+      <TransformationLastModified>2013-03-17T21:37:48.11-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4660</TransformationID>
+      <TransformationName>Preview</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;vehicle name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("vehicleName") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4455</TransformationClassID>
+      <TransformationVersionGUID>010a5e95-522d-4a58-8407-99304b51504c</TransformationVersionGUID>
+      <TransformationGUID>f2d8a508-3181-4d08-81bf-e391004bb739</TransformationGUID>
+      <TransformationLastModified>2013-03-17T21:37:48.17-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4661</TransformationID>
+      <TransformationName>RSSItem</TransformationName>
+      <TransformationCode>&lt;item&gt;
+  &lt;guid isPermaLink="false"&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/guid&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;description&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/description&gt;
+  &lt;pubDate&gt;&lt;%# GetRSSDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/pubDate&gt;
+  &lt;link&gt;&lt;![CDATA[&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;]]&gt;&lt;/link&gt;
+&lt;/item&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4455</TransformationClassID>
+      <TransformationVersionGUID>ea488fca-83e3-47f3-84ee-87b022388ee1</TransformationVersionGUID>
+      <TransformationGUID>98db540b-c6df-4049-85c5-dbe88ab63dde</TransformationGUID>
+      <TransformationLastModified>2013-03-17T21:37:48.17-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>10650</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>4f91828d-05e1-4722-8974-f15fac3ede7f</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.797-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10649</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>1c4ee721-cddb-4f1b-b4a8-3f3a7e38284d</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.797-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10651</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>76ec5256-5712-4079-8eb3-d7fc6ee8a64d</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.797-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10652</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>3cba04c7-fab4-4d42-90a9-e5fdf0eff28e</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.813-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10653</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>650115cc-0236-4476-99e3-b6be81e3a51e</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.813-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10648</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>372a5d0a-6d0e-45bf-bc39-095c0c96b080</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.78-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10654</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>4306d8c3-35db-4e53-9afe-b6d0f979da15</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.827-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>10647</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>4455</ClassID>
+      <PermissionGUID>8d727f06-4e73-4e25-97c2-e64c980ea88a</PermissionGUID>
+      <PermissionLastModified>2013-03-17T21:37:01.72-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_allowedchildclasses>
+      <ParentClassID>3440</ParentClassID>
+      <ChildClassID>4455</ChildClassID>
+    </cms_allowedchildclasses>
+  </NewDataSet>
+</cms_documenttype>

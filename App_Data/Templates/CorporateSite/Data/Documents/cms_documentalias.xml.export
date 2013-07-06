@@ -1,0 +1,17 @@
+﻿<cms_documentalias version="7.0">
+  <NewDataSet>
+    <cms_documentalias>
+      <AliasID>527882</AliasID>
+      <AliasNodeID>52016</AliasNodeID>
+      <AliasCulture></AliasCulture>
+      <AliasURLPath>MVC:[Controller=NewsMVC]:[Action=Detail]:/NewsMVC/Detail/{id}</AliasURLPath>
+      <AliasExtensions></AliasExtensions>
+      <AliasCampaign></AliasCampaign>
+      <AliasWildcardRule>MVC:[Controller=NewsMVC]:[Action=Detail]:/NewsMVC/Detail/%</AliasWildcardRule>
+      <AliasPriority>2</AliasPriority>
+      <AliasGUID>cfebb402-7a22-4c73-b0fb-c18ae1ba7f81</AliasGUID>
+      <AliasLastModified>2012-06-15T08:29:17.317+02:00</AliasLastModified>
+      <AliasSiteID>110</AliasSiteID>
+    </cms_documentalias>
+  </NewDataSet>
+</cms_documentalias>

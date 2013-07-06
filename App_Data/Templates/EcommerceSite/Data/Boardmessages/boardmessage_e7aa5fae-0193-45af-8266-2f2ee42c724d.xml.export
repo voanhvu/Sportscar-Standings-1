@@ -1,0 +1,34 @@
+﻿<boardmessage_e7aa5fae-0193-45af-8266-2f2ee42c724d version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3263</MessageID>
+      <MessageUserName>Michael</MessageUserName>
+      <MessageText>I like both of them. Furthermore, for this price it is really great deal.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4062</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-29T15:35:42.983+02:00</MessageInserted>
+      <MessageLastModified>2012-08-29T15:35:43.147+02:00</MessageLastModified>
+      <MessageGUID>2fadf23e-f094-4a5a-8c0b-b3aa20d7f50d</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3235</MessageID>
+      <MessageUserName>Jimmy</MessageUserName>
+      <MessageText>Nice bargain!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4062</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-22T09:31:23.707+02:00</MessageInserted>
+      <MessageLastModified>2012-08-22T09:31:23.91+02:00</MessageLastModified>
+      <MessageGUID>cb9aeed8-e37d-4d1a-bd6a-dd2fd4ee4913</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_e7aa5fae-0193-45af-8266-2f2ee42c724d>

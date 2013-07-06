@@ -1,0 +1,19 @@
+﻿<boardmessage_21e72bd3-e2e1-4398-9670-96b7d04491ba version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3174</MessageID>
+      <MessageUserName>Jane</MessageUserName>
+      <MessageText>Those pants are pretty comfortable.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4043</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-06T23:21:49.633+02:00</MessageInserted>
+      <MessageLastModified>2012-06-06T23:21:49.653+02:00</MessageLastModified>
+      <MessageGUID>b27bb1ff-1307-40d1-87a9-08ac9c6e7858</MessageGUID>
+      <MessageRatingValue>0.6</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_21e72bd3-e2e1-4398-9670-96b7d04491ba>

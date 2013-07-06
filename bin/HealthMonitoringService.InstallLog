@@ -1,0 +1,15 @@
+﻿Installing assembly 'c:\tempfiles\bin\HealthMonitoringService.exe'.
+Affected parameters are:
+   logtoconsole = true
+   assemblypath = c:\tempfiles\bin\HealthMonitoringService.exe
+   logfile = c:\tempfiles\bin\HealthMonitoringService.InstallLog
+   webpath = c:\tempfiles
+Installing service KenticoCMSHealthMonitor83211b93675146429cf0ec922909cb97...
+Service KenticoCMSHealthMonitor83211b93675146429cf0ec922909cb97 has been successfully installed.
+Creating EventLog source KenticoCMSHealthMonitor83211b93675146429cf0ec922909cb97 in log Application...
+Committing assembly 'c:\tempfiles\bin\HealthMonitoringService.exe'.
+Affected parameters are:
+   logtoconsole = true
+   assemblypath = c:\tempfiles\bin\HealthMonitoringService.exe
+   logfile = c:\tempfiles\bin\HealthMonitoringService.InstallLog
+   webpath = c:\tempfiles

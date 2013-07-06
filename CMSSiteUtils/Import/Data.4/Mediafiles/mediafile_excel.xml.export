@@ -1,0 +1,21 @@
+﻿<mediafile_excel version="7.0">
+  <NewDataSet>
+    <media_file>
+      <FileID>197</FileID>
+      <FileName>Road_Track1</FileName>
+      <FileTitle>Road_Track1</FileTitle>
+      <FileDescription></FileDescription>
+      <FileExtension>.xls</FileExtension>
+      <FileMimeType>application/vnd.ms-excel</FileMimeType>
+      <FilePath>Road_Track1.xls</FilePath>
+      <FileSize>102400</FileSize>
+      <FileGUID>f451ad6f-b504-4b56-adac-2333d434ef63</FileGUID>
+      <FileLibraryID>6</FileLibraryID>
+      <FileSiteID>1</FileSiteID>
+      <FileCreatedByUserID>53</FileCreatedByUserID>
+      <FileCreatedWhen>2013-03-05T01:56:40.917-06:00</FileCreatedWhen>
+      <FileModifiedByUserID>53</FileModifiedByUserID>
+      <FileModifiedWhen>2013-03-05T01:56:40.917-06:00</FileModifiedWhen>
+    </media_file>
+  </NewDataSet>
+</mediafile_excel>

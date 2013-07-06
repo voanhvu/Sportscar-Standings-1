@@ -1,0 +1,157 @@
+﻿<cms_form version="7.0">
+  <NewDataSet>
+    <cms_form>
+      <FormID>1</FormID>
+      <FormDisplayName>Contact Us</FormDisplayName>
+      <FormName>ContactUs</FormName>
+      <FormEmailAttachUploadedDocs>true</FormEmailAttachUploadedDocs>
+      <FormClassID>3452</FormClassID>
+      <FormItems>7</FormItems>
+      <FormRedirectToUrl>/thanks-you</FormRedirectToUrl>
+      <FormClearAfterSave>false</FormClearAfterSave>
+      <FormSubmitButtonText>Send Message</FormSubmitButtonText>
+      <FormSiteID>1</FormSiteID>
+      <FormGUID>7ee03b96-502d-4b84-9a4b-39bbc1ece841</FormGUID>
+      <FormLastModified>2013-03-04T00:45:53.023-06:00</FormLastModified>
+      <FormLogActivity>true</FormLogActivity>
+    </cms_form>
+    <cms_class>
+      <ClassID>3452</ClassID>
+      <ClassDisplayName>Contact Us</ClassDisplayName>
+      <ClassName>BizForm.ContactUs</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="Form_Carz_ContactUs"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ContactUsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="FormInserted" type="xs:dateTime" /&gt;
+              &lt;xs:element name="FormUpdated" type="xs:dateTime" /&gt;
+              &lt;xs:element name="Name"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Email"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Phone" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Message" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Address" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//Form_Carz_ContactUs" /&gt;
+      &lt;xs:field xpath="ContactUsID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ContactUsID" fieldcaption="ContactUsID" visible="true" columntype="integer" fieldtype="CustomUserControl" isPK="true" publicfield="false" guid="3eee3e38-d176-45cf-a17d-285e89d8f945"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Name" fieldcaption="Name *" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="500" guid="8eb1b436-014d-484b-9738-87f07a653238" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" fieldcaption="Email *" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="100" guid="f4b3ae43-ac3f-4eb9-a0ae-0b2c5c3f6684" visibility="none"&gt;&lt;settings&gt;&lt;AllowMultipleAddresses&gt;False&lt;/AllowMultipleAddresses&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Address" fieldcaption="Address" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="500" guid="ecf00acb-2122-4a7a-8d18-c28b6c8f6b18"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Phone" fieldcaption="Phone" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="500" guid="b7636a5e-ce6b-4b98-81fb-19143f8714f8"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Message" fieldcaption="Message" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="500" guid="d7b63a29-2dd6-4766-acfa-b33547ca2d62"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;Cols&gt;20&lt;/Cols&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;IsTextArea&gt;True&lt;/IsTextArea&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;Rows&gt;5&lt;/Rows&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormInserted" fieldcaption="Form inserted" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="240be010-8263-4e63-95e1-db1ba4f19ced"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormUpdated" fieldcaption="Form updated" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="d05182c3-e7c1-46de-919d-f63be05a644e"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>Form_Carz_ContactUs</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout>&lt;table class="ContactUsForm"&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Name$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Name$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Email$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Email$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Address$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Address$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Phone$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Phone$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Message$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Message$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				&amp;nbsp;&lt;/td&gt;
+			&lt;td&gt;
+				$$submitbutton$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+</ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2013-03-04T00:46:15.18-06:00</ClassLastModified>
+      <ClassGUID>8dd95f41-59bd-49a9-8567-d76341fb09e6</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn></ClassSearchTitleColumn>
+      <ClassSearchContentColumn></ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn></ClassSearchCreationDateColumn>
+      <ClassSearchSettings></ClassSearchSettings>
+      <ClassSearchEnabled>false</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+  </NewDataSet>
+</cms_form>

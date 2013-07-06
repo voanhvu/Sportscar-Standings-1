@@ -1,0 +1,17 @@
+﻿<cms_culture version="7.0">
+  <NewDataSet>
+    <cms_culture>
+      <CultureID>50</CultureID>
+      <CultureName>English - United States</CultureName>
+      <CultureCode>en-US</CultureCode>
+      <CultureShortName>English</CultureShortName>
+      <CultureGUID>4c98fdfa-841b-431e-9bc8-9fc80800ee45</CultureGUID>
+      <CultureLastModified>2011-08-22T08:35:23.98+02:00</CultureLastModified>
+      <CultureAlias></CultureAlias>
+    </cms_culture>
+    <cms_siteculture>
+      <SiteID>107</SiteID>
+      <CultureID>50</CultureID>
+    </cms_siteculture>
+  </NewDataSet>
+</cms_culture>

@@ -1,0 +1,681 @@
+﻿<cms_documenttype version="7.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>1095</ClassID>
+      <ClassDisplayName>Root</ClassDisplayName>
+      <ClassName>CMS.Root</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>false</ClassIsCoupledClass>
+      <ClassXmlSchema></ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName></ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>true</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2011-06-17T16:20:39.437+02:00</ClassLastModified>
+      <ClassGUID>a585aea3-10b5-4b74-9aad-747fcce72493</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+    <cms_query>
+      <QueryID>2400</QueryID>
+      <QueryName>searchattachments</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>/* 
+Uncomment the following query after you configure Kentico CMS for full-text search as described in Developers Guide -&gt; Installation and deployment -&gt; Configuration of full-text search in files
+*/
+
+/*
+SELECT View_CMS_Tree_Joined.*, View_CMS_Tree_Joined.NodeName AS SearchResultName
+FROM CMS_Attachment INNER JOIN View_CMS_Tree_Joined
+ON View_CMS_Tree_Joined.DocumentID = CMS_Attachment.AttachmentDocumentID
+WHERE (##WHERE##) AND
+(([AttachmentName] Like N'%'+ @Expression + N'%') OR ([AttachmentTitle] Like N'%'+ @Expression + N'%') OR ([AttachmentDescription] Like N'%'+ @Expression + N'%')) OR (FREETEXT(AttachmentBinary, @expression)) 
+ORDER BY ##ORDERBY##
+*/
+
+SELECT View_CMS_Tree_Joined.*, View_CMS_Tree_Joined.DocumentName AS SearchResultName
+FROM CMS_Attachment INNER JOIN View_CMS_Tree_Joined 
+ON View_CMS_Tree_Joined.DocumentID = CMS_Attachment.AttachmentDocumentID 
+WHERE (##WHERE##) AND (([AttachmentName] Like N'%'+ @Expression + N'%') OR ([AttachmentTitle] Like N'%'+ @Expression + N'%') OR ([AttachmentDescription] Like N'%'+ @Expression + N'%')) ORDER BY ##ORDERBY##
+</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>1095</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2010-11-15T15:16:17.253+01:00</QueryLastModified>
+      <QueryGUID>faa8ff41-9e2a-455e-b58b-5bd9c471a503</QueryGUID>
+      <QueryLoadGeneration>2</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_query>
+      <QueryID>2399</QueryID>
+      <QueryName>searchdocuments</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT View_CMS_Tree_Joined.*, SearchResultName = CASE View_CMS_Tree_Joined.DocumentName WHEN '' THEN '/' else View_CMS_Tree_Joined.DocumentName END 
+FROM View_CMS_Tree_Joined
+WHERE 
+(
+[DocumentName] LIKE N'%' + @Expression + N'%'
+OR
+[NodeName] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentUrlPath] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentPageTitle] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentPageKeyWords] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentPageDescription] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentMenuCaption] LIKE N'%' + @Expression + N'%'
+OR
+[DocumentContent] LIKE N'%' + @Expression + N'%'
+)
+AND (##WHERE##) ORDER BY ##ORDERBY##</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>1095</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2010-10-05T09:08:24.553+02:00</QueryLastModified>
+      <QueryGUID>e59b6ae0-1d3f-4ee8-8fdc-720fae543868</QueryGUID>
+      <QueryLoadGeneration>2</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_query>
+      <QueryID>8480</QueryID>
+      <QueryName>smartsearchattachments</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ##TOPN## SUM(RANK) AS [Score], DocumentID, SiteName, NodeID, NodeAliasPath, DocumentCulture, NodeClassID, ClassName, NodeACLID, NodeSiteID, NodeLinkedNodeID
+FROM CMS_Attachment INNER JOIN
+CONTAINSTABLE(CMS_Attachment, AttachmentBinary, ##SEARCH## ) AS KEY_TBL ON CMS_Attachment.AttachmentID = KEY_TBL.[KEY] INNER JOIN
+View_CMS_Tree_Joined ON View_CMS_Tree_Joined.DocumentID = CMS_Attachment.AttachmentDocumentID
+WHERE (Published = 1) AND (##WHERE##) 
+GROUP BY DocumentID, SiteName, NodeID, NodeAliasPath, DocumentCulture, NodeClassID, ClassName, NodeACLID, NodeSiteID, NodeLinkedNodeID ORDER BY ##ORDERBY##</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>1095</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2009-05-14T13:10:23.677+02:00</QueryLastModified>
+      <QueryGUID>80834b50-0ab4-445e-99a4-775df7a1a2e3</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_transformation>
+      <TransformationID>1115</TransformationID>
+      <TransformationName>AtomItem</TransformationName>
+      <TransformationCode>&lt;entry&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;link href="&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;" /&gt;
+  &lt;id&gt;urn:uuid:&lt;%# Eval("NodeGUID") %&gt;&lt;/id&gt;
+  &lt;published&gt;&lt;%# GetAtomDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/published&gt;
+  &lt;updated&gt;&lt;%# GetAtomDateTime(Eval("DocumentModifiedWhen")) %&gt;&lt;/updated&gt;
+  &lt;author&gt;
+    &lt;name&gt;&lt;%# Eval("NodeOwnerFullName") %&gt;&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;summary&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/summary&gt;
+&lt;/entry&gt;
+
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>fab37630-55db-46cc-8ee0-2380f110c652</TransformationVersionGUID>
+      <TransformationGUID>ce31d65b-f97e-4967-824c-c65bb10543ad</TransformationGUID>
+      <TransformationLastModified>2010-08-02T15:39:59.257+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>676</TransformationID>
+      <TransformationName>Attachment</TransformationName>
+      <TransformationCode>&lt;%@ Register TagPrefix="cc1" Namespace="CMS.GlobalHelper" Assembly="CMS.GlobalHelper" %&gt;
+
+&lt;div&gt;
+&lt;a target="_blank" href="&lt;%# GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) %&gt;"&gt;
+&lt;img style="border: none;" src="&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true, GetAttachmentIconUrl(Eval("AttachmentExtension"), null), GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID"))) %&gt;?maxsidesize=150" alt="&lt;%# Eval("AttachmentName", true) %&gt;" /&gt;
+&lt;/a&gt;
+&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true, "&lt;br /&gt;" + ResHelper.GetString("attach.openfile"), "") %&gt;
+&lt;br /&gt;
+&lt;%# Eval("AttachmentName",true) %&gt;
+&lt;br /&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>df241d1e-84da-46bd-bfd9-28627d21e207</TransformationVersionGUID>
+      <TransformationGUID>6eba21c8-7c1a-49a6-937e-974627c9224b</TransformationGUID>
+      <TransformationLastModified>2011-05-18T17:07:45.343+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>1982</TransformationID>
+      <TransformationName>AttachmentCarousel2D</TransformationName>
+      <TransformationCode>&lt;%@ Register TagPrefix="cc1" Namespace="CMS.GlobalHelper" Assembly="CMS.GlobalHelper" %&gt;
+
+&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true,"&lt;div style='text-align:center;width: 350px;'&gt;&lt;div style='font-size: 11px;line-height: 12px;position:relative;z-index:1000;margin:auto;width:140px;'&gt;&lt;a target='_blank' href='" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "'&gt;&lt;img style='border: none;' src='" + GetAttachmentIconUrl(Eval("AttachmentExtension"), null) + "' alt='" + Eval("AttachmentName") + "' /&gt;&lt;/a&gt;&lt;p&gt;" + ResHelper.GetString("attach.openfile") + "&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;","&lt;img src='" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "?maxsidesize=150' class='cloudcarousel2d' alt='" + Eval("AttachmentTitle", true) + "' title='" + Eval("AttachmentDescription", true) + "' /&gt;") %&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>e9e5c016-66f3-45f6-b290-6dcd67405355</TransformationVersionGUID>
+      <TransformationGUID>1813bc8e-8791-4a0a-b6b2-acb90f0fa599</TransformationGUID>
+      <TransformationLastModified>2011-05-18T17:06:43.323+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>1739</TransformationID>
+      <TransformationName>AttachmentCarousel3D</TransformationName>
+      <TransformationCode>&lt;%@ Register TagPrefix="cc1" Namespace="CMS.GlobalHelper" Assembly="CMS.GlobalHelper" %&gt;
+
+&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true,
+
+"&lt;div style=\"text-align:center;width: 350px;\"&gt;&lt;div style=\"font-size: 11px;line-height: 12px;position:relative;z-index:1000;margin:auto;width:140px;\"&gt;&lt;a target=\"_blank\" href=\"" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "\"&gt;&lt;img style=\"border: none;\" src=\"" + GetAttachmentIconUrl(Eval("AttachmentExtension"), null) + "\" alt=\"" + Eval("AttachmentName") + "\" /&gt;&lt;/a&gt;&lt;p&gt;" + ResHelper.GetString("attach.openfile") + "&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;",
+
+"&lt;img src=\"" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "?maxsidesize=150\" class=\"cloudcarousel3d\" alt=\"" + Eval("AttachmentTitle", true) + "\" title=\"" + Eval("AttachmentDescription", true) + "\" /&gt;") %&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>a49ad2e4-7b15-49b1-830d-c570d8355fe8</TransformationVersionGUID>
+      <TransformationGUID>49c7568b-113e-41eb-b183-4712344811a3</TransformationGUID>
+      <TransformationLastModified>2011-05-18T17:07:34.403+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>713</TransformationID>
+      <TransformationName>AttachmentLightbox</TransformationName>
+      <TransformationCode>&lt;%@ Register TagPrefix="cc1" Namespace="CMS.GlobalHelper" Assembly="CMS.GlobalHelper" %&gt;
+
+&lt;a style="text-decoration: none;" href="&lt;%# GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) %&gt;" rel="lightbox[attachments]" rev="&lt;%# Eval("AttachmentID") %&gt;" title="&lt;%# Eval("AttachmentName", true) %&gt;"&gt;
+&lt;img style="border: none;" src="&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true, GetAttachmentIconUrl(Eval("AttachmentExtension"), null), GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID"))) %&gt;?maxsidesize=150" alt="&lt;%# Eval("AttachmentTitle", true) %&gt;" /&gt;
+&lt;/a&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>d281ac4b-4d77-4a81-b717-368a0425552a</TransformationVersionGUID>
+      <TransformationGUID>f0460e74-2509-4b1e-8665-5e68cf947e86</TransformationGUID>
+      <TransformationLastModified>2011-05-18T17:07:26.113+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>714</TransformationID>
+      <TransformationName>AttachmentLightboxDetail</TransformationName>
+      <TransformationCode>&lt;%@ Register TagPrefix="cc1" Namespace="CMS.GlobalHelper" Assembly="CMS.GlobalHelper" %&gt;
+
+&lt;%# IfCompare(ImageHelper.IsImage((string)Eval("AttachmentExtension")), true,
+
+"&lt;div style=\"text-align:center;width: 350px;\"&gt;&lt;div style=\"font-size: 11px;line-height: 12px;position:relative;z-index:1000;margin:auto;width:140px;\"&gt;&lt;a target=\"_blank\" href=\"" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "\"&gt;&lt;img style=\"border: none;\" src=\"" + GetAttachmentIconUrl(Eval("AttachmentExtension"), null) + "\" alt=\"" + Eval("AttachmentName") + "\" /&gt;&lt;/a&gt;&lt;p&gt;" + ResHelper.GetString("attach.openfile") + "&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;",
+
+"&lt;img src=\"" + GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), Eval&lt;int&gt;("AttachmentSiteID")) + "?maxsidesize=1000\" alt=\"" + Eval("AttachmentTitle", true) + "\" title=\"" + Eval("AttachmentDescription", true) + "\" /&gt;") %&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>afc11d16-7b39-4bac-86c0-926408e50ee6</TransformationVersionGUID>
+      <TransformationGUID>fdad8271-1293-4444-9151-e74af81dcda6</TransformationGUID>
+      <TransformationLastModified>2010-11-16T09:32:08.313+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>841</TransformationID>
+      <TransformationName>AttachmentList</TransformationName>
+      <TransformationCode>&lt;div&gt;
+&lt;img src="&lt;%# GetAttachmentIconUrl(Eval("AttachmentExtension"), "List") %&gt;" alt="&lt;%# Eval("AttachmentName",true) %&gt;" /&gt;
+&amp;nbsp;
+&lt;a target="_blank" href="&lt;%# GetAbsoluteUrl(GetAttachmentUrl(Eval("AttachmentName"), Eval("NodeAliasPath")), EvalInteger("AttachmentSiteID")) %&gt;"&gt;
+&lt;%# Eval("AttachmentName",true) %&gt;
+&lt;/a&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>340b35e2-b966-439b-ac0a-46ecad9ea638</TransformationVersionGUID>
+      <TransformationGUID>4455961a-e81f-419b-8a68-19d1cdcef2a1</TransformationGUID>
+      <TransformationLastModified>2011-05-18T16:21:59.003+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>415</TransformationID>
+      <TransformationName>CategoryList</TransformationName>
+      <TransformationCode>&lt;asp:HyperLink ID="lnkCategoryList" runat="server" EnableViewState="false"&gt;&lt;/asp:HyperLink&gt;&lt;br /&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>56545e12-f308-4a92-a1de-093b2f697b37</TransformationVersionGUID>
+      <TransformationGUID>4b6c6f44-ac26-45c1-920f-df48f92e94d0</TransformationGUID>
+      <TransformationLastModified>2008-09-29T12:53:32.77+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>915</TransformationID>
+      <TransformationName>CMSDeskSmartSearchResults</TransformationName>
+      <TransformationCode>&lt;div style="margin-bottom: 30px;"&gt;
+  &lt;%-- Search result image --%&gt;
+        &lt;div style="border: solid 1px #eeeeee; width: 90px; height:90px; margin-right: 5px;" class="LeftAlign"&gt;
+           &lt;img src="&lt;%# GetSearchImageUrl(UIHelper.GetImageUrl(Page, "CMSModules/CMS_SmartSearch/no_image.gif"),90) %&gt;" alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div class="LeftAlign"&gt;
+            &lt;%-- Search result title --%&gt;
+            &lt;div style="text-align: left;"&gt;
+                &lt;a style="font-weight: bold" href='&lt;%# "javascript:SelectItem(" + CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(ValidationHelper.GetString(GetSearchValue("nodeId"), "")) + ", '"+ ValidationHelper.GetString(GetSearchValue("DocumentCulture"), "") + "')" %&gt;'&gt;
+                    &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(DataHelper.GetNotEmpty(Eval("Title"), "/")), "&lt;span style='font-weight:bold;'&gt;", "&lt;/span&gt;")%&gt; (&lt;%#ValidationHelper.GetString(GetSearchValue("DocumentCulture"), "")%&gt;)
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;%-- Search result content --%&gt;
+            &lt;div style="margin-top: 5px; width: 590px;min-height:40px"&gt;
+                &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(TextHelper.LimitLength(HttpUtility.HtmlDecode(CMS.GlobalHelper.HTMLHelper.StripTags(CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(GetSearchedContent(DataHelper.GetNotEmpty(Eval("Content"), ""))), false, " ")), 280, "...")), "&lt;span style='background-color: #FEFF8F'&gt;", "&lt;/span&gt;")%&gt;&lt;br /&gt;
+            &lt;/div&gt;
+            &lt;%-- Relevance, URL, Creattion --%&gt;
+            &lt;div style="margin-top: 5px;"&gt;
+                &lt;%-- Relevance --%&gt;
+                &lt;div title="Relevance: &lt;%# Convert.ToInt32(ValidationHelper.GetDouble(Eval("Score"),0.0)*100) %&gt;%"
+                    style="width: 50px; border: solid 1px #aaaaaa; margin-top: 7px; margin-right: 6px;
+                    float: left; color: #0000ff; font-size: 2pt; line-height: 4px; height: 4px;"&gt;
+                    &lt;div style="&lt;%# "background-color:#a7d3a7;width:"+ Convert.ToString(Convert.ToInt32((ValidationHelper.GetDouble(Eval("Score"),0.0)/2)*100))  + "px;height:4px;line-height: 4px;"%&gt;"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;%-- URL --%&gt;
+                &lt;span style="color: #008000"&gt;
+                    &lt;%# TextHelper.BreakLine(SearchHighlight(SearchResultUrl(true),"&lt;strong&gt;","&lt;/strong&gt;"),75,"&lt;br /&gt;") %&gt;
+                &lt;/span&gt;
+                &lt;%-- Creation --%&gt;
+                &lt;span style="padding-left:5px;color: #888888; font-size: 9pt"&gt;
+                    &lt;%# GetDateTimeString(ValidationHelper.GetDateTime(Eval("Created"), DateTimeHelper.ZERO_TIME), true) %&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style="clear: both"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>c1ddba3f-9f0c-4775-94fa-6598743eefc5</TransformationVersionGUID>
+      <TransformationGUID>aadecc4c-1909-4804-b0bb-990c093fc4e0</TransformationGUID>
+      <TransformationLastModified>2011-06-17T16:20:16.657+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>916</TransformationID>
+      <TransformationName>CMSDeskSQLSearchResults</TransformationName>
+      <TransformationCode>&lt;div style="margin-bottom: 30px;"&gt;
+  &lt;%-- Search result image --%&gt;
+        &lt;div style="margin-right: 5px;" class="LeftAlign"&gt;
+           &lt;img src="&lt;%# UIHelper.GetDocumentTypeIconUrl(this.Page, ValidationHelper.GetString(DataBinder.Eval(((System.Web.UI.WebControls.RepeaterItem)(Container)).DataItem, "ClassName"), "")) %&gt;" alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div class="LeftAlign" style="width:95%;"&gt;
+            &lt;%-- Search result title --%&gt;
+            &lt;div&gt;
+        &lt;a style="font-weight: bold" href="&lt;%# "javascript:SelectItem(" + Eval("NodeID") + ", \'" + Eval("DocumentCulture") + "\')" %&gt;"&gt;&lt;%# IfEmpty(Eval("NodeName"), "/", HTMLHelper.HTMLEncode(ValidationHelper.GetString(Eval("NodeName"), null))) %&gt; (&lt;%# Eval("DocumentCulture") %&gt;)&lt;/a&gt;
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="LeftAlign"&gt;
+  &lt;div style="margin-top: 5px;"&gt;
+&lt;%-- URL --%&gt;
+                &lt;span style="color: #008000"&gt;
+                    &lt;%#  GetAbsoluteUrl(GetDocumentUrl()) %&gt;
+                &lt;/span&gt;
+                &lt;%-- Creation --%&gt;
+                &lt;span style="padding-left:5px;;color: #888888; font-size: 9pt"&gt;
+                    &lt;%# GetDateTimeString(ValidationHelper.GetDateTime(Eval("DocumentCreatedWhen"), DateTimeHelper.ZERO_TIME), true) %&gt;
+                &lt;/span&gt;
+        &lt;/div&gt;
+  &lt;/div&gt;
+&lt;div style="clear: both"&gt;&lt;/div&gt;
+
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>be8c4331-f4f0-4c33-9230-4d2ec1b8a590</TransformationVersionGUID>
+      <TransformationGUID>914377c1-21ad-443e-956f-0b9646e5520b</TransformationGUID>
+      <TransformationLastModified>2010-11-18T15:31:57.633+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>668</TransformationID>
+      <TransformationName>GoogleSiteMap</TransformationName>
+      <TransformationCode>&lt;url&gt;
+&lt;loc&gt;&lt;%# GetAbsoluteUrl(GetDocumentUrl()) %&gt;&lt;/loc&gt;
+&lt;lastmod&gt;&lt;%# GetDateTime("DocumentModifiedWhen", "yyyy-MM-dd") %&gt;&lt;/lastmod&gt;
+&lt;/url&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>032acb6b-592a-47b5-889f-5f0e690f3f82</TransformationVersionGUID>
+      <TransformationGUID>8d5a6991-b2bf-436d-ba82-5159eb98fc71</TransformationGUID>
+      <TransformationLastModified>2009-01-05T12:12:09.383+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>153</TransformationID>
+      <TransformationName>Newsletter_Archive</TransformationName>
+      <TransformationCode>&lt;%#  FormatDateTime(Eval("IssueMailoutTime"),"d") %&gt; - &lt;a href="~/CMSModules/Newsletters/CMSPages/GetNewsletterIssue.aspx?issueId=&lt;%# Eval("IssueID")%&gt;" target="_blank"&gt;&lt;%# Eval("IssueSubject",true) %&gt;&lt;/a&gt; &lt;br /&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>575fa5a1-14a8-44a6-b92f-0d78c09353ef</TransformationVersionGUID>
+      <TransformationGUID>62116172-2118-4676-98eb-373c79fa6cc6</TransformationGUID>
+      <TransformationLastModified>2011-03-17T15:39:33.233+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>559</TransformationID>
+      <TransformationName>OnLineUsers</TransformationName>
+      <TransformationCode>&lt;%# Eval("UserName", true) %&gt;&amp;nbsp;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>b457a60d-ddfe-49d3-99b9-f57afed6b033</TransformationVersionGUID>
+      <TransformationGUID>3b16b39e-3020-485d-8bae-6e7617e13894</TransformationGUID>
+      <TransformationLastModified>2009-01-22T21:35:31.513+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>283</TransformationID>
+      <TransformationName>Print</TransformationName>
+      <TransformationCode>&lt;h3&gt;Print transformation is missing&lt;/h3&gt;
+&lt;div&gt;Transformation of current document type is missing. You have to define the tranformation in the CMS Site Manager Development section.&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>083138cf-0c93-4a7a-80c3-da88c9821529</TransformationVersionGUID>
+      <TransformationGUID>dfba986c-38de-431c-89df-8ad3e8c7b451</TransformationGUID>
+      <TransformationLastModified>2008-04-21T16:10:12.36+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>15</TransformationID>
+      <TransformationName>RelatedDocuments</TransformationName>
+      <TransformationCode>&lt;strong&gt;&lt;a href="&lt;%# ResolveUrl(GetUrl( Eval("NodeAliasPath"), null)) %&gt;"&gt;
+&lt;%# Eval("DocumentName",true) %&gt;&lt;/a&gt;&lt;/strong&gt;
+&lt;br /&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>7d193205-f164-421e-8e74-7b694e69c154</TransformationVersionGUID>
+      <TransformationGUID>b96f0a40-8fb6-4ed5-8eaa-309867a18283</TransformationGUID>
+      <TransformationLastModified>2011-03-17T15:39:58.797+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>1019</TransformationID>
+      <TransformationName>RSSItem</TransformationName>
+      <TransformationCode>&lt;item&gt;
+     &lt;guid isPermaLink="false"&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/guid&gt;
+     &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+     &lt;description&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/description&gt;
+     &lt;pubDate&gt;&lt;%# GetRSSDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/pubDate&gt;
+     &lt;link&gt;&lt;![CDATA[&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;]]&gt;&lt;/link&gt;     	
+&lt;/item&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>736f3000-ee3c-4e13-ae01-bfbd8cd2974d</TransformationVersionGUID>
+      <TransformationGUID>e38315ed-fcef-46a9-b82a-b33d6902649b</TransformationGUID>
+      <TransformationLastModified>2010-08-02T15:40:20.953+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>20</TransformationID>
+      <TransformationName>SearchResults</TransformationName>
+      <TransformationCode>&lt;div class="SearchResult"&gt;
+  &lt;div class="ResultTitle"&gt;
+    &lt;a href="&lt;%# GetDocumentUrl()%&gt;"&gt;&lt;%# IfEmpty(Eval("SearchResultName",true), "/", Eval("SearchResultName",true)) %&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="ResultPath"&gt;
+    Path: &lt;%# Eval("DocumentNamePath",true) %&gt;&lt;br /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>67e11de6-13cf-47f6-9df9-59c1cc88ddda</TransformationVersionGUID>
+      <TransformationGUID>a3c543c8-b855-4acd-9c03-9302a02f8f74</TransformationGUID>
+      <TransformationLastModified>2008-12-05T13:57:06.527+01:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>801</TransformationID>
+      <TransformationName>SmartSearchResults</TransformationName>
+      <TransformationCode>&lt;div style="margin-bottom: 30px;"&gt;
+        &lt;%-- Search result title --%&gt;
+        &lt;div&gt;
+            &lt;a style="font-weight: bold" href='&lt;%# SearchResultUrl(true) %&gt;'&gt;
+                &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(DataHelper.GetNotEmpty(Eval("Title"), "/"))), "&lt;span style='font-weight:bold;'&gt;", "&lt;/span&gt;")%&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;%-- Search result content --%&gt;
+        &lt;div style="margin-top: 5px; width: 590px;"&gt;
+            &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(TextHelper.LimitLength(HttpUtility.HtmlDecode(CMS.GlobalHelper.HTMLHelper.StripTags(CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(GetSearchedContent(DataHelper.GetNotEmpty(Eval("Content"), ""))), false, " ")), 280, "...")), "&lt;span style='background-color: #FEFF8F'&gt;", "&lt;/span&gt;")%&gt;&lt;br /&gt;
+        &lt;/div&gt;
+        &lt;%-- Relevance, URL, Creattion --%&gt;
+        &lt;div style="margin-top: 5px;"&gt;
+            &lt;%-- Relevance --%&gt;
+            &lt;div title="Relevance: &lt;%# Convert.ToInt32(ValidationHelper.GetDouble(Eval("Score"),0.0)*100)%&gt;%"
+                style="width: 50px; border: solid 1px #aaaaaa; margin-top: 7px; margin-right: 6px; float: left; color: #0000ff; font-size: 2pt; line-height: 4px; height: 4px;"&gt;
+                &lt;div style='&lt;%# "background-color:#a7d3a7;width:"+ Convert.ToString(Convert.ToInt32((ValidationHelper.GetDouble(Eval("Score"),0.0)/2)*100))  + "px;height:4px;line-height: 4px;"%&gt;'&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;%-- URL --%&gt;
+            &lt;span style="color: #008000"&gt;
+                &lt;%# SearchHighlight(SearchResultUrl(true),"&lt;strong&gt;","&lt;/strong&gt;")%&gt;
+            &lt;/span&gt;
+            &lt;%-- Creation --%&gt;
+            &lt;span style="color: #888888; font-size: 9pt"&gt;
+                &lt;%# GetDateTimeString(ValidationHelper.GetDateTime(Eval("Created"), DateTimeHelper.ZERO_TIME), true) %&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>b0657d12-44d0-4173-a1f4-e86b6c374c8d</TransformationVersionGUID>
+      <TransformationGUID>63b96721-59ae-4462-a842-10fedfc282e1</TransformationGUID>
+      <TransformationLastModified>2011-06-10T15:07:17.31+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>846</TransformationID>
+      <TransformationName>SmartSearchResultsWithImages</TransformationName>
+      <TransformationCode>&lt;div style="margin-bottom: 30px;"&gt;
+  &lt;%-- Search result image --%&gt;
+        &lt;div style="float: left; border: solid 1px #eeeeee; width: 90px; height:90px; margin-right: 5px;"&gt;
+           &lt;img src="&lt;%# GetSearchImageUrl("~/App_Themes/Default/Images/CMSModules/CMS_SmartSearch/no_image.gif",90) %&gt;" alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div style="float: left"&gt;
+            &lt;%-- Search result title --%&gt;
+            &lt;div&gt;
+                &lt;a style="font-weight: bold" href='&lt;%# SearchResultUrl(true) %&gt;'&gt;
+                    &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(DataHelper.GetNotEmpty(Eval("Title"), "/"))), "&lt;span style='font-weight:bold;'&gt;", "&lt;/span&gt;")%&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;%-- Search result content --%&gt;
+            &lt;div style="margin-top: 5px; width: 590px;min-height:40px"&gt;
+                &lt;%#SearchHighlight(CMS.GlobalHelper.HTMLHelper.HTMLEncode(TextHelper.LimitLength(HttpUtility.HtmlDecode(CMS.GlobalHelper.HTMLHelper.StripTags(CMS.ExtendedControls.ControlsHelper.RemoveDynamicControls(GetSearchedContent(DataHelper.GetNotEmpty(Eval("Content"), ""))), false, " ")), 280, "...")), "&lt;span style='background-color: #FEFF8F'&gt;", "&lt;/span&gt;")%&gt;&lt;br /&gt;
+            &lt;/div&gt;
+            &lt;%-- Relevance, URL, Creattion --%&gt;
+            &lt;div style="margin-top: 5px;"&gt;
+                &lt;%-- Relevance --%&gt;
+                &lt;div title="Relevance: &lt;%#Convert.ToInt32(ValidationHelper.GetDouble(Eval("Score"),0.0)*100)%&gt;%"
+                    style="width: 50px; border: solid 1px #aaaaaa; margin-top: 7px; margin-right: 6px;
+                    float: left; color: #0000ff; font-size: 2pt; line-height: 4px; height: 4px;"&gt;
+                    &lt;div style="&lt;%# "background-color:#a7d3a7;width:"+ Convert.ToString(Convert.ToInt32((ValidationHelper.GetDouble(Eval("Score"),0.0)/2)*100))  + "px;height:4px;line-height: 4px;"%&gt;"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;%-- URL --%&gt;
+                &lt;span style="color: #008000"&gt;
+                    &lt;%# TextHelper.BreakLine(SearchHighlight(SearchResultUrl(true),"&lt;strong&gt;","&lt;/strong&gt;"),75,"&lt;br /&gt;") %&gt;
+                &lt;/span&gt;
+                &lt;%-- Creation --%&gt;
+                &lt;span style="padding-left:5px;color: #888888; font-size: 9pt"&gt;
+                    &lt;%# GetDateTimeString(ValidationHelper.GetDateTime(Eval("Created"), DateTimeHelper.ZERO_TIME), true) %&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style="clear: both"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>1095</TransformationClassID>
+      <TransformationVersionGUID>8c6ae3d1-56cc-4db8-83fa-496104094cdd</TransformationVersionGUID>
+      <TransformationGUID>fa253f7c-6705-4995-bb27-96c0042dee5b</TransformationGUID>
+      <TransformationLastModified>2011-06-17T16:20:39.397+02:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>1996</PermissionID>
+      <PermissionDisplayName>Read</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>2df1a7ae-ff00-41c8-b254-f2cb0ec7b9d8</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>1997</PermissionID>
+      <PermissionDisplayName>Modify</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>e95138bf-8837-466e-9bd0-801a32952c4f</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>1998</PermissionID>
+      <PermissionDisplayName>Create</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>afd715da-a040-41e9-96d6-573834827ae3</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>1999</PermissionID>
+      <PermissionDisplayName>Delete</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>9cb45cb6-54cd-4d04-a2a2-43d9af6d94d4</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>2000</PermissionID>
+      <PermissionDisplayName>Destroy</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>1a131cfd-b1fb-4453-b045-0c7205d72bb5</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>2001</PermissionID>
+      <PermissionDisplayName>Browse Tree</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>69b02532-2b26-45b0-9927-042722ecdce7</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>2002</PermissionID>
+      <PermissionDisplayName>Modify Permissions</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>92ba1cdf-2235-4e1b-a8c5-24a04bf817d3</PermissionGUID>
+      <PermissionLastModified>2008-03-13T09:35:00+01:00</PermissionLastModified>
+      <PermissionDescription></PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7295</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>1095</ClassID>
+      <PermissionGUID>794d4ea9-598b-4d92-8612-fb479711e5e9</PermissionGUID>
+      <PermissionLastModified>2011-08-23T12:36:48.52+02:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_classsite>
+      <ClassID>1095</ClassID>
+      <SiteID>2</SiteID>
+    </cms_classsite>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>3423</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>3435</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>3443</ChildClassID>
+    </cms_allowedchildclasses>
+  </NewDataSet>
+</cms_documenttype>

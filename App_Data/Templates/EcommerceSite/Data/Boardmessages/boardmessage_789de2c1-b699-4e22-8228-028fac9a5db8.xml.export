@@ -1,0 +1,34 @@
+﻿<boardmessage_789de2c1-b699-4e22-8228-028fac9a5db8 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3233</MessageID>
+      <MessageUserName>Eva</MessageUserName>
+      <MessageText>These shoes are great! Ventilation system is incredible! very comfortable!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4056</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-26T14:56:50.387+02:00</MessageInserted>
+      <MessageLastModified>2012-06-26T14:56:50.503+02:00</MessageLastModified>
+      <MessageGUID>9528d09d-2237-4125-8168-951fab5f6846</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3205</MessageID>
+      <MessageUserName>Jane</MessageUserName>
+      <MessageText>Very good indeed.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4056</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-15T15:34:35.833+02:00</MessageInserted>
+      <MessageLastModified>2012-06-15T15:34:36.493+02:00</MessageLastModified>
+      <MessageGUID>fefb3e21-7266-4a95-ae73-db9b6cffd6fb</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_789de2c1-b699-4e22-8228-028fac9a5db8>

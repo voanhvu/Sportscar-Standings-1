@@ -1,0 +1,15 @@
+﻿<forums_forumgroup version="7.0">
+  <NewDataSet>
+    <forums_forumgroup>
+      <GroupID>661</GroupID>
+      <GroupSiteID>1</GroupSiteID>
+      <GroupName>AdHocForumGroup</GroupName>
+      <GroupDisplayName>AdHoc forum group</GroupDisplayName>
+      <GroupOrder>1</GroupOrder>
+      <GroupGUID>f2af0b7a-5ce7-4163-b8ba-2e3e45bd354d</GroupGUID>
+      <GroupLastModified>2012-03-05T17:56:46.68+01:00</GroupLastModified>
+      <GroupBaseUrl></GroupBaseUrl>
+      <GroupUnsubscriptionUrl></GroupUnsubscriptionUrl>
+    </forums_forumgroup>
+  </NewDataSet>
+</forums_forumgroup>

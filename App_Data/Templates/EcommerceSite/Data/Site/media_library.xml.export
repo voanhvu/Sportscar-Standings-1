@@ -1,0 +1,28 @@
+﻿<media_library version="7.0">
+  <NewDataSet>
+    <media_library>
+      <LibraryID>498</LibraryID>
+      <LibraryName>Headline_Banner_Images</LibraryName>
+      <LibraryDisplayName>Headline Banner Images</LibraryDisplayName>
+      <LibraryDescription>Headline banner images used on the home page</LibraryDescription>
+      <LibraryFolder>HeadlineBannerImages</LibraryFolder>
+      <LibraryAccess>0</LibraryAccess>
+      <LibrarySiteID>135</LibrarySiteID>
+      <LibraryGUID>f07fd837-c60d-4767-83d1-3047b5d2eb9b</LibraryGUID>
+      <LibraryLastModified>2012-05-26T22:19:34.36+02:00</LibraryLastModified>
+      <LibraryTeaserPath></LibraryTeaserPath>
+    </media_library>
+    <media_library>
+      <LibraryID>597</LibraryID>
+      <LibraryName>PT_Sans_Font</LibraryName>
+      <LibraryDisplayName>PT Sans Font</LibraryDisplayName>
+      <LibraryDescription></LibraryDescription>
+      <LibraryFolder>PTSansFont</LibraryFolder>
+      <LibraryAccess>0</LibraryAccess>
+      <LibrarySiteID>135</LibrarySiteID>
+      <LibraryGUID>dceb5035-b5ee-4293-86f9-220a18bc9937</LibraryGUID>
+      <LibraryLastModified>2012-08-23T10:08:34.137+02:00</LibraryLastModified>
+      <LibraryTeaserPath></LibraryTeaserPath>
+    </media_library>
+  </NewDataSet>
+</media_library>

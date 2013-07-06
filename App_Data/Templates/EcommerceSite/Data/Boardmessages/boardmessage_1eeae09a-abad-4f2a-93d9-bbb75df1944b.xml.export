@@ -1,0 +1,38 @@
+﻿<boardmessage_1eeae09a-abad-4f2a-93d9-bbb75df1944b version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3190</MessageID>
+      <MessageUserName>Katy</MessageUserName>
+      <MessageText>It's a pity it is so terribly expensive. On the other hand, its power is incredible.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4048</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T00:54:33.003+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T00:54:33.007+02:00</MessageLastModified>
+      <MessageGUID>8fd2500c-e31a-407b-8fdf-37d781637093</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3189</MessageID>
+      <MessageUserName>Bob</MessageUserName>
+      <MessageText>Just one word: WOW</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4048</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T00:52:54.513+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T00:52:54.517+02:00</MessageLastModified>
+      <MessageGUID>e9497633-ccdd-440f-a839-54ddf9786356</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_1eeae09a-abad-4f2a-93d9-bbb75df1944b>

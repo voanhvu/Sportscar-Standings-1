@@ -1,0 +1,240 @@
+﻿<cms_form version="7.0">
+  <NewDataSet>
+    <cms_form>
+      <FormID>110246</FormID>
+      <FormDisplayName>General Question</FormDisplayName>
+      <FormName>General_Question</FormName>
+      <FormEmailAttachUploadedDocs>true</FormEmailAttachUploadedDocs>
+      <FormClassID>3330</FormClassID>
+      <FormItems>0</FormItems>
+      <FormReportFields>GeneralQuestionID;GeneralQuestionEmail;GeneralQuestionText;FormInserted</FormReportFields>
+      <FormDisplayText>Thank you for submitting your question.</FormDisplayText>
+      <FormClearAfterSave>false</FormClearAfterSave>
+      <FormSubmitButtonText>Submit</FormSubmitButtonText>
+      <FormSiteID>135</FormSiteID>
+      <FormGUID>d944579b-872d-473b-a27c-7af74537b45b</FormGUID>
+      <FormLastModified>2012-08-30T13:57:53.383+02:00</FormLastModified>
+      <FormLogActivity>true</FormLogActivity>
+    </cms_form>
+    <cms_form>
+      <FormID>110247</FormID>
+      <FormDisplayName>Product Question</FormDisplayName>
+      <FormName>Product_Question</FormName>
+      <FormEmailAttachUploadedDocs>true</FormEmailAttachUploadedDocs>
+      <FormClassID>3331</FormClassID>
+      <FormItems>0</FormItems>
+      <FormReportFields>ProductQuestionID;ProductQuestionEmail;ProductQuestionText;FormInserted</FormReportFields>
+      <FormDisplayText>Thank you for submitting your question.</FormDisplayText>
+      <FormClearAfterSave>false</FormClearAfterSave>
+      <FormSubmitButtonText>Submit</FormSubmitButtonText>
+      <FormSiteID>135</FormSiteID>
+      <FormGUID>9d63b936-4bfe-495c-ae93-50b793ca9aad</FormGUID>
+      <FormLastModified>2012-08-30T13:58:31.647+02:00</FormLastModified>
+      <FormLogActivity>true</FormLogActivity>
+    </cms_form>
+    <cms_class>
+      <ClassID>3330</ClassID>
+      <ClassDisplayName>General Question</ClassDisplayName>
+      <ClassName>BizForm.GeneralQuestion</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="Form_EcommerceSite_GeneralQuestion"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="GeneralQuestionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="FormInserted" type="xs:dateTime" /&gt;
+              &lt;xs:element name="FormUpdated" type="xs:dateTime" /&gt;
+              &lt;xs:element name="GeneralQuestionEmail"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="150" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="GeneralQuestionText"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//Form_EcommerceSite_GeneralQuestion" /&gt;
+      &lt;xs:field xpath="GeneralQuestionID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="GeneralQuestionID" fieldcaption="ID" visible="true" columntype="integer" fieldtype="CustomUserControl" isPK="true" columnsize="500" publicfield="false" guid="92c524d9-2b15-4655-8094-2205cdaeab93"&gt;&lt;settings&gt;&lt;controlname&gt;LabelControl&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="GeneralQuestionEmail" fieldcaption="Your e-mail" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="150" validationerrormessage="Please enter e-mail address in correct format." guid="181e2924-b480-4ea5-a8ae-dc1f8921bd6c" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;AllowMultipleAddresses&gt;False&lt;/AllowMultipleAddresses&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="GeneralQuestionText" fieldcaption="Question" visible="true" columntype="longtext" fieldtype="CustomUserControl" guid="7e7ca78b-ea05-45b7-8fee-71d29f002a86" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;IsTextArea&gt;True&lt;/IsTextArea&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormInserted" fieldcaption="Inserted" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="42f76c7e-d78d-4512-a96d-7acb834fe007"&gt;&lt;settings&gt;&lt;DisplayNow&gt;True&lt;/DisplayNow&gt;&lt;controlname&gt;CalendarControl&lt;/controlname&gt;&lt;EditTime&gt;True&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormUpdated" fieldcaption="Updated" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="096b45ce-a175-4e02-8eda-5d751e513204"&gt;&lt;settings&gt;&lt;DisplayNow&gt;True&lt;/DisplayNow&gt;&lt;controlname&gt;CalendarControl&lt;/controlname&gt;&lt;EditTime&gt;True&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>Form_EcommerceSite_GeneralQuestion</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2012-08-07T08:44:55.22+02:00</ClassLastModified>
+      <ClassGUID>a9ed3bc4-1b8b-4ed2-a245-e71a551fb2d3</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn></ClassSearchTitleColumn>
+      <ClassSearchContentColumn></ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn></ClassSearchCreationDateColumn>
+      <ClassSearchSettings></ClassSearchSettings>
+      <ClassSearchEnabled>false</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactMapping>&lt;form&gt;&lt;field column="ContactEmail" mappedtofield="GeneralQuestionEmail" /&gt;&lt;/form&gt;</ClassContactMapping>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+    <cms_class>
+      <ClassID>3331</ClassID>
+      <ClassDisplayName>Product Question</ClassDisplayName>
+      <ClassName>BizForm.ProductQuestion</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="Form_EcommerceSite_ProductQuestion"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ProductQuestionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="FormInserted" type="xs:dateTime" /&gt;
+              &lt;xs:element name="FormUpdated" type="xs:dateTime" /&gt;
+              &lt;xs:element name="ProductQuestionEmail"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="150" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="ProductQuestionText"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="ProductQuestionProduct"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//Form_EcommerceSite_ProductQuestion" /&gt;
+      &lt;xs:field xpath="ProductQuestionID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ProductQuestionID" fieldcaption="ID" visible="true" columntype="integer" fieldtype="CustomUserControl" isPK="true" columnsize="500" publicfield="false" guid="dfc5b1a5-01a6-4aee-bb61-8d6015952094"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ProductQuestionEmail" fieldcaption="Your e-mail" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="150" validationerrormessage="Please enter e-mail address in correct format." guid="2bb917d6-590a-4c97-b512-1d4196153acb" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;AllowMultipleAddresses&gt;False&lt;/AllowMultipleAddresses&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ProductQuestionText" fieldcaption="Question" visible="true" columntype="longtext" fieldtype="CustomUserControl" guid="2cb08644-6841-4e4e-b1bd-d7e8789191f4" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;IsTextArea&gt;True&lt;/IsTextArea&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ProductQuestionProduct" fieldcaption="Product" visible="true" defaultvalue="&amp;lt;a href=&amp;quot;{% CurrentURL %}&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;{% CurrentDocument %}&amp;lt;a&amp;gt;" columntype="text" fieldtype="CustomUserControl" columnsize="500" publicfield="false" guid="232f53ce-eb47-4f4b-a5d3-f614af316281" ismacro="true"&gt;&lt;settings&gt;&lt;controlname&gt;LabelControl&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormInserted" fieldcaption="Inserted" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="c8a08d3d-0693-42ea-b181-0f4532844276"&gt;&lt;settings&gt;&lt;DisplayNow&gt;True&lt;/DisplayNow&gt;&lt;controlname&gt;CalendarControl&lt;/controlname&gt;&lt;EditTime&gt;True&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FormUpdated" fieldcaption="Updated" columntype="datetime" fieldtype="CustomUserControl" system="true" publicfield="false" guid="0aae18b7-af92-4c17-830d-fbb24a84b546"&gt;&lt;settings&gt;&lt;DisplayNow&gt;True&lt;/DisplayNow&gt;&lt;controlname&gt;CalendarControl&lt;/controlname&gt;&lt;EditTime&gt;True&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>Form_EcommerceSite_ProductQuestion</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2012-08-07T08:51:58.157+02:00</ClassLastModified>
+      <ClassGUID>d377c355-c250-4016-9786-bfb913dc640b</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn></ClassSearchTitleColumn>
+      <ClassSearchContentColumn></ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn></ClassSearchCreationDateColumn>
+      <ClassSearchSettings></ClassSearchSettings>
+      <ClassSearchEnabled>false</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactMapping>&lt;form&gt;&lt;field column="ContactEmail" mappedtofield="ProductQuestionEmail" /&gt;&lt;/form&gt;</ClassContactMapping>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+    <cms_alternativeform>
+      <FormID>1197</FormID>
+      <FormDisplayName>Mobile</FormDisplayName>
+      <FormName>Mobile</FormName>
+      <FormClassID>3330</FormClassID>
+      <FormLayout>&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:GeneralQuestionEmail$$$$input:GeneralQuestionEmail$$ $$validation:GeneralQuestionEmail$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:GeneralQuestionText$$$$input:GeneralQuestionText$$ $$validation:GeneralQuestionText$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+</FormLayout>
+      <FormGUID>0ee1c0c0-a922-43a0-a1f9-152317dbe802</FormGUID>
+      <FormLastModified>2012-06-25T12:42:43.107+02:00</FormLastModified>
+      <FormHideNewParentFields>false</FormHideNewParentFields>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>1198</FormID>
+      <FormDisplayName>Mobile</FormDisplayName>
+      <FormName>Mobile</FormName>
+      <FormClassID>3331</FormClassID>
+      <FormLayout>&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:ProductQuestionEmail$$$$input:ProductQuestionEmail$$ $$validation:ProductQuestionEmail$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:ProductQuestionText$$$$input:ProductQuestionText$$ $$validation:ProductQuestionText$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+$$label:ProductQuestionProduct$$$$input:ProductQuestionProduct$$</FormLayout>
+      <FormGUID>d3beac6d-8c02-4681-bbd5-4056deec2b41</FormGUID>
+      <FormLastModified>2012-08-07T08:29:02.097+02:00</FormLastModified>
+      <FormHideNewParentFields>false</FormHideNewParentFields>
+    </cms_alternativeform>
+  </NewDataSet>
+</cms_form>

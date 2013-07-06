@@ -1,0 +1,36 @@
+﻿<cms_info version="6.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>PUMA-PC</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>localhost:7951</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>12/14/2012 11:37:02 PM</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>6.0.4463.26889 </Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>23</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+    <cms_info>
+      <Key>siteincluded</Key>
+      <Value>True</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

@@ -1,0 +1,166 @@
+﻿<cms_scheduledtask version="7.0">
+  <NewDataSet>
+    <cms_scheduledtask>
+      <TaskID>6783</TaskID>
+      <TaskName>Newsletter.CheckBounces</TaskName>
+      <TaskDisplayName>Check bounced e-mails</TaskDisplayName>
+      <TaskAssemblyName>CMS.Newsletter</TaskAssemblyName>
+      <TaskClass>CMS.Newsletter.BounceChecker</TaskClass>
+      <TaskInterval>hour;3/17/2011 7:42:00 AM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2013-03-11T00:58:15.37-05:00</TaskLastRunTime>
+      <TaskNextRunTime>2013-03-11T01:58:15-05:00</TaskNextRunTime>
+      <TaskLastResult>Monitoring is not enabled for this site.</TaskLastResult>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>0e5fc4db-2707-40d2-97ef-ef1a3a5c0c04</TaskGUID>
+      <TaskLastModified>2013-03-11T00:58:15.37-05:00</TaskLastModified>
+      <TaskExecutions>921</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+      <TaskUseExternalService>true</TaskUseExternalService>
+      <TaskAllowExternalService>true</TaskAllowExternalService>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6784</TaskID>
+      <TaskName>Content.Publish</TaskName>
+      <TaskDisplayName>Content publishing</TaskDisplayName>
+      <TaskAssemblyName>CMS.DocumentEngine</TaskAssemblyName>
+      <TaskClass>CMS.DocumentEngine.ContentPublisher</TaskClass>
+      <TaskInterval>minute;11/3/2010 12:38:30 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData>&lt;data&gt;&lt;/data&gt;</TaskData>
+      <TaskLastRunTime>2013-03-11T01:40:15.583-05:00</TaskLastRunTime>
+      <TaskNextRunTime>2013-03-11T01:41:15-05:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>095ee8d2-8f2d-47b0-9fce-464e39d0aab1</TaskGUID>
+      <TaskLastModified>2013-03-11T01:40:15.63-05:00</TaskLastModified>
+      <TaskExecutions>29221</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+      <TaskAllowExternalService>false</TaskAllowExternalService>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6785</TaskID>
+      <TaskName>Staging.Synchronization</TaskName>
+      <TaskDisplayName>Content synchronization</TaskDisplayName>
+      <TaskAssemblyName>CMS.SynchronizationEngine</TaskAssemblyName>
+      <TaskClass>CMS.Synchronization.StagingWorker</TaskClass>
+      <TaskInterval>hour;11/8/2007 3:55:14 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2008-07-09T01:53:38.327-05:00</TaskLastRunTime>
+      <TaskNextRunTime>2007-11-08T06:55:14-06:00</TaskNextRunTime>
+      <TaskEnabled>false</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>13ec1cf4-3ac0-45c1-93a6-acfdcd6538df</TaskGUID>
+      <TaskLastModified>2011-03-18T05:39:24.17-05:00</TaskLastModified>
+      <TaskExecutions>0</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+      <TaskUseExternalService>true</TaskUseExternalService>
+      <TaskAllowExternalService>true</TaskAllowExternalService>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6786</TaskID>
+      <TaskName>Ecommerce.DeleteOldShoppingCarts</TaskName>
+      <TaskDisplayName>Delete old shopping carts</TaskDisplayName>
+      <TaskAssemblyName>CMS.Ecommerce</TaskAssemblyName>
+      <TaskClass>CMS.Ecommerce.ShoppingCartCleaner</TaskClass>
+      <TaskInterval>day;1/30/2007 11:50:00 AM;1;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2013-03-10T22:01:08.41-05:00</TaskLastRunTime>
+      <TaskNextRunTime>2013-03-11T22:01:08-05:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>14caafb9-f4d5-4ee6-9e5d-d6f8c557f98a</TaskGUID>
+      <TaskLastModified>2013-03-10T22:01:08.427-05:00</TaskLastModified>
+      <TaskExecutions>72</TaskExecutions>
+      <TaskResourceID>111</TaskResourceID>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+      <TaskUseExternalService>true</TaskUseExternalService>
+      <TaskAllowExternalService>true</TaskAllowExternalService>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6817</TaskID>
+      <TaskName>SportingCarzTask</TaskName>
+      <TaskDisplayName>SportingCarzTask</TaskDisplayName>
+      <TaskAssemblyName>App_Code</TaskAssemblyName>
+      <TaskClass>Custom.CustomTask</TaskClass>
+      <TaskInterval>week;2/25/2013 5:40:02 AM;1</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2013-03-06T22:13:40.45-06:00</TaskLastRunTime>
+      <TaskNextRunTime>2013-05-06T05:41:57-05:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>e6df79d6-ff9e-48e7-b2c6-71d8e657798d</TaskGUID>
+      <TaskLastModified>2013-03-06T22:13:40.667-06:00</TaskLastModified>
+      <TaskExecutions>21</TaskExecutions>
+      <TaskRunInSeparateThread>false</TaskRunInSeparateThread>
+      <TaskUseExternalService>false</TaskUseExternalService>
+      <TaskAllowExternalService>true</TaskAllowExternalService>
+      <TaskCondition></TaskCondition>
+      <TaskRunIndividually>false</TaskRunIndividually>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6787</TaskID>
+      <TaskName>UsersDeleteNonActivatedUser</TaskName>
+      <TaskDisplayName>Users delete non activated user</TaskDisplayName>
+      <TaskAssemblyName>CMS.Scheduler</TaskAssemblyName>
+      <TaskClass>CMS.Scheduler.DeleteNonActivatedUser</TaskClass>
+      <TaskInterval>hour;10/2/2008 6:14:26 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2013-03-11T00:58:15.37-05:00</TaskLastRunTime>
+      <TaskNextRunTime>2013-03-11T01:58:15-05:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>74689bde-2542-4b11-ac31-ec6345a927e9</TaskGUID>
+      <TaskLastModified>2013-03-11T00:58:15.37-05:00</TaskLastModified>
+      <TaskExecutions>921</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+      <TaskUseExternalService>true</TaskUseExternalService>
+      <TaskAllowExternalService>true</TaskAllowExternalService>
+    </cms_scheduledtask>
+    <export_task>
+      <TaskID>1048</TaskID>
+      <TaskSiteID>1</TaskSiteID>
+      <TaskTitle>Delete Scheduled task 'SportingCarzTask'</TaskTitle>
+      <TaskData>&lt;NewDataSet&gt;&lt;CMS_ScheduledTask&gt;
+  &lt;TaskID&gt;6816&lt;/TaskID&gt;
+  &lt;TaskName&gt;SportingCarzUpdateTimeClass&lt;/TaskName&gt;
+  &lt;TaskDisplayName&gt;SportingCarzTask&lt;/TaskDisplayName&gt;
+  &lt;TaskAssemblyName&gt;App_Code&lt;/TaskAssemblyName&gt;
+  &lt;TaskClass&gt;Custom.CustomTask&lt;/TaskClass&gt;
+  &lt;TaskInterval&gt;day;2/4/2013 5:45:38 PM;1;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday&lt;/TaskInterval&gt;
+  &lt;TaskData /&gt;
+  &lt;TaskLastRunTime&gt;2013-02-25T04:20:15.98-06:00&lt;/TaskLastRunTime&gt;
+  &lt;TaskNextRunTime&gt;2013-02-26T04:20:15-06:00&lt;/TaskNextRunTime&gt;
+  &lt;TaskLastResult&gt;Error: Unable to cast object of type 'Custom.CustomTask' to type 'CMS.Scheduler.ITask'.&lt;/TaskLastResult&gt;
+  &lt;TaskEnabled&gt;true&lt;/TaskEnabled&gt;
+  &lt;TaskSiteID&gt;1&lt;/TaskSiteID&gt;
+  &lt;TaskDeleteAfterLastRun&gt;false&lt;/TaskDeleteAfterLastRun&gt;
+  &lt;TaskServerName /&gt;
+  &lt;TaskGUID&gt;08c5d820-f1fa-4c9e-8921-8f1ae586bd8a&lt;/TaskGUID&gt;
+  &lt;TaskLastModified&gt;2013-02-25T04:20:15.98-06:00&lt;/TaskLastModified&gt;
+  &lt;TaskExecutions&gt;0&lt;/TaskExecutions&gt;
+  &lt;TaskRunInSeparateThread&gt;false&lt;/TaskRunInSeparateThread&gt;
+  &lt;TaskUseExternalService&gt;false&lt;/TaskUseExternalService&gt;
+  &lt;TaskAllowExternalService&gt;true&lt;/TaskAllowExternalService&gt;
+  &lt;TaskCondition /&gt;
+  &lt;TaskRunIndividually&gt;false&lt;/TaskRunIndividually&gt;
+&lt;/CMS_ScheduledTask&gt;&lt;ObjectTranslation&gt;&lt;ClassName&gt;cms_site&lt;/ClassName&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;CodeName&gt;Carz&lt;/CodeName&gt;&lt;/ObjectTranslation&gt;&lt;/NewDataSet&gt;</TaskData>
+      <TaskTime>2013-02-25T04:30:28.17-06:00</TaskTime>
+      <TaskType>DELETEOBJ</TaskType>
+      <TaskObjectType>cms.scheduledtask</TaskObjectType>
+      <TaskObjectID>6816</TaskObjectID>
+    </export_task>
+  </NewDataSet>
+</cms_scheduledtask>

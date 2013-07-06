@@ -1,0 +1,19 @@
+﻿<boardmessage_65c2ff61-8bd3-4eff-93ac-2d1d41cffe5b version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3173</MessageID>
+      <MessageUserName>Jackie</MessageUserName>
+      <MessageText>I like the red ones. They are so cool :-)</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4042</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-06T23:19:36.853+02:00</MessageInserted>
+      <MessageLastModified>2012-06-06T23:19:37.217+02:00</MessageLastModified>
+      <MessageGUID>5358b424-278d-41bb-a4ec-a7bf0455cf3c</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_65c2ff61-8bd3-4eff-93ac-2d1d41cffe5b>

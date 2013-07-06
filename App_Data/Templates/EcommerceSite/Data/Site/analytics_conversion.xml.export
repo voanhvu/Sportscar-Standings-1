@@ -1,0 +1,31 @@
+﻿<analytics_conversion version="7.0">
+  <NewDataSet>
+    <analytics_conversion>
+      <ConversionID>468</ConversionID>
+      <ConversionName>AddItemToCart</ConversionName>
+      <ConversionDisplayName>AddItemToCart</ConversionDisplayName>
+      <ConversionDescription>User has added a product to his or her shopping cart.</ConversionDescription>
+      <ConversionGUID>1403dea3-7c50-47c0-99f6-bf7d6689d99d</ConversionGUID>
+      <ConversionLastModified>2012-07-30T09:40:12.2+02:00</ConversionLastModified>
+      <ConversionSiteID>135</ConversionSiteID>
+    </analytics_conversion>
+    <analytics_conversion>
+      <ConversionID>467</ConversionID>
+      <ConversionName>FinishedOrder</ConversionName>
+      <ConversionDisplayName>FinishedOrder</ConversionDisplayName>
+      <ConversionDescription>User has finished an order.</ConversionDescription>
+      <ConversionGUID>dbc200df-8645-4bf2-86dc-63f96ed0b943</ConversionGUID>
+      <ConversionLastModified>2012-08-10T14:24:09.093+02:00</ConversionLastModified>
+      <ConversionSiteID>135</ConversionSiteID>
+    </analytics_conversion>
+    <analytics_conversion>
+      <ConversionID>469</ConversionID>
+      <ConversionName>PageView</ConversionName>
+      <ConversionDisplayName>PageView</ConversionDisplayName>
+      <ConversionDescription>Number of views.</ConversionDescription>
+      <ConversionGUID>aac6593e-2ffd-4f73-be3c-3e87c8eae117</ConversionGUID>
+      <ConversionLastModified>2012-08-10T14:28:02.243+02:00</ConversionLastModified>
+      <ConversionSiteID>135</ConversionSiteID>
+    </analytics_conversion>
+  </NewDataSet>
+</analytics_conversion>

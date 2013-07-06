@@ -1,0 +1,14 @@
+﻿<objecttranslation version="7.0">
+  <NewDataSet>
+    <objecttranslation>
+      <ClassName>cms_badge</ClassName>
+      <ID>43</ID>
+      <CodeName>Member</CodeName>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_user</ClassName>
+      <ID>76</ID>
+      <CodeName>MyNewImportedUser</CodeName>
+    </objecttranslation>
+  </NewDataSet>
+</objecttranslation>

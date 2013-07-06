@@ -1,0 +1,25 @@
+﻿<chat_supportcannedresponse version="7.0">
+  <NewDataSet>
+    <chat_supportcannedresponse>
+      <ChatSupportCannedResponseID>16</ChatSupportCannedResponseID>
+      <ChatSupportCannedResponseText>Thank you for using our service, feel free to contact us again if you need any further assistance</ChatSupportCannedResponseText>
+      <ChatSupportCannedResponseTagName>bye</ChatSupportCannedResponseTagName>
+      <ChatSupportCannedResponseSiteID>135</ChatSupportCannedResponseSiteID>
+      <ChatSupportCannedResponseName>bye</ChatSupportCannedResponseName>
+    </chat_supportcannedresponse>
+    <chat_supportcannedresponse>
+      <ChatSupportCannedResponseID>17</ChatSupportCannedResponseID>
+      <ChatSupportCannedResponseText>Please feel free to contact our support at http://www.kentico.com/Support for any further assistance.</ChatSupportCannedResponseText>
+      <ChatSupportCannedResponseTagName>contactsupport</ChatSupportCannedResponseTagName>
+      <ChatSupportCannedResponseSiteID>135</ChatSupportCannedResponseSiteID>
+      <ChatSupportCannedResponseName>contactsupport</ChatSupportCannedResponseName>
+    </chat_supportcannedresponse>
+    <chat_supportcannedresponse>
+      <ChatSupportCannedResponseID>15</ChatSupportCannedResponseID>
+      <ChatSupportCannedResponseText>Hello, how can I help you?</ChatSupportCannedResponseText>
+      <ChatSupportCannedResponseTagName>hello</ChatSupportCannedResponseTagName>
+      <ChatSupportCannedResponseSiteID>135</ChatSupportCannedResponseSiteID>
+      <ChatSupportCannedResponseName>hello</ChatSupportCannedResponseName>
+    </chat_supportcannedresponse>
+  </NewDataSet>
+</chat_supportcannedresponse>

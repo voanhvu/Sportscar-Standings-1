@@ -1,0 +1,39 @@
+﻿<polls_poll version="7.0">
+  <NewDataSet>
+    <polls_poll>
+      <PollID>1</PollID>
+      <PollCodeName>CompareCars</PollCodeName>
+      <PollDisplayName>Compare Cars</PollDisplayName>
+      <PollTitle>Monthly Poll</PollTitle>
+      <PollAllowMultipleAnswers>false</PollAllowMultipleAnswers>
+      <PollQuestion>In a battle of American muscle cars, which car is faster, Camaro or Mustang?</PollQuestion>
+      <PollAccess>0</PollAccess>
+      <PollResponseMessage>Thanks, your vote has been cast.</PollResponseMessage>
+      <PollGUID>c62b200f-368f-49e3-ae9c-5636e57346d2</PollGUID>
+      <PollLastModified>2013-02-01T09:28:17.017-06:00</PollLastModified>
+      <PollSiteID>1</PollSiteID>
+      <PollLogActivity>true</PollLogActivity>
+    </polls_poll>
+    <polls_pollanswer>
+      <AnswerID>1</AnswerID>
+      <AnswerText>King Camaro</AnswerText>
+      <AnswerOrder>1</AnswerOrder>
+      <AnswerCount>11</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>1</AnswerPollID>
+      <AnswerGUID>a6fb0264-d5fc-4ce5-a515-16816ffeffb0</AnswerGUID>
+      <AnswerLastModified>2012-12-15T13:52:51.987-06:00</AnswerLastModified>
+      <AnswerHideForm>false</AnswerHideForm>
+    </polls_pollanswer>
+    <polls_pollanswer>
+      <AnswerID>2</AnswerID>
+      <AnswerText>Master Mustang</AnswerText>
+      <AnswerOrder>2</AnswerOrder>
+      <AnswerCount>11</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>1</AnswerPollID>
+      <AnswerGUID>43e74360-5c5a-40b7-9509-4d8b11f8e8df</AnswerGUID>
+      <AnswerLastModified>2012-12-15T13:52:38.737-06:00</AnswerLastModified>
+    </polls_pollanswer>
+  </NewDataSet>
+</polls_poll>

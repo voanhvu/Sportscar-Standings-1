@@ -1,0 +1,189 @@
+﻿<newsletter_emailtemplate version="7.0">
+  <NewDataSet>
+    <newsletter_emailtemplate>
+      <TemplateID>248</TemplateID>
+      <TemplateDisplayName>E-commerce Site - Newsletter Issue Template</TemplateDisplayName>
+      <TemplateName>EcommerceSite.NewsletterIssueTemplate</TemplateName>
+      <TemplateBody>&lt;table cellpadding="0" cellspacing="0" width="100%"&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td bgcolor="#f9f9f9" colspan="2" width="520"&gt;
+				&lt;center&gt;
+					&lt;table width="520"&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;td height="20"&gt;
+									&lt;p align="right" style="margin:0;font-family:Arial;font-size:10px;font-weight:bold;"&gt;
+										$$Date:150:20$$&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+				&lt;/center&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td bgcolor="#f9f9f9"&gt;
+				&lt;center&gt;
+					&lt;table bgcolor="white" cellpadding="0" cellspacing="0" width="600"&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;td align="center" bgcolor="white" colspan="2" height="70" style="width:520px;height:70px;margin:0;padding:0;" width="520"&gt;
+									&lt;center&gt;
+										&lt;table style="background:white;height:70px;margin:0;padding:0;"&gt;
+											&lt;tbody&gt;
+												&lt;tr&gt;
+													&lt;td bgcolor="white" height="70" style="text-align:left;height:70px;width:400px;margin:0;padding:0;" width="400"&gt;
+														$$Logo:220:50$$&lt;/td&gt;
+													&lt;td bgcolor="white" height="70" style="height:70px;width:120px;margin:0;padding:0;" width="120"&gt;
+														&lt;p align="right" style="padding:20px 0 0 0;margin:0;"&gt;
+															&lt;font face="Georgia" size="5"&gt;Newsletter&lt;/font&gt;&lt;/p&gt;
+													&lt;/td&gt;
+												&lt;/tr&gt;
+											&lt;/tbody&gt;
+										&lt;/table&gt;
+									&lt;/center&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td bgcolor="#00adf6" colspan="2" style="line-height:0;" width="100%"&gt;
+									&lt;hr style="height:10px;color:#00adf6;background:#00adf6;border:none;" /&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td bgcolor="white" colspan="2"&gt;
+									&lt;center&gt;
+										$$Content:520:400$$&lt;/center&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td colspan="2"&gt;
+									&lt;center&gt;
+										&lt;table width="520"&gt;
+											&lt;tbody&gt;
+												&lt;tr&gt;
+													&lt;td align="left" bgcolor="white" colspan="2" height="80" width="520"&gt;
+														&lt;font face="Arial" size="1"&gt;You are receiving this e-mail since you&amp;rsquo;ve subscribed to the E-Commerce Site Newsletter. If you wish to unsubscribe, please click here: {%UnsubscribeLink%}&lt;/font&gt;&lt;/td&gt;
+												&lt;/tr&gt;
+											&lt;/tbody&gt;
+										&lt;/table&gt;
+									&lt;/center&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td bgcolor="#f9f9f9" colspan="2" height="40" width="600"&gt;
+									&lt;center&gt;
+										&lt;table width="520"&gt;
+											&lt;tbody&gt;
+												&lt;tr&gt;
+													&lt;td align="left" height="40" width="520"&gt;
+														$$FooterLogo:100:30$$&lt;/td&gt;
+												&lt;/tr&gt;
+											&lt;/tbody&gt;
+										&lt;/table&gt;
+									&lt;/center&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+				&lt;/center&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br /&gt;</TemplateBody>
+      <TemplateSiteID>135</TemplateSiteID>
+      <TemplateHeader>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=UTF-8" /&gt;
+&lt;title&gt;E-commerce Starter Site newsletter&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#f9f9f9"&gt;</TemplateHeader>
+      <TemplateFooter>&lt;/body&gt;
+&lt;/html&gt;</TemplateFooter>
+      <TemplateType>I</TemplateType>
+      <TemplateStylesheetText>table td.line
+{
+  line-height: 0;
+}
+
+.text
+{
+  line-height: 18px;
+}
+
+.img
+{
+  border: 1px solid #dfdfdf;
+}
+
+a
+{
+  color: #000000;
+  text-decoration: none;  
+}
+
+a.text
+{
+  text-decoration: underline;
+  font-weight: bold;
+  color: #626262;
+}
+
+p
+{
+  margin: 0;
+}</TemplateStylesheetText>
+      <TemplateGUID>82f2a7e1-272c-4cd5-8b0e-a7285e129e8f</TemplateGUID>
+      <TemplateLastModified>2012-08-31T11:58:16.617+02:00</TemplateLastModified>
+    </newsletter_emailtemplate>
+    <newsletter_emailtemplate>
+      <TemplateID>246</TemplateID>
+      <TemplateDisplayName>E-commerce Site - Subscription Template</TemplateDisplayName>
+      <TemplateName>EcommerceSite.SubscriptionTemplate</TemplateName>
+      <TemplateBody>&lt;h3&gt;
+	Hello,&lt;/h3&gt;
+&lt;p&gt;
+	you have been successfully subscribed to E-commerce starter site newsletter.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	&lt;a href="{%UnsubscriptionLink%}" title="Unsubsribe via this link"&gt;Click here to unsubscribe&lt;/a&gt;&lt;/p&gt;</TemplateBody>
+      <TemplateSiteID>135</TemplateSiteID>
+      <TemplateHeader>&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;</TemplateHeader>
+      <TemplateFooter>&lt;/body&gt;
+&lt;/html&gt;</TemplateFooter>
+      <TemplateType>S</TemplateType>
+      <TemplateStylesheetText>body, td
+{
+  font-size: 12px; 
+  font-family: arial
+}</TemplateStylesheetText>
+      <TemplateGUID>0ccf30af-a2af-49bb-931f-5d3aa20b1fa6</TemplateGUID>
+      <TemplateLastModified>2012-05-28T16:25:54.74+02:00</TemplateLastModified>
+      <TemplateSubject>E-commerce starter site newsletter Subscription</TemplateSubject>
+    </newsletter_emailtemplate>
+    <newsletter_emailtemplate>
+      <TemplateID>247</TemplateID>
+      <TemplateDisplayName>E-commerce Site - Unsubscription Template</TemplateDisplayName>
+      <TemplateName>EcommerceSite.UnsubscriptionTemplate</TemplateName>
+      <TemplateBody>You&amp;#39;ve been successfully unsubscribed from the E-commerce starter site newsletter.</TemplateBody>
+      <TemplateSiteID>135</TemplateSiteID>
+      <TemplateHeader>&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;</TemplateHeader>
+      <TemplateFooter>&lt;/body&gt;
+&lt;/html&gt;</TemplateFooter>
+      <TemplateType>U</TemplateType>
+      <TemplateStylesheetText></TemplateStylesheetText>
+      <TemplateGUID>818c0308-e078-4a1e-b5e2-6219890dcff2</TemplateGUID>
+      <TemplateLastModified>2012-05-28T16:26:01.4+02:00</TemplateLastModified>
+      <TemplateSubject>E-commerce starter site newsletter Unsubscription</TemplateSubject>
+    </newsletter_emailtemplate>
+  </NewDataSet>
+</newsletter_emailtemplate>

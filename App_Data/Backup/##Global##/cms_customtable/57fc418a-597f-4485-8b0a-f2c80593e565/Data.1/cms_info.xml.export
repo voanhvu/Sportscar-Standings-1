@@ -1,0 +1,36 @@
+﻿<cms_info version="7.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>W12</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>sportscarstandings.com</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>4/15/2013 9:18:38 PM</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>7.0.4640.25526 </Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>0</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+    <cms_info>
+      <Key>singleobject</Key>
+      <Value>True</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

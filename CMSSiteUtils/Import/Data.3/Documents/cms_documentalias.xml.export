@@ -1,0 +1,17 @@
+﻿<cms_documentalias version="7.0">
+  <NewDataSet>
+    <cms_documentalias>
+      <AliasID>1</AliasID>
+      <AliasNodeID>38</AliasNodeID>
+      <AliasCulture></AliasCulture>
+      <AliasURLPath>/Rankings</AliasURLPath>
+      <AliasExtensions></AliasExtensions>
+      <AliasCampaign></AliasCampaign>
+      <AliasWildcardRule></AliasWildcardRule>
+      <AliasPriority>1</AliasPriority>
+      <AliasGUID>fc9e4241-bcfa-4b62-8275-55ff56d7ba9c</AliasGUID>
+      <AliasLastModified>2012-12-15T16:38:13.247-08:00</AliasLastModified>
+      <AliasSiteID>1</AliasSiteID>
+    </cms_documentalias>
+  </NewDataSet>
+</cms_documentalias>

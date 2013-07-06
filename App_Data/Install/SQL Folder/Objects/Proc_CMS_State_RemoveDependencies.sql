@@ -1,0 +1,8 @@
+CREATE PROCEDURE [Proc_CMS_State_RemoveDependencies]
+ @ID int
+AS
+BEGIN
+ BEGIN TRANSACTION;
+ 
+ COMMIT TRANSACTION;
+END

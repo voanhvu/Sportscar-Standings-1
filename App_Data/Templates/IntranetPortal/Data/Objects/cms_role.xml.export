@@ -1,0 +1,36 @@
+﻿<cms_role version="7.0">
+  <NewDataSet>
+    <cms_role>
+      <RoleID>3595</RoleID>
+      <RoleDisplayName>Chat support engineers</RoleDisplayName>
+      <RoleName>ChatSupportEngineers</RoleName>
+      <RoleDescription></RoleDescription>
+      <RoleGUID>34e9b97b-237d-4b76-b5a6-92810406eda2</RoleGUID>
+      <RoleLastModified>2012-08-29T14:38:55.473+02:00</RoleLastModified>
+      <RoleIsDomain>false</RoleIsDomain>
+    </cms_role>
+    <cms_rolepermission>
+      <RoleID>3595</RoleID>
+      <PermissionID>8097</PermissionID>
+    </cms_rolepermission>
+    <cms_userrole>
+      <UserID>53</UserID>
+      <RoleID>3595</RoleID>
+      <UserRoleID>8149</UserRoleID>
+    </cms_userrole>
+    <cms_userrole>
+      <UserID>1645</UserID>
+      <RoleID>3595</RoleID>
+      <UserRoleID>8155</UserRoleID>
+    </cms_userrole>
+    <cms_roleuielement>
+      <RoleID>3595</RoleID>
+      <ElementID>2310</ElementID>
+    </cms_roleuielement>
+    <cms_widgetrole>
+      <WidgetID>410</WidgetID>
+      <RoleID>3595</RoleID>
+      <PermissionID>4307</PermissionID>
+    </cms_widgetrole>
+  </NewDataSet>
+</cms_role>

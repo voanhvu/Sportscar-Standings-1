@@ -1,0 +1,67 @@
+﻿<cms_category version="7.0">
+  <NewDataSet>
+    <cms_category>
+      <CategoryID>6</CategoryID>
+      <CategoryDisplayName>Class</CategoryDisplayName>
+      <CategoryName>Class</CategoryName>
+      <CategoryDescription></CategoryDescription>
+      <CategoryCount>0</CategoryCount>
+      <CategoryEnabled>true</CategoryEnabled>
+      <CategoryGUID>31d7a343-b3b6-40f6-be7d-cad226573636</CategoryGUID>
+      <CategoryLastModified>2012-12-25T19:02:52.083-08:00</CategoryLastModified>
+      <CategorySiteID>1</CategorySiteID>
+      <CategoryIDPath>/00000006</CategoryIDPath>
+      <CategoryNamePath>/Class</CategoryNamePath>
+      <CategoryLevel>0</CategoryLevel>
+      <CategoryOrder>1</CategoryOrder>
+    </cms_category>
+    <cms_category>
+      <CategoryID>7</CategoryID>
+      <CategoryDisplayName>1-2 Sec</CategoryDisplayName>
+      <CategoryName>1-2s</CategoryName>
+      <CategoryDescription></CategoryDescription>
+      <CategoryCount>0</CategoryCount>
+      <CategoryEnabled>true</CategoryEnabled>
+      <CategoryGUID>fd2cebc2-8777-4632-a1f1-7ad48425da6a</CategoryGUID>
+      <CategoryLastModified>2012-12-25T19:15:27.29-08:00</CategoryLastModified>
+      <CategorySiteID>1</CategorySiteID>
+      <CategoryParentID>6</CategoryParentID>
+      <CategoryIDPath>/00000006/00000007</CategoryIDPath>
+      <CategoryNamePath>/Class/1-2 Sec</CategoryNamePath>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryOrder>1</CategoryOrder>
+    </cms_category>
+    <cms_category>
+      <CategoryID>5</CategoryID>
+      <CategoryDisplayName>3-4 Sec</CategoryDisplayName>
+      <CategoryName>3-4s</CategoryName>
+      <CategoryDescription></CategoryDescription>
+      <CategoryCount>0</CategoryCount>
+      <CategoryEnabled>true</CategoryEnabled>
+      <CategoryGUID>a271490e-b520-4faa-a41e-f1e81bf3e528</CategoryGUID>
+      <CategoryLastModified>2012-12-25T19:13:29.94-08:00</CategoryLastModified>
+      <CategorySiteID>1</CategorySiteID>
+      <CategoryParentID>6</CategoryParentID>
+      <CategoryIDPath>/00000006/00000005</CategoryIDPath>
+      <CategoryNamePath>/Class/3-4 Sec</CategoryNamePath>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryOrder>2</CategoryOrder>
+    </cms_category>
+    <cms_category>
+      <CategoryID>8</CategoryID>
+      <CategoryDisplayName>5-6 Sec</CategoryDisplayName>
+      <CategoryName>5-6s</CategoryName>
+      <CategoryDescription></CategoryDescription>
+      <CategoryCount>0</CategoryCount>
+      <CategoryEnabled>true</CategoryEnabled>
+      <CategoryGUID>093ee62e-8e6c-4d8d-a08f-11b189455e26</CategoryGUID>
+      <CategoryLastModified>2012-12-25T19:15:38.913-08:00</CategoryLastModified>
+      <CategorySiteID>1</CategorySiteID>
+      <CategoryParentID>6</CategoryParentID>
+      <CategoryIDPath>/00000006/00000008</CategoryIDPath>
+      <CategoryNamePath>/Class/5-6 Sec</CategoryNamePath>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryOrder>3</CategoryOrder>
+    </cms_category>
+  </NewDataSet>
+</cms_category>

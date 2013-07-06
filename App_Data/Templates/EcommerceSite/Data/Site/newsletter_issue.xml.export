@@ -1,0 +1,149 @@
+﻿<newsletter_issue version="7.0">
+  <NewDataSet>
+    <newsletter_newsletterissue>
+      <IssueID>2508</IssueID>
+      <IssueSubject>E-Commerce Starter Site newsletter</IssueSubject>
+      <IssueText>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;content&gt;
+  &lt;region id="Date"&gt;august | 2012&lt;/region&gt;
+  &lt;region id="Logo"&gt;&amp;lt;img alt="E-Commerce Site Logo" height="32" src="~/CMSPages/GetMetaFile.aspx?fileguid=2af5b079-eec3-4a0d-b99d-cc69947e372e" width="183" /&amp;gt;&lt;/region&gt;
+  &lt;region id="Content"&gt;&amp;lt;table width="520"&amp;gt;
+	&amp;lt;tbody&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="35" style="line-height:0;" width="100%"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left"&amp;gt;
+				&amp;lt;a href="~/Products/Electronics/Media-Players/Music/Apple-iPod-shuffle-2GB.aspx" style="color:#000000;text-decoration: none;" title="Let the music play"&amp;gt;&amp;lt;font color="black" face="Georgia" size="6"&amp;gt;&amp;lt;b&amp;gt;Let the music play&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="5" style="line-height:0;"&amp;gt;
+				&amp;lt;hr style="color: #e5e5e5;background-color: #e5e5e5;height: 5px;border: none;" /&amp;gt;
+			&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="20" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td&amp;gt;
+				&amp;lt;a href="~/Products/Electronics/Media-Players/Music/Apple-iPod-shuffle-2GB.aspx"&amp;gt;&amp;lt;img alt="Let the music play with Apple iPod Shuffle" src="~/EcommerceSite/media/HeadlineBannerImages/apple_ipod_shuffle.jpg" style="border: 1px solid rgb(223, 223, 223); width: 520px; height: 160px; " /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="10" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left" style="line-height: 18px;"&amp;gt;
+				&amp;lt;font face="Arial" size="3"&amp;gt;&amp;lt;b&amp;gt;With buttons, VoiceOver, and playlists, it&amp;amp;#39;s the perfect mix.&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left" style="line-height: 18px;"&amp;gt;
+				&amp;lt;font color="#626262" face="Arial" size="2"&amp;gt;Play your music on the go with the iPod shuffle. With its clip-and-go design, sleek finish available in five brilliant colors, and nifty features like VoiceOver and Genius Mixes, the iPod shuffle offers a smart and effective way to bring your essential music everywhere. Take a look at complete specifications &amp;lt;a href="~/Products/Electronics/Media-Players/Music/Apple-iPod-shuffle-2GB.aspx" style="text-decoration: underline;font-weight: bold;color: #626262;" title="Let the music play"&amp;gt;here&amp;lt;/a&amp;gt;.&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="2" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="2" style="line-height:0;"&amp;gt;
+				&amp;lt;hr style="color: #e5e5e5;background-color: #e5e5e5;height: 2px;border: none;" /&amp;gt;
+			&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+	&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;br /&amp;gt;
+&amp;lt;table width="520"&amp;gt;
+	&amp;lt;tbody&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="35" style="line-height:0;" width="100%"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left"&amp;gt;
+				&amp;lt;a href="#" style="color: #000000;text-decoration: none;" title="Feel the power of 12 cores"&amp;gt;&amp;lt;font color="black" face="Georgia" size="6"&amp;gt;&amp;lt;b&amp;gt;Feel the power of 12 cores&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="5" style="line-height:0;"&amp;gt;
+				&amp;lt;hr style="color: #e5e5e5;background-color: #e5e5e5;height: 5px;border: none;" /&amp;gt;
+			&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="20" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left"&amp;gt;
+				&amp;lt;a href="~/Products/Computers/Desktops/Apple-Mac-Pro-12-Core.aspx" title="Feel the power of 12 cores"&amp;gt;&amp;lt;img alt="Feel the power of 12 cores in Apple Mac Pro" src="~/getmedia/44d7cb35-2a4c-4bea-885e-13e96c1a9ef8/apple_mac_pro.aspx?width=520&amp;amp;amp;height=160" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(223, 223, 223); border-right-color: rgb(223, 223, 223); border-bottom-color: rgb(223, 223, 223); border-left-color: rgb(223, 223, 223); border-image: initial; width: 520px; height: 160px; " /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="10" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left" style="line-height: 18px;"&amp;gt;
+				&amp;lt;font face="Arial" size="3"&amp;gt;&amp;lt;b&amp;gt;The new Mac Pro delivers more processing power, more graphics performance, and more storage options. Its the worlds newest superpower.&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td align="left" style="line-height: 18px;"&amp;gt;
+				&amp;lt;font color="#626262" face="Arial" size="2"&amp;gt;The Apple Mac Pro 12 Core is a powerful desktop computer, with 2.66 GHz of CPU and boasting 1TB SATA hard drive with a speed of 7200rpm, the Mac Pro now comes with 6GB of RAM which is fully expandable up to 32GB. The Apple Mac Pro 12-core is an incredibly powerful desktop PC and we are happy to announce this beast of a machine is now available in our store. See more details &amp;lt;a href="~/Products/Computers/Desktops/Apple-Mac-Pro-12-Core.aspx" style="text-decoration: underline;font-weight: bold;color: #626262;" title="Feel the power of 12 cores"&amp;gt;here&amp;lt;/a&amp;gt;.&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="2" style="line-height:0;"&amp;gt;
+				&amp;amp;nbsp;&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;td height="2" style="line-height:0;"&amp;gt;
+				&amp;lt;hr style="color: #e5e5e5;background-color: #e5e5e5;height: 2px;border: none;" /&amp;gt;
+			&amp;lt;/td&amp;gt;
+		&amp;lt;/tr&amp;gt;
+	&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;br /&amp;gt;
+&lt;/region&gt;
+  &lt;region id="FooterLogo"&gt;&amp;lt;img alt="E-commerce Site Logo" src="~/getmetafile/d9445663-8015-4c5c-82e9-7ad8ba200225/newsletterlogofooter.aspx" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; width: 84px; height: 16px; " /&amp;gt;&lt;/region&gt;
+&lt;/content&gt;</IssueText>
+      <IssueUnsubscribed>0</IssueUnsubscribed>
+      <IssueNewsletterID>142</IssueNewsletterID>
+      <IssueTemplateID>248</IssueTemplateID>
+      <IssueSentEmails>0</IssueSentEmails>
+      <IssueShowInNewsletterArchive>true</IssueShowInNewsletterArchive>
+      <IssueGUID>1e838d01-96ac-409f-9c9e-e778561e9f0f</IssueGUID>
+      <IssueLastModified>2012-06-22T10:06:47.213+02:00</IssueLastModified>
+      <IssueSiteID>135</IssueSiteID>
+      <IssueSenderName>E-commerce Site</IssueSenderName>
+      <IssueSenderEmail>sender@localhost.local</IssueSenderEmail>
+    </newsletter_newsletterissue>
+    <cms_metafile>
+      <MetaFileID>4908</MetaFileID>
+      <MetaFileObjectID>2508</MetaFileObjectID>
+      <MetaFileObjectType>newsletter.issue</MetaFileObjectType>
+      <MetaFileGroupName>Issue</MetaFileGroupName>
+      <MetaFileName>newsletterlogo.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>4364</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>188</MetaFileImageWidth>
+      <MetaFileImageHeight>32</MetaFileImageHeight>
+      <MetaFileGUID>2af5b079-eec3-4a0d-b99d-cc69947e372e</MetaFileGUID>
+      <MetaFileLastModified>2012-04-02T14:37:27.853+02:00</MetaFileLastModified>
+      <MetaFileSiteID>135</MetaFileSiteID>
+    </cms_metafile>
+    <cms_metafile>
+      <MetaFileID>4909</MetaFileID>
+      <MetaFileObjectID>2508</MetaFileObjectID>
+      <MetaFileObjectType>newsletter.issue</MetaFileObjectType>
+      <MetaFileGroupName>Issue</MetaFileGroupName>
+      <MetaFileName>newsletterlogofooter.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>2189</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>84</MetaFileImageWidth>
+      <MetaFileImageHeight>16</MetaFileImageHeight>
+      <MetaFileGUID>d9445663-8015-4c5c-82e9-7ad8ba200225</MetaFileGUID>
+      <MetaFileLastModified>2012-04-02T15:30:35.637+02:00</MetaFileLastModified>
+      <MetaFileSiteID>135</MetaFileSiteID>
+    </cms_metafile>
+  </NewDataSet>
+</newsletter_issue>

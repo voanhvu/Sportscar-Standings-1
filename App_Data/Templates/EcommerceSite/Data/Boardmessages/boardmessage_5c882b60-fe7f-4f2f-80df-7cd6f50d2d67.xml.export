@@ -1,0 +1,66 @@
+﻿<boardmessage_5c882b60-fe7f-4f2f-80df-7cd6f50d2d67 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3266</MessageID>
+      <MessageUserName>Stuart</MessageUserName>
+      <MessageText>Yip, I'd like to buy it soon. So far, I saw it only in our mall.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4045</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-29T16:22:02.61+02:00</MessageInserted>
+      <MessageLastModified>2012-08-29T16:22:02.62+02:00</MessageLastModified>
+      <MessageGUID>d32106b0-cfcc-4070-839e-359ffc08725f</MessageGUID>
+      <MessageRatingValue>0.6</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3270</MessageID>
+      <MessageUserName>Leonard</MessageUserName>
+      <MessageText>The motion plus technology is too smart for me - objects are moving way too smoothly and the final feeling is not not natural move.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4045</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-30T15:11:24.28+02:00</MessageInserted>
+      <MessageLastModified>2012-08-30T15:11:24.697+02:00</MessageLastModified>
+      <MessageGUID>8584288c-996e-4679-9a67-8cd3fb31a2a5</MessageGUID>
+      <MessageRatingValue>0.6</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3264</MessageID>
+      <MessageUserName>Carter</MessageUserName>
+      <MessageText>Its response is way too slow for me. However, overall experience is good.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4045</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-29T16:11:09.23+02:00</MessageInserted>
+      <MessageLastModified>2012-08-29T16:11:09.257+02:00</MessageLastModified>
+      <MessageGUID>46191c44-5f7f-45bf-829b-ef3e66602186</MessageGUID>
+      <MessageRatingValue>0.6</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3177</MessageID>
+      <MessageUserName>James</MessageUserName>
+      <MessageText>It has perfectly sharp display. Thumb up.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4045</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-06T23:58:40.17+02:00</MessageInserted>
+      <MessageLastModified>2012-06-06T23:58:40.17+02:00</MessageLastModified>
+      <MessageGUID>3172ccf4-8062-4629-abca-fe59262ccd69</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_5c882b60-fe7f-4f2f-80df-7cd6f50d2d67>

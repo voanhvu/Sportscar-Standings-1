@@ -1,0 +1,16 @@
+﻿<cms_site version="6.0">
+  <NewDataSet>
+    <cms_site>
+      <SiteID>3</SiteID>
+      <SiteName>Carz</SiteName>
+      <SiteDisplayName>Carz</SiteDisplayName>
+      <SiteDescription>Sample blank web site</SiteDescription>
+      <SiteStatus>RUNNING</SiteStatus>
+      <SiteDomainName>localhost:7951</SiteDomainName>
+      <SiteDefaultStylesheetID>4</SiteDefaultStylesheetID>
+      <SiteDefaultVisitorCulture></SiteDefaultVisitorCulture>
+      <SiteGUID>cc15d501-908b-4a2f-8e87-5ffe24e690b1</SiteGUID>
+      <SiteLastModified>2011-09-09T00:58:54.743-06:00</SiteLastModified>
+    </cms_site>
+  </NewDataSet>
+</cms_site>

@@ -1,0 +1,25 @@
+﻿<cms_site version="7.0">
+  <NewDataSet>
+    <cms_site>
+      <SiteID>1</SiteID>
+      <SiteName>Carz</SiteName>
+      <SiteDisplayName>Carz</SiteDisplayName>
+      <SiteDescription>Sample blank web site</SiteDescription>
+      <SiteStatus>RUNNING</SiteStatus>
+      <SiteDomainName>www.sportscarstandings.com</SiteDomainName>
+      <SiteDefaultVisitorCulture></SiteDefaultVisitorCulture>
+      <SiteGUID>5f694afe-4653-46a6-9d55-3ecc9d197748</SiteGUID>
+      <SiteLastModified>2013-07-02T13:58:17.837-07:00</SiteLastModified>
+    </cms_site>
+    <cms_sitedomainalias>
+      <SiteDomainAliasID>1</SiteDomainAliasID>
+      <SiteDomainAliasName>sportscarstandings.com</SiteDomainAliasName>
+      <SiteID>1</SiteID>
+      <SiteDefaultVisitorCulture></SiteDefaultVisitorCulture>
+      <SiteDomainGUID>193c4c05-fd9a-4237-9b59-9f9ef6c067b7</SiteDomainGUID>
+      <SiteDomainLastModified>2012-12-14T21:20:47.797-08:00</SiteDomainLastModified>
+      <SiteDomainDefaultAliasPath></SiteDomainDefaultAliasPath>
+      <SiteDomainRedirectUrl></SiteDomainRedirectUrl>
+    </cms_sitedomainalias>
+  </NewDataSet>
+</cms_site>

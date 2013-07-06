@@ -1,0 +1,21 @@
+﻿<boardmessage_3d28720b-11e3-49a9-8baa-8693c39de1ed version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3186</MessageID>
+      <MessageUserName>Andy</MessageUserName>
+      <MessageText>This iPad is really a must!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4035</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T00:38:04.06+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T00:38:04.063+02:00</MessageLastModified>
+      <MessageGUID>adeea668-bb12-4005-b45b-aed9dc522d85</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_3d28720b-11e3-49a9-8baa-8693c39de1ed>

@@ -1,0 +1,29 @@
+﻿<newsletter_newsletter version="7.0">
+  <NewDataSet>
+    <newsletter_newsletter>
+      <NewsletterID>142</NewsletterID>
+      <NewsletterDisplayName>E-commerce Site - Newsletter</NewsletterDisplayName>
+      <NewsletterName>EcommerceSite.Newsletter</NewsletterName>
+      <NewsletterType>T</NewsletterType>
+      <NewsletterSubscriptionTemplateID>246</NewsletterSubscriptionTemplateID>
+      <NewsletterUnsubscriptionTemplateID>247</NewsletterUnsubscriptionTemplateID>
+      <NewsletterSenderName>E-commerce Site</NewsletterSenderName>
+      <NewsletterSenderEmail>sender@localhost.local</NewsletterSenderEmail>
+      <NewsletterTemplateID>248</NewsletterTemplateID>
+      <NewsletterSiteID>135</NewsletterSiteID>
+      <NewsletterGUID>54e651d6-8c83-4f5a-a03e-a3e3ad6b1517</NewsletterGUID>
+      <NewsletterUnsubscribeUrl></NewsletterUnsubscribeUrl>
+      <NewsletterBaseUrl></NewsletterBaseUrl>
+      <NewsletterLastModified>2012-05-28T11:19:16.017+02:00</NewsletterLastModified>
+      <NewsletterUseEmailQueue>true</NewsletterUseEmailQueue>
+      <NewsletterEnableOptIn>false</NewsletterEnableOptIn>
+      <NewsletterSendOptInConfirmation>false</NewsletterSendOptInConfirmation>
+      <NewsletterOptInApprovalURL></NewsletterOptInApprovalURL>
+      <NewsletterTrackOpenEmails>false</NewsletterTrackOpenEmails>
+      <NewsletterTrackClickedLinks>false</NewsletterTrackClickedLinks>
+      <NewsletterDraftEmails></NewsletterDraftEmails>
+      <NewsletterLogActivity>false</NewsletterLogActivity>
+      <NewsletterEnableResending>true</NewsletterEnableResending>
+    </newsletter_newsletter>
+  </NewDataSet>
+</newsletter_newsletter>

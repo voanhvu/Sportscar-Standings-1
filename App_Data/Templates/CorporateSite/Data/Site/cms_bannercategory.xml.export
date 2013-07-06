@@ -1,0 +1,13 @@
+﻿<cms_bannercategory version="7.0">
+  <NewDataSet>
+    <cms_bannercategory>
+      <BannerCategoryID>23</BannerCategoryID>
+      <BannerCategoryName>Sample_banner_category</BannerCategoryName>
+      <BannerCategoryDisplayName>Sample banner category</BannerCategoryDisplayName>
+      <BannerCategorySiteID>110</BannerCategorySiteID>
+      <BannerCategoryGuid>3c5f70b1-1337-496e-99f2-905180925c63</BannerCategoryGuid>
+      <BannerCategoryLastModified>2012-05-09T19:39:01.817+02:00</BannerCategoryLastModified>
+      <BannerCategoryEnabled>true</BannerCategoryEnabled>
+    </cms_bannercategory>
+  </NewDataSet>
+</cms_bannercategory>

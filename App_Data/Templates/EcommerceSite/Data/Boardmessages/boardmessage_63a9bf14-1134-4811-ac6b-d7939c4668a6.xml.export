@@ -1,0 +1,38 @@
+﻿<boardmessage_63a9bf14-1134-4811-ac6b-d7939c4668a6 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3183</MessageID>
+      <MessageUserName>Lisa</MessageUserName>
+      <MessageText>I disagree with Jack. It is definitely very easy to use. Also, the features it provides for this price is enough even for everyday bussines life.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4022</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T00:26:45.227+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T00:26:45.227+02:00</MessageLastModified>
+      <MessageGUID>7b50a857-9657-4012-8f63-747bedd8162f</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3182</MessageID>
+      <MessageUserName>Jack</MessageUserName>
+      <MessageText>I must give it 2 stars since I'm a bit disappointed - iPhone has much better user experience.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4022</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T00:23:56.247+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T00:23:56.25+02:00</MessageLastModified>
+      <MessageGUID>43158c0f-318d-4939-9345-7aff284aa075</MessageGUID>
+      <MessageRatingValue>0.4</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_63a9bf14-1134-4811-ac6b-d7939c4668a6>

@@ -1,0 +1,15 @@
+﻿Installing assembly 'c:\tempfiles\bin\SchedulerService.exe'.
+Affected parameters are:
+   logtoconsole = true
+   assemblypath = c:\tempfiles\bin\SchedulerService.exe
+   logfile = c:\tempfiles\bin\SchedulerService.InstallLog
+   webpath = c:\tempfiles
+Installing service KenticoCMSScheduler83211b93675146429cf0ec922909cb97...
+Service KenticoCMSScheduler83211b93675146429cf0ec922909cb97 has been successfully installed.
+Creating EventLog source KenticoCMSScheduler83211b93675146429cf0ec922909cb97 in log Application...
+Committing assembly 'c:\tempfiles\bin\SchedulerService.exe'.
+Affected parameters are:
+   logtoconsole = true
+   assemblypath = c:\tempfiles\bin\SchedulerService.exe
+   logfile = c:\tempfiles\bin\SchedulerService.InstallLog
+   webpath = c:\tempfiles

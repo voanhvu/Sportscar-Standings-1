@@ -1,0 +1,1383 @@
+﻿<cms_customtable version="7.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>3451</ClassID>
+      <ClassDisplayName>carz</ClassDisplayName>
+      <ClassName>customtable.carz</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="customtable_carz"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ItemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="ItemCreatedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemCreatedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemOrder" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="Year"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="4" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Make"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Model"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Engine" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Transmission" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="CurbWeight" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Horsepower" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MSRP" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Tags" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Image" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Featured" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="TimeClass" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="TimeClassRank" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="RanklListAll" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="Average060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Best060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Best1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Best1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="BestTopSpeed" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="RT060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="RT1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="RT1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="RTTopSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="RTSource" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="MT060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MT1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MT1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MTTopSpeed" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="MTSource" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="CD060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="CD1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="CD1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="CDTopSpeed" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="CDSource" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="ED060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="ED1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="ED1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="EDTopSpeed" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="EDSource" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Other060Time" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Other1of4MileTime" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Other1of4MileSpeed" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="OtherTopSpeed" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="OtherSource" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="255" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Views" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="Torque" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="RTSkidPad" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="CDSkidPad" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="OtherSkidPad" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="EDSkidPad" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MTSkidPad" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="MPG" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="BodyText" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="250" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="MPGCity" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="250" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//customtable_carz" /&gt;
+      &lt;xs:field xpath="ItemID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ItemID" fieldcaption="ItemID" visible="true" columntype="integer" fieldtype="CustomUserControl" isPK="true" system="true" publicfield="false" guid="13e84078-a5e5-42d8-918e-a1d4e5f7021b" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Year" fieldcaption="Year" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="4" publicfield="false" guid="855fc87a-4b38-4016-a046-612e484fae47" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Make" fieldcaption="Make" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="100" publicfield="false" guid="4cca09a5-8225-488e-9705-b2a9f3b0c583" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Model" fieldcaption="Model" visible="true" columntype="text" fieldtype="CustomUserControl" columnsize="100" publicfield="false" guid="3c7439b5-4fdc-4563-9c4a-1ff026b16651" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="BodyText" fieldcaption="Unused" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="250" publicfield="false" guid="60e853c3-9273-4cee-a056-6f6bc17e1a9c" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MPGCity" fieldcaption="City MPG" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="250" publicfield="false" guid="fc08a3e3-c0af-4cf3-9483-203f0e63a202" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MPG" fieldcaption="Highway MPG" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="100" publicfield="false" guid="0ca490e5-25a4-4859-8bb1-4f806a3fdadf" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Engine" fieldcaption="Engine" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="100" publicfield="false" guid="39bbf224-20a2-4eab-9ae4-5c501f39a2f6" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Transmission" fieldcaption="Transmission" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="100" publicfield="false" guid="2ddf2e50-80f7-49b5-b6ae-5b95b86d365d" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CurbWeight" fieldcaption="Curb Weight" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="100" publicfield="false" guid="4923ee1f-724c-401c-a3e7-a85983c1b52f" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Horsepower" fieldcaption="Horsepower" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="13c325d0-d3e5-4c63-b20a-4b5ccd42974a" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Torque" fieldcaption="Torque" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="cf2acf7e-6a88-4fde-a200-a4bd4ff2848b" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MSRP" fieldcaption="MSRP" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="66da9e0b-1980-40fa-9e15-7e439f350bbf" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Tags" fieldcaption="Tags" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="dc33e760-3400-4807-96b8-9c76e9ea4fd2" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;IsTextArea&gt;True&lt;/IsTextArea&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Image" fieldcaption="Image" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="cdb40bd5-4d01-4c34-85b0-094d927f1cfc" visibility="none"&gt;&lt;settings&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;controlname&gt;mediaselectioncontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Featured" fieldcaption="Featured" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="f60bf86d-415d-48d0-946b-a66b14ef2d35" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TimeClass" fieldcaption="Time Class" visible="true" defaultvalue="0" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="64949e3e-a478-42f0-8300-0eee3f3893c6" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TimeClassRank" fieldcaption="Time Class Rank" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="0153203c-72e3-4a19-836e-6b09dada4cee" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RanklListAll" fieldcaption="RanklListAll" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="78c9b515-f660-4da0-9d64-7ed0d2c7a58e" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Average060Time" fieldcaption="Average 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="f7e7777e-59e9-4373-a424-110c50e2acc7" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Best060Time" fieldcaption="Best 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="ad20e21d-3a43-43e2-a208-0f19313d39b5" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Best1of4MileTime" fieldcaption="Best ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="c3657a93-42de-48db-937c-7c5f369d2674" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Best1of4MileSpeed" fieldcaption="Best ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="585a1095-c4a2-45a3-9076-c0acbf69411c" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="BestTopSpeed" fieldcaption="Best Top Speed" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="94670126-590b-4202-b771-db899166b1e0" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RT060Time" fieldcaption="RT 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="b2697f35-2658-4f20-b129-b89f39d5655f" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RT1of4MileTime" fieldcaption="RT ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="36c83bf2-8cda-4a71-96e1-e9c337c0d9e7" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RT1of4MileSpeed" fieldcaption="RT ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="57ce8145-b085-47cd-bc55-742e73ffbdfc" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RTTopSpeed" fieldcaption="RT Top Speed" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="11662efa-2f0c-435b-8fea-ef9aac6f7afa" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RTSkidPad" fieldcaption="RT Skid Pad" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="f3e4f260-87ff-4d05-a263-87cfa00312f5" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RTSource" fieldcaption="RT Source" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="d0bde13b-cc3a-43ae-be74-e00881b319d5" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MT060Time" fieldcaption="MT 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="dc6bd9ae-9705-4799-8379-dbf75dc69bfa" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MT1of4MileTime" fieldcaption="MT ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="e632de46-66cd-4a8b-8ffc-31cb0d111ecb" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MT1of4MileSpeed" fieldcaption="MT ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="d7696bc8-6a5b-4647-b7e3-939bab43e4a4" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MTTopSpeed" fieldcaption="MT Top Speed" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="c32fa9ec-fe82-4419-9347-3950a39bdb5f" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MTSkidPad" fieldcaption="MT Skid Pad" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="14f0a01d-cebe-4638-b01f-e84eac7ebd82" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MTSource" fieldcaption="MT Source" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="bbd23603-22d3-45d1-80fd-87b582db7e02" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CD060Time" fieldcaption="CD 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="86a66010-d85f-4d5c-abf1-f2bbeb720020" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CD1of4MileTime" fieldcaption="CD ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="3dfca339-537e-4d1f-aa8c-02dd57916c72" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CD1of4MileSpeed" fieldcaption="CD ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="172b1f2c-55bf-44fc-8be6-ffd4e998aede" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CDTopSpeed" fieldcaption="CD Top Speed" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="5ec543b3-5246-4ff4-bc9d-7c159c38f5b1" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CDSkidPad" fieldcaption="CD Skid Pad" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="4599a6f6-0686-4ee4-b055-c3be070b9a5d" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CDSource" fieldcaption="CD Source" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="fd19ce0b-255e-4c65-801a-4ec53d7e748e" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ED060Time" fieldcaption="ED 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="80465a03-2984-4d78-92fb-af9333809ed4" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ED1of4MileTime" fieldcaption="ED ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="9f936635-25a6-4f9c-b60d-b360ad41eac4" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ED1of4MileSpeed" fieldcaption="ED ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="07bbae3d-e7c9-489f-b183-96359b780f5a" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EDTopSpeed" fieldcaption="ED Top Speed" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="996b80a7-2f33-44e7-b363-63cb6c0c0ad2" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EDSkidPad" fieldcaption="ED Skid Pad" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="67b39c76-faa7-4f46-b651-f80cc73c7775" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EDSource" fieldcaption="ED Source" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="3192e18e-5f3d-4e94-9ab8-ae9b2b1d1669" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Other060Time" fieldcaption="Other 0-60 Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="b3176b64-9add-4155-845d-8863e4d0e7f0" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Other1of4MileTime" fieldcaption="Other ¼ Mile Time" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="9796ba42-c1f2-4ec2-807d-144f06ccfeff" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Other1of4MileSpeed" fieldcaption="Other ¼ Mile Speed" visible="true" defaultvalue="0" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="db5c8ae6-48db-4c00-9070-5e324b139a02" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="OtherTopSpeed" fieldcaption="Other Top Speed" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="0d0010d4-011c-47da-9428-f42f57a88527" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="OtherSkidPad" fieldcaption="Other Skid Pad" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="aaa0fb25-e5ce-4ad6-bcdc-43458724ca39" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="OtherSource" fieldcaption="Other Source" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" columnsize="255" publicfield="false" guid="f23fa326-2863-43e9-a7e8-98d0c20b2c61" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Views" fieldcaption="Views" visible="true" defaultvalue="0" columntype="integer" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="a82e165c-ebba-424d-a704-ad998cc4db1f" visibility="none"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedBy" fieldcaption="Created by" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" system="true" publicfield="false" guid="0e65cb47-0c22-40a4-a47f-a83c2c1e61a6" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedWhen" fieldcaption="Created when" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" system="true" publicfield="false" guid="1a868a6a-3e61-4c36-975b-29ad5909df76" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedBy" fieldcaption="Modified by" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" system="true" publicfield="false" guid="0de19b4e-0da3-4853-b18d-c11f6213d8ae" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedWhen" fieldcaption="Modified when" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" system="true" publicfield="false" guid="2ea1f4e2-9353-4f04-892b-f5870114ae36" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemOrder" fieldcaption="Order" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" system="true" publicfield="false" guid="5961e9cf-d0e4-425c-82e9-302e454770c6" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemGUID" fieldcaption="GUID" visible="true" columntype="guid" fieldtype="CustomUserControl" system="true" publicfield="false" guid="c64d1f3b-b36b-4b4e-8607-b9ad852b50ed" visibility="none"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>customtable_carz</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout>&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Year$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Year$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Year$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Make$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Make$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Make$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Model$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Model$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Model$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MPGCity$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MPGCity$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MPGCity$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MPG$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MPG$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MPG$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Engine$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Engine$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Engine$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Horsepower$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Horsepower$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Horsepower$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Torque$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Torque$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Torque$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Transmission$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Transmission$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Transmission$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CurbWeight$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CurbWeight$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CurbWeight$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MSRP$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MSRP$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MSRP$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Tags$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Tags$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Tags$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Image$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Image$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Image$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Featured$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Featured$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Featured$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RT060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RT060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RT060Time$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RT1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RT1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RT1of4MileTime$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RT1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RT1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RT1of4MileSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RTTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RTTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RTTopSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RTSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RTSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RTSkidPad$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:RTSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:RTSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:RTSource$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MT060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MT060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MT060Time$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MT1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MT1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MT1of4MileTime$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MT1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MT1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MT1of4MileSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MTTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MTTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MTTopSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MTSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MTSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MTSkidPad$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MTSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MTSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:MTSource$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CD060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CD060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CD060Time$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CD1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CD1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CD1of4MileTime$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CD1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CD1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CD1of4MileSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CDTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CDTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CDTopSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CDSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CDSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CDSkidPad$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:CDSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:CDSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:CDSource$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:ED060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:ED060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:ED060Time$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:ED1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:ED1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:ED1of4MileTime$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:ED1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:ED1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:ED1of4MileSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:EDTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:EDTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:EDTopSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:EDSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:EDSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:EDSkidPad$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:EDSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:EDSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:EDSource$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Other060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Other060Time$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Other060Time$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Other1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Other1of4MileTime$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Other1of4MileTime$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Other1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Other1of4MileSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:Other1of4MileSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:OtherTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:OtherTopSpeed$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:OtherTopSpeed$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:OtherSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:OtherSkidPad$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:OtherSkidPad$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:OtherSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:OtherSource$$&lt;/td&gt;
+			&lt;td&gt;
+				$$validation:OtherSource$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2013-03-31T19:30:51.62-07:00</ClassLastModified>
+      <ClassGUID>57fc418a-597f-4485-8b0a-f2c80593e565</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>true</ClassIsCustomTable>
+      <ClassShowColumns>ItemID;Year;Make;Model;MPGCity;MPG;Engine;Transmission;CurbWeight;Horsepower;Torque;MSRP;Tags;Image;Featured;TimeClass;TimeClassRank;RanklListAll;Average060Time;Best060Time;Best1of4MileTime;Best1of4MileSpeed;BestTopSpeed;RT060Time;RT1of4MileTime;RT1of4MileSpeed;RTTopSpeed;RTSkidPad;RTSource;MT060Time;MT1of4MileTime;MT1of4MileSpeed;MTTopSpeed;MTSkidPad;MTSource;CD060Time;CD1of4MileTime;CD1of4MileSpeed;CDTopSpeed;CDSkidPad;CDSource;ED060Time;ED1of4MileTime;ED1of4MileSpeed;EDTopSpeed;EDSkidPad;EDSource;Other060Time;Other1of4MileTime;Other1of4MileSpeed;OtherTopSpeed;OtherSkidPad;OtherSource;Views;ItemCreatedBy;ItemCreatedWhen;ItemModifiedBy;ItemModifiedWhen;ItemOrder;ItemGUID</ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>ItemID</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>0</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>0</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item id="2096b3fb-41a8-4314-b9cb-fb0b7df62cd5" searchable="False" content="False" tokenized="False" name="ItemID" /&gt;&lt;item id="b0bc01ab-7a15-4a24-9109-58dd4defac73" searchable="True" content="False" tokenized="False" name="Year" /&gt;&lt;item id="c6d818f0-2cc5-494d-b325-6dde3bdd80ed" searchable="True" content="False" tokenized="False" name="Make" /&gt;&lt;item id="7c4d19c5-7b43-4e20-9493-e203d7099add" searchable="True" content="False" tokenized="False" name="Model" /&gt;&lt;item id="1806dffc-0626-4464-9f2e-46d09390db1e" searchable="True" content="False" tokenized="False" name="Style" /&gt;&lt;item id="8bda9bd7-aa8b-484a-9c52-af13634cc4d0" searchable="True" content="False" tokenized="False" name="BodyText" /&gt;&lt;item id="d7eefe03-38e8-438f-b438-a6763161b8ad" searchable="False" content="False" tokenized="False" name="Doors" /&gt;&lt;item id="7cde146b-a117-4f67-86b5-718ff0470fb3" searchable="False" content="False" tokenized="False" name="Fuel" /&gt;&lt;item id="04690de4-ee7d-4e52-9d9b-92da40850093" searchable="False" content="False" tokenized="False" name="Engine" /&gt;&lt;item id="e1786261-b3b6-44a7-ace1-15a4a74cd34d" searchable="False" content="False" tokenized="False" name="Transmission" /&gt;&lt;item id="05429e8f-7406-4e6d-b4e6-1dae1f3c36f5" searchable="False" content="False" tokenized="False" name="Drivetrain" /&gt;&lt;item id="e4758186-350b-4781-9cfa-327ce0d77b97" searchable="False" content="False" tokenized="False" name="CurbWeight" /&gt;&lt;item id="3ba35927-8a43-4899-acc3-eab13bb3a7ca" searchable="True" content="False" tokenized="False" name="MSRP" /&gt;&lt;item id="643779e0-e747-4b75-99c2-d640c30f7e0d" searchable="False" content="False" tokenized="False" name="Tags" /&gt;&lt;item id="afc8d58d-c01f-4144-b4ef-8b10c1e99801" searchable="False" content="False" tokenized="False" name="Image" /&gt;&lt;item id="2000bb93-1010-42f0-afc0-c6ecbc6905b8" searchable="False" content="False" tokenized="False" name="Featured" /&gt;&lt;item id="1a848e2a-9d3e-4fa5-9c81-4374c4d4a4ff" searchable="True" content="False" tokenized="False" name="TimeClass" /&gt;&lt;item id="b72151a3-24d8-43c8-98c4-2958e4e47a8f" searchable="True" content="False" tokenized="False" name="TimeClassRank" /&gt;&lt;item id="3ac83444-439c-4d6d-90c3-ff54566162bb" searchable="False" content="False" tokenized="False" name="Average060Time" /&gt;&lt;item id="79904a06-3278-4383-a682-ed8214081d22" searchable="False" content="False" tokenized="False" name="Best060Time" /&gt;&lt;item id="a41cc2a2-8b16-4c76-a6de-322e5fcb89e0" searchable="False" content="False" tokenized="False" name="Best1of4MileTime" /&gt;&lt;item id="6653e0b9-accc-4f09-b532-1c0cea7025b4" searchable="False" content="False" tokenized="False" name="Best1of4MileSpeed" /&gt;&lt;item id="08ce1daa-fbc6-415c-b64a-d405762eb837" searchable="False" content="False" tokenized="False" name="BestTopSpeed" /&gt;&lt;item id="c939b681-5939-4952-8c66-307b422faf6a" searchable="True" content="False" tokenized="False" name="RT060Time" /&gt;&lt;item id="62587bff-f136-4671-9df0-26c2af5a8fdf" searchable="True" content="False" tokenized="False" name="RT1of4MileTime" /&gt;&lt;item id="9ba06525-924e-47e9-9a83-05c2a482a7e1" searchable="True" content="False" tokenized="False" name="RT1of4MileSpeed" /&gt;&lt;item id="b26f3690-52fb-4a0b-84bb-d137cedd2929" searchable="True" content="False" tokenized="False" name="RTTopSpeed" /&gt;&lt;item id="64e3c4c2-2084-4199-aac7-841e9912c8bb" searchable="True" content="False" tokenized="False" name="RTSource" /&gt;&lt;item id="8ac55542-9091-4621-ada1-1678ba2d1efc" searchable="False" content="False" tokenized="False" name="MT060Time" /&gt;&lt;item id="0ec128f9-8ded-40a2-acd9-af3e5c3a860f" searchable="False" content="False" tokenized="False" name="MT1of4MileTime" /&gt;&lt;item id="c8c11130-2013-45eb-ba4e-908cb4850c95" searchable="False" content="False" tokenized="False" name="MT1of4MileSpeed" /&gt;&lt;item id="050e7f67-8694-471b-aa8e-4fabae0f8ea7" searchable="False" content="False" tokenized="False" name="MTTopSpeed" /&gt;&lt;item id="10c6c410-5ed8-4110-be38-52292c8776f9" searchable="False" content="False" tokenized="False" name="MTSource" /&gt;&lt;item id="3077a407-f3da-426c-8081-250c5de1d7eb" searchable="False" content="False" tokenized="False" name="CD060Time" /&gt;&lt;item id="3348a5cf-227b-4713-a00b-7e4394ad4015" searchable="False" content="False" tokenized="False" name="CD1of4MileTime" /&gt;&lt;item id="67a8a27c-ed91-4d7a-a80e-e8e3be365bcf" searchable="False" content="False" tokenized="False" name="CD1of4MileSpeed" /&gt;&lt;item id="b5f3351a-053a-4b15-9cf4-6d521e7e2168" searchable="False" content="False" tokenized="False" name="CDTopSpeed" /&gt;&lt;item id="136103a6-9bc8-470d-9041-8623a7e70780" searchable="False" content="False" tokenized="False" name="CDSource" /&gt;&lt;item id="6a0c5551-34c1-4c46-82a0-3cd459aa64ea" searchable="False" content="False" tokenized="False" name="ED060Time" /&gt;&lt;item id="860f730b-d471-416f-bb5b-9ee2b1419d61" searchable="False" content="False" tokenized="False" name="ED1of4MileTime" /&gt;&lt;item id="e330220d-ca93-438b-bf0e-f31f95ef5e21" searchable="False" content="False" tokenized="False" name="ED1of4MileSpeed" /&gt;&lt;item id="f072fbce-289c-401c-b220-43e4a684c00b" searchable="False" content="False" tokenized="False" name="EDTopSpeed" /&gt;&lt;item id="910b8369-8e90-4297-ad7a-db3e0cb4575b" searchable="False" content="False" tokenized="False" name="EDSource" /&gt;&lt;item id="109f405e-30cc-4b57-a1c1-190ba46ec8ac" searchable="False" content="False" tokenized="False" name="Other060Time" /&gt;&lt;item id="232f3d45-33ae-4655-bbe2-1470f19c5b76" searchable="False" content="False" tokenized="False" name="Other1of4MileTime" /&gt;&lt;item id="2cc5d2e1-6032-4063-ab18-b879f4f4dcc6" searchable="False" content="False" tokenized="False" name="Other1of4MileSpeed" /&gt;&lt;item id="be5a0896-e321-480c-a92f-2336c1b80e11" searchable="False" content="False" tokenized="False" name="OtherTopSpeed" /&gt;&lt;item id="0b6b4aeb-3205-440a-8244-11e0612e64bb" searchable="False" content="False" tokenized="False" name="OtherSource" /&gt;&lt;item id="84175fcc-5bd2-4dac-a7db-3a08a0a0f334" searchable="False" content="False" tokenized="False" name="ItemCreatedBy" /&gt;&lt;item id="e2783a69-b7d4-4ed5-aa07-bfb60a69b807" searchable="False" content="False" tokenized="False" name="ItemCreatedWhen" /&gt;&lt;item id="d790013e-88ce-4136-af94-66009a4e0fd7" searchable="False" content="False" tokenized="False" name="ItemModifiedBy" /&gt;&lt;item id="35444786-bd23-48c3-825e-93dd36454bcd" searchable="False" content="False" tokenized="False" name="ItemModifiedWhen" /&gt;&lt;item id="8dabca29-79ba-4952-be6c-d6e1e4a87ac0" searchable="False" content="False" tokenized="False" name="ItemOrder" /&gt;&lt;item id="8b4a9273-ff3b-4352-98f5-23f34a526436" searchable="False" content="False" tokenized="False" name="ItemGUID" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>false</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+      <ClassIsProductSection>false</ClassIsProductSection>
+    </cms_class>
+    <cms_query>
+      <QueryID>18971</QueryID>
+      <QueryName>AllMakes</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID 
+FROM (SELECT Distinct Make 
+      FROM [dbo].[customtable_carz]) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-05T06:05:32.047-08:00</QueryLastModified>
+      <QueryGUID>12d1821d-a79c-4d7d-aecf-7d1a83f03af9</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18976</QueryID>
+      <QueryName>Feature</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT  top 2 [ItemID],*
+FROM [dbo].[customtable_carz] 
+WHERE Featured='True'
+Order By NEWID()</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-15T05:07:33.917-07:00</QueryLastModified>
+      <QueryGUID>1bea8c76-ec57-445a-a3c0-3598fd5d3a3c</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19008</QueryID>
+      <QueryName>Lineup_Horsepower_1000</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Horsepower &gt;= 1000  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:44:46.417-07:00</QueryLastModified>
+      <QueryGUID>db11e38d-d67f-4a12-b33b-223b19560058</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18991</QueryID>
+      <QueryName>Lineup_Horsepower_200</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Horsepower &lt;= 200  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T23:03:02.23-07:00</QueryLastModified>
+      <QueryGUID>604c40cf-eaa9-400d-99c1-92087ccf34c5</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18997</QueryID>
+      <QueryName>Lineup_MSRP_1000000</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where MSRP&gt;=1000000  and ##WHERE## Order by Best060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:42:09.433-07:00</QueryLastModified>
+      <QueryGUID>11e254ef-9407-4226-9b1b-a6cb54964619</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18973</QueryID>
+      <QueryName>Lineup_MSRP_30000</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where MSRP &lt;= 30000 and ##WHERE## 
+Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T23:11:43.607-07:00</QueryLastModified>
+      <QueryGUID>caebd5a9-2b2f-4083-8c62-55b0b7bb57ef</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18992</QueryID>
+      <QueryName>Lineup_Tag_AWD</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Tags like '%AWD%'  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T23:01:07.54-07:00</QueryLastModified>
+      <QueryGUID>872cf4b7-ba45-4506-b572-fd1459fd8542</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18977</QueryID>
+      <QueryName>Lineup_Tag_Electric</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Tags like '%Electric%'  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T23:04:40.983-07:00</QueryLastModified>
+      <QueryGUID>a313d59d-c9af-406f-aa13-34703b56fbe1</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19006</QueryID>
+      <QueryName>Lineup_Tag_Exotic</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Tags like '%Exotic%'  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T21:42:21.26-07:00</QueryLastModified>
+      <QueryGUID>c30bb164-6216-47d8-9b0a-864c51794854</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18974</QueryID>
+      <QueryName>Lineup_Tag_Hybrid</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Tags like '%Hybrid%' and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T23:10:00.237-07:00</QueryLastModified>
+      <QueryGUID>5ecbcdf7-1b85-4d12-9651-3f8b5c5d37cb</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19007</QueryID>
+      <QueryName>Lineup_Tag_Muscle</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM  [dbo].[customtable_carz] Where Tags like '%Muscle%' and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:01:43.52-07:00</QueryLastModified>
+      <QueryGUID>c7440681-9201-4234-98e2-1f9828350b1b</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18995</QueryID>
+      <QueryName>Lineup_Tag_Sedan</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM  [dbo].[customtable_carz] Where Tags like '%Sedan%' and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T21:57:17.753-07:00</QueryLastModified>
+      <QueryGUID>c269160d-f342-4ab7-ab04-5e824daa7018</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18994</QueryID>
+      <QueryName>Lineup_Tag_Sleeper</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Tags ='Sleeper'  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:56:26.483-07:00</QueryLastModified>
+      <QueryGUID>7ec972cc-58d7-4d4e-9f49-3dc2803229b2</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19004</QueryID>
+      <QueryName>Lineup_Year_2012</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Year='2012' and ##WHERE## 
+Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:39:57.073-07:00</QueryLastModified>
+      <QueryGUID>1206f9e0-5b45-422f-ba92-0bc0c583aed5</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19005</QueryID>
+      <QueryName>Lineup_Year_2013</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where Year ='2013'  and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T22:39:39.353-07:00</QueryLastModified>
+      <QueryGUID>e5d2cef4-c1ab-4541-b78c-a35f7af1aa3a</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18981</QueryID>
+      <QueryName>ListMakes10SecAndOver</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM  [dbo].[customtable_carz] Where 10 &lt;= Best060Time ) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T14:09:24.363-07:00</QueryLastModified>
+      <QueryGUID>b89a16f7-1b76-4069-b409-dd8f2484a1b8</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18983</QueryID>
+      <QueryName>ListMakes3SecAndUnder</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM [dbo].[customtable_carz] Where (0 &lt; Best060Time and Best060Time &lt; 4) ) as allD </QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T13:59:04.003-07:00</QueryLastModified>
+      <QueryGUID>cb9a8769-2194-4945-ac46-199045066d0d</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18978</QueryID>
+      <QueryName>ListMakes4and5Sec</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM [dbo].[customtable_carz] Where (4 &lt;= Best060Time and Best060Time &lt; 6) ) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T14:01:37.447-07:00</QueryLastModified>
+      <QueryGUID>0a37c5ac-d1cd-4fa7-b3a5-d574d9a02880</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18979</QueryID>
+      <QueryName>ListMakes6and7Sec</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM [dbo].[customtable_carz] Where 6 &lt;= Best060Time and Best060Time &lt; 8 ) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T14:05:46.247-07:00</QueryLastModified>
+      <QueryGUID>9431b80a-c5cc-41a0-9347-a93a0f8b92b7</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18980</QueryID>
+      <QueryName>ListMakes8and9Sec</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM [dbo].[customtable_carz] Where 8 &lt;= Best060Time and Best060Time &lt; 10 ) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-30T14:07:04.1-07:00</QueryLastModified>
+      <QueryGUID>ada3abc6-eea3-4ec6-a935-510e57365edd</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18982</QueryID>
+      <QueryName>ListMakesOver11Sec</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT Make, ROW_NUMBER() OVER (Order by Make) as itemID, TimeClass
+FROM (SELECT Distinct Make, TimeClass 
+      FROM [dbo].[customtable_carz] Where Best060Time&gt;=11) as allD</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-12T21:13:04.113-07:00</QueryLastModified>
+      <QueryGUID>c00eb7b3-b7ea-4dee-83a5-338e46939275</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18984</QueryID>
+      <QueryName>Proc_Update_TimeClass</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Update customtable_carz SET TimeClass='Super-Fast-Cars' Where RT060Time&lt;3
+Update customtable_carz SET TimeClass='Fast-Cars' Where (3 &lt;= RT060Time and RT060Time &lt; 5)
+Update customtable_carz SET TimeClass='Zippy-Cars' Where (5 &lt;= RT060Time and RT060Time &lt; 7)
+Update customtable_carz SET TimeClass='Peppy-Cars' Where (7 &lt;= RT060Time and RT060Time &lt; 9)
+Update customtable_carz SET TimeClass='Cruiser-Cars' Where (9 &lt;= RT060Time and RT060Time &lt; 11)
+Update customtable_carz SET TimeClass='Slow-Cars' WHERE 11 &lt;= RT060Time</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T16:23:26.083-08:00</QueryLastModified>
+      <QueryGUID>a09f1617-e6d7-4393-9cfb-d2d31373c5df</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18985</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Cruiser</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (0 &lt; RT060Time and RT060Time &lt; 3);	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:05:36.007-08:00</QueryLastModified>
+      <QueryGUID>2a0ce537-17fd-4764-924d-74565afd7f8e</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18986</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Fast</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (3 &lt;= RT060Time and RT060Time &lt; 5);	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:06:59.023-08:00</QueryLastModified>
+      <QueryGUID>d51d37ad-224a-432f-9be9-cbce042a2db1</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18987</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Peppy</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (7 &lt;= RT060Time and RT060Time &lt; 9);	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:07:45.1-08:00</QueryLastModified>
+      <QueryGUID>f50ed0d1-159c-471f-b586-e8a262736f3f</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18988</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Slow</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (11 &lt;= RT060Time );	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:08:02.18-08:00</QueryLastModified>
+      <QueryGUID>2adbd818-e718-4912-9846-2eb905ae8aca</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18989</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Supper</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (0 &lt; RT060Time and RT060Time &lt; 3);	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:05:06.523-08:00</QueryLastModified>
+      <QueryGUID>eadf9fdc-1b7c-4373-b9b4-6a40a1d556d0</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18990</QueryID>
+      <QueryName>Proc_Update_TimeClassRank_Zippy</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>Declare @TempTableVariable TABLE(
+		ItemID int,
+		STT int);
+
+	INSERT INTO @TempTableVariable (ItemID, STT)
+		SELECT ItemID, ROW_NUMBER() OVER (Order by RT060Time) as STT 
+			FROM [dbo].[customtable_carz] 
+			Where (5 &lt;= RT060Time and RT060Time &lt; 7);	
+	
+	Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT
+	FROM [dbo].[customtable_carz]
+	RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID];</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-02-20T11:08:23.523-08:00</QueryLastModified>
+      <QueryGUID>226c0d8f-8c00-4aea-b61b-725dc8d76b00</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18993</QueryID>
+      <QueryName>search_result</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where ##WHERE##
+ORDER BY Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-12T21:06:42.037-07:00</QueryLastModified>
+      <QueryGUID>b8bd1a0c-5004-49f3-8d24-85ccf4c3efc5</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18998</QueryID>
+      <QueryName>TimeClasses_Cruiser</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where (Best060Time &gt;= 10) and ##WHERE##
+ORDER BY Best060Time,Average060Time ASC </QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-18T02:03:44.58-07:00</QueryLastModified>
+      <QueryGUID>949f3598-93b8-44f6-a136-6b1c2da06ea3</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>18999</QueryID>
+      <QueryName>TimeClasses_Fast</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where (4 &lt;= Best060Time and Best060Time &lt; 6) and ##WHERE##
+ORDER BY Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-18T01:59:43.313-07:00</QueryLastModified>
+      <QueryGUID>aaa50e83-3b89-4b21-b301-047e53fd024b</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19000</QueryID>
+      <QueryName>TimeClasses_Peppy</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM  [dbo].[customtable_carz] Where (8 &lt;= Best060Time and Best060Time &lt; 10) and ##WHERE##
+order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-18T02:02:46.86-07:00</QueryLastModified>
+      <QueryGUID>17a6f929-fbec-4995-a908-0e982be5e96c</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19001</QueryID>
+      <QueryName>TimeClasses_Slow</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where (11 &lt;= Best060Time ) and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-12T21:08:40.35-07:00</QueryLastModified>
+      <QueryGUID>a6abbff6-59bd-441f-948f-0aee3865392b</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19002</QueryID>
+      <QueryName>TimeClasses_SuperFast</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where (0 &lt; Best060Time and Best060Time &lt; 4)   and ##WHERE## Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-18T01:57:12-07:00</QueryLastModified>
+      <QueryGUID>aa06c7e1-10a5-4f60-972d-3c4e1de31c4d</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_query>
+      <QueryID>19003</QueryID>
+      <QueryName>TimeClasses_Zippy</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT  ROW_NUMBER() OVER (Order by Best060Time,Average060Time ASC) as STT,*
+FROM [dbo].[customtable_carz] Where (6 &lt;= Best060Time and Best060Time &lt; 8) and ##WHERE## 
+Order by Best060Time,Average060Time ASC</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>3451</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2013-03-18T02:02:05.707-07:00</QueryLastModified>
+      <QueryGUID>48b76918-2fe1-4401-8c51-5fcdd418a14d</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+    <cms_transformation>
+      <TransformationID>3644</TransformationID>
+      <TransformationName>AllMakes</TransformationName>
+      <TransformationCode>
+&lt;li&gt;
+  &lt;a href="/Search/&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString()) %&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make")  %&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;%# (DataItemIndex==(DataRowView.DataView.Count-1))?"&lt;/ul&gt;":(Convert.ToInt32(Eval("itemID"))%10==0) ? "&lt;/ul&gt;&lt;ul&gt;" : "" %&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>ce049b96-2b3b-4e29-8a88-e86e1302d631</TransformationVersionGUID>
+      <TransformationGUID>445aba39-a137-4bdb-b647-d582da68d59d</TransformationGUID>
+      <TransformationLastModified>2013-03-04T01:06:29.89-08:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+      <TransformationPreferredDocument>/Home;1;en-US;</TransformationPreferredDocument>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3645</TransformationID>
+      <TransformationName>AllMakesFooter</TransformationName>
+      <TransformationCode>&lt;li&gt;
+  &lt;a href="/Search/&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString()) %&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make") %&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;%# (DataItemIndex==(DataRowView.DataView.Count-1)?"&lt;/ul&gt;":(Convert.ToInt32(Eval("itemID"))%10==0 ? " &lt;/ul&gt; &lt;ul&gt;" : "")) %&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>8eb6072f-ffaa-44a5-80c7-fed120d28692</TransformationVersionGUID>
+      <TransformationGUID>f1347a9d-ad11-4399-8eb5-9adc06035de1</TransformationGUID>
+      <TransformationLastModified>2013-03-19T00:21:18.783-07:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3646</TransformationID>
+      <TransformationName>HomeFeatured</TransformationName>
+      <TransformationCode>
+&lt;div class="feature"&gt;
+	&lt;%#IfEmpty(Eval("Image"), "", "&lt;img src='" + CarzHelpers.getMediaURL(Eval("Image").ToString()) + "' alt='Photo' /&gt;")%&gt;
+			&lt;dl class="newsClip"&gt;
+				&lt;dt&gt;&lt;a  title="&lt;%# Eval("Year") %&gt; &lt;%# Eval("Make") %&gt; &lt;%# Eval("Model") %&gt;" href="/Class-Standings/&lt;%# Eval("TimeClass") %&gt;/&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString())%&gt;-&lt;%# CarzHelpers.URLEncode(Eval("Model").ToString(),true)%&gt;"&gt;&lt;%# Eval("Year") %&gt; &lt;%# Eval("Make") %&gt; &lt;%# Eval("Model") %&gt;&lt;/a&gt;&lt;/dt&gt;
+				&lt;dd class="first-child"&gt;
+					&lt;div class="wrapper-field"&gt;
+						&lt;label&gt;Rank:&lt;/label&gt; &lt;strong&gt;#&lt;%# Eval("TimeClassRank") %&gt;&lt;/strong&gt;&lt;br /&gt;
+					&lt;/div&gt;
+					&lt;div class="wrapper-field"&gt;
+						&lt;label&gt;Class:&lt;/label&gt;  &lt;a title="&lt;%# Eval("TimeClass").ToString().Trim().Replace("-"," ") %&gt;" href="/Class-Standings/&lt;%# Eval("TimeClass") %&gt;"&gt;&lt;%# Eval("TimeClass").ToString().Trim().Replace("-"," ") %&gt;&lt;/a&gt;&lt;br /&gt;
+					&lt;/div&gt;
+					&lt;div class="wrapper-field"&gt;
+						&lt;label&gt;0-60:&lt;/label&gt; &lt;%# Eval("RT060Time") %&gt; s&lt;br /&gt;
+					&lt;/div&gt;
+				&lt;/dd&gt;
+			&lt;/dl&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    
+function next(url, id) {
+    if (id != "") {
+        createCookie("Neascasdgghjukljkt", id, "1");
+        window.location.href = url;
+    }
+}
+  &lt;/script&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>ec15adbe-f336-46df-bc5c-9069cd264df8</TransformationVersionGUID>
+      <TransformationGUID>84c22d26-8b17-4edf-bded-a02b2ecf6914</TransformationGUID>
+      <TransformationLastModified>2013-03-18T03:12:14.217-07:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3647</TransformationID>
+      <TransformationName>QueryResultsSpeed</TransformationName>
+      <TransformationCode>
+&lt;tr&gt;
+    &lt;td&gt;&lt;a href="javascript:next('/sportscar/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString().Replace("?","")+"/":"")%&gt;&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString())%&gt;-&lt;%# CarzHelpers.URLEncode(Eval("Model").ToString(),true)%&gt;&lt;%# IfCompare(Eval("BodyText").ToString() ,"","-","") %&gt;&lt;%# CarzHelpers.URLEncode(Eval("BodyText").ToString())%&gt;','&lt;%# Eval("ItemID")%&gt;')" title='#&lt;%# Eval("STT")%&gt;'&gt;#&lt;%# Eval("STT") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString().Replace("?","")+"/":"")%&gt;&lt;%# Eval("Year") %&gt;" title="&lt;%# Eval("Year") %&gt;"&gt;&lt;%# Eval("Year") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString().Replace("?","")+"/":"")%&gt;&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString())%&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Model") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("BodyText") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("MSRP") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("RT060Time") %&gt; s  &lt;/td&gt;
+&lt;/tr&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>53945189-e6c3-44a6-9366-190f58db6edd</TransformationVersionGUID>
+      <TransformationGUID>d539cf62-7617-4298-ae12-35bd82a3a2e5</TransformationGUID>
+      <TransformationLastModified>2013-02-16T16:46:49.51-08:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3648</TransformationID>
+      <TransformationName>SearchResults</TransformationName>
+      <TransformationCode>&lt;tr&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLReplace(Eval("Make").ToString())%&gt;-&lt;%# Eval("Model")%&gt;" title="#&lt;%# Eval("TimeClassRank") %&gt;"&gt;#&lt;%# Eval("TimeClassRank") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLReplace(Eval("Make").ToString())%&gt;-&lt;%# Eval("Model")%&gt;" title="&lt;%# Eval("Year") %&gt;"&gt;&lt;%# Eval("Year") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLReplace(Eval("Make").ToString())%&gt;-&lt;%# Eval("Model")%&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscar/&lt;%# Eval("Year") %&gt;-&lt;%# CarzHelpers.URLReplace(Eval("Make").ToString())%&gt;-&lt;%# Eval("Model")%&gt;" title="&lt;%# Eval("Model") %&gt;"&gt;&lt;%# Eval("Model") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("BodyText") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("MSRP") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("RT060Time") %&gt; s&lt;/td&gt;
+&lt;/tr&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>5418f1da-2d75-4cbf-8719-f07cf1c9a725</TransformationVersionGUID>
+      <TransformationGUID>e0ba4367-61a4-4d23-9f03-629003807d83</TransformationGUID>
+      <TransformationLastModified>2013-01-31T13:32:19.703-08:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3649</TransformationID>
+      <TransformationName>Speed</TransformationName>
+      <TransformationCode>
+&lt;tr&gt;
+    &lt;td&gt;&lt;a href="javascript:next('/sportscars/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString()+"/":"")%&gt;&lt;%# Eval("Year") %&gt;-&lt;%#  CarzHelpers.URLEncode(Eval("Make").ToString())%&gt;-&lt;%# CarzHelpers.URLEncode(Eval("Model").ToString(),true)%&gt;&lt;%# IfCompare(Eval("BodyText").ToString() ,"","-","") %&gt;&lt;%# CarzHelpers.URLEncode(Eval("BodyText").ToString())%&gt;','&lt;%# Eval("ItemID")%&gt;')" title='#&lt;%# Eval("STT")%&gt;'&gt;#&lt;%# Eval("STT") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscars/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString()+"/":"")%&gt;&lt;%# Eval("Year") %&gt;" title="&lt;%# Eval("Year") %&gt;"&gt;&lt;%# Eval("Year") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;a href="/sportscars/&lt;%=(Request.Params["class"]!=null?Request.Params["class"].ToString()+"/":"")%&gt;&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString())%&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make") %&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Model") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("BodyText") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("MSRP") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("RT060Time") %&gt; s  &lt;/td&gt;
+&lt;/tr&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>25b08042-20fe-4340-8465-ae5a4d13193c</TransformationVersionGUID>
+      <TransformationGUID>4ef996c2-f657-4a88-9aba-cf8b17769a83</TransformationGUID>
+      <TransformationLastModified>2013-03-30T17:52:04.42-07:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+      <TransformationPreferredDocument>/Special-Page/Speed/Super-Fast-Cars;1;en-US;</TransformationPreferredDocument>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>3650</TransformationID>
+      <TransformationName>TimeClasses</TransformationName>
+      <TransformationCode>
+&lt;li&gt;
+  &lt;a href="/Class-Standings/&lt;%# Eval("TimeClass") %&gt;/&lt;%# CarzHelpers.URLEncode(Eval("Make").ToString()) %&gt;" title="&lt;%# Eval("Make") %&gt;"&gt;&lt;%# Eval("Make") %&gt;&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;%# (DataItemIndex==(DataRowView.DataView.Count-1)?" &lt;/ul&gt;":(Convert.ToInt32(Eval("itemID"))%10==0 ? " &lt;/ul&gt; &lt;ul&gt;" : "")) %&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3451</TransformationClassID>
+      <TransformationVersionGUID>f99f1e8e-bbd2-4a32-b945-1a8f8c88625f</TransformationVersionGUID>
+      <TransformationGUID>387a4fda-336d-4b98-9813-af27dfef75a4</TransformationGUID>
+      <TransformationLastModified>2013-03-19T00:22:07.833-07:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>9629</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>3451</ClassID>
+      <PermissionGUID>8499c27a-096e-44b0-bfd7-a3369ad3ecbf</PermissionGUID>
+      <PermissionLastModified>2013-01-12T16:02:22.597-08:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>9630</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>3451</ClassID>
+      <PermissionGUID>8744980b-7e3c-48dd-b8af-7d773a043fb3</PermissionGUID>
+      <PermissionLastModified>2013-01-12T16:02:22.643-08:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>9628</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>3451</ClassID>
+      <PermissionGUID>f8c90612-a46d-45ab-89a7-075d2c969d21</PermissionGUID>
+      <PermissionLastModified>2013-01-12T16:02:22.567-08:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>9627</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>3451</ClassID>
+      <PermissionGUID>ba0ae744-ab1a-4756-8546-60b50b78cccb</PermissionGUID>
+      <PermissionLastModified>2013-01-12T16:02:22.487-08:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+  </NewDataSet>
+</cms_customtable>

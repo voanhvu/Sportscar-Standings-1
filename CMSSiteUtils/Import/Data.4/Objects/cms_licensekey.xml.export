@@ -1,0 +1,76 @@
+﻿<cms_licensekey version="7.0">
+  <NewDataSet>
+    <cms_licensekey>
+      <LicenseKeyID>2</LicenseKeyID>
+      <LicenseDomain>127.0.0.1</LicenseDomain>
+      <LicenseKey>CX07-20130109-sIG8Xg</LicenseKey>
+      <LicenseEdition>X</LicenseEdition>
+      <LicenseExpiration>1/9/2013</LicenseExpiration>
+      <LicenseServers>0</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>1</LicenseKeyID>
+      <LicenseDomain>localhost</LicenseDomain>
+      <LicenseKey>CX07-20130109-sIG8Xg</LicenseKey>
+      <LicenseEdition>X</LicenseEdition>
+      <LicenseExpiration>1/9/2013</LicenseExpiration>
+      <LicenseServers>0</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>6</LicenseKeyID>
+      <LicenseDomain>sportingcars.carbon-8.com</LicenseDomain>
+      <LicenseKey>DOMAIN:sportingcars.carbon-8.com
+PRODUCT:CF07
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+ik/IbF0K0z8qDUjXV4k0DxxqvoWZ7yfhp/RVXfaQoTGrqAEcnO/VZw/HbLlsD8igMoO8zZ7Xxo+KzBCo9B83BHxEmARM38NDwedWllYV+NzS14MExXne2rHqP0EUl37LaYpodvM+a0kuyLrnPELzBcUXjpTnmNAMcYLDtV8cBrOmtF4UzZgrU1W9UBtkE+AGAP9uotDSPyVoYQTTQQoowifG8e2aKA+zVG5v8PFCUBRfjFKvaC6KTRgwPJ3s506O3R5a5Nodl/nZ7R8Xc2ztHZkHwHIy/JmlN3Xrz8UQ/IBhatUmoMXfFJE4kngEHH375jsPbcepPv17UV/Q/nHRZQ==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>3</LicenseKeyID>
+      <LicenseDomain>sportsc3.w12.wh-2.com</LicenseDomain>
+      <LicenseKey>DOMAIN:sportsc3.w12.wh-2.com
+PRODUCT:CF07
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+XpVDP3xuaNSEJMQGHCcv/yFoBzhP2IBhEqzo8GxFxXa++ULkidsh7Sf5OU6yvjPEAOkFXxsS6+/3JM5ObOfr41Zlh2xHB0oNJH2ysVBbIDw3d8SiKN+n+FUwil18c381DgTOIKBlvV/qeYQp9CtRETwwrg7CeBZe9C8gnpALyXbTA/UfsNgOSj5lHj1ZhdKORS2ixAaEmqg8J8QOcXKsipr2mK8OiyLdC7Z+ZvRcQh8JCcGM67sjRoQEIfgxdIoMMf6Tn9fxw9T7yr5dx6iCDAVWR9X9i4Yp0ot/FcnF6/Nc5p2YX1j3wWrKlbA1NDeHAyPbpCV42MxVg8e4uXAbcg==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>5</LicenseKeyID>
+      <LicenseDomain>sportscar.carbon8dev.com</LicenseDomain>
+      <LicenseKey>DOMAIN:sportscar.carbon8dev.com
+PRODUCT:CF07
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+Gj+dksoMY5P7v5uA2pcILNil9oPdCNEoXY1gTCv1apT2nu6yGQh/7NzJmqbqulSEP7oFak7z5n2upWZG5EVk17XoCR1HPAEq2Qj5cN92NvcvAEK9za8JaOea4Xb9gNxNrDSYCUfwZBxbsqKsJYBNkAheuthZ6tgIpMKNeveqzI10XPJrFP47qOIMQlq7bKB0fHJOL7n41NskrmmX3bYJGqE9TUnhrGjpL3WW1Uc4oCigMgQ+n5tfmpvda61Uk47GHgXegYdnbONAHEmZkejIwwGId5iBs9ZcY90nyqilY8H5wn1iTziVrkpzjyYS8+uIOUzuCqgNx098hDfFllOoCw==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>4</LicenseKeyID>
+      <LicenseDomain>sportscarstandings.com</LicenseDomain>
+      <LicenseKey>DOMAIN:sportscarstandings.com
+PRODUCT:CF07
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+oszgZwsZCJZVQu2RBgV6BMY1cRFhFGyJAVCh5s6UV4hvLDVzaF3YP9r7q4dJODUSa7yQNTgUJ2rAXBfHKQPYBSvHMWLNdUl4wlc8g1GFFvxSklk7k/7GGdUGh7finUUIJNjrTkI407RFxLlOI/bFf8YZCRs7inlXZsjhpj7JkKzSKgXz5ddKSsHpXBOhtu76+5GYr83NRDbaCmnypHOQMHcQXuBbm3yVFimyOSxzp7hhK5YtudwE0/5Q8oKFOQv0O6sWbFM8cVAodIek+tiwI3JiLkGy2/GWZuR2800iMGqyAPADiJNhyeiA2EA8CBS51Ah9lIy4CHWVg8kwbO3qvg==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+  </NewDataSet>
+</cms_licensekey>

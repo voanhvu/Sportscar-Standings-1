@@ -1,0 +1,162 @@
+﻿<cms_webpartcontainer version="7.0">
+  <NewDataSet>
+    <cms_webpartcontainer>
+      <ContainerID>1</ContainerID>
+      <ContainerDisplayName>Black box</ContainerDisplayName>
+      <ContainerName>BlackBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="blackBox"&gt;
+  &lt;h2 class="title"&gt;{%ContainerTitle%}&lt;/h2&gt;
+  &lt;div class="content"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>  &lt;/div&gt;
+&lt;/div&gt;
+
+</ContainerTextAfter>
+      <ContainerGUID>8dd8abba-d7ea-473c-a194-436add312719</ContainerGUID>
+      <ContainerLastModified>2011-07-19T22:00:03.753-07:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>2</ContainerID>
+      <ContainerDisplayName>Content padding</ContainerDisplayName>
+      <ContainerName>Padding.Content</ContainerName>
+      <ContainerTextBefore>&lt;div class="ContentPadding"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>2102cc78-54f5-4e85-9977-746d8b67c136</ContainerGUID>
+      <ContainerLastModified>2011-01-02T12:32:52.35-08:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>3</ContainerID>
+      <ContainerDisplayName>Div element</ContainerDisplayName>
+      <ContainerName>Div</ContainerName>
+      <ContainerTextBefore>&lt;div&gt;	</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>c278c678-a3f7-4fdc-ac4e-20cb69d9de06</ContainerGUID>
+      <ContainerLastModified>2008-11-19T01:22:23.463-08:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>4</ContainerID>
+      <ContainerDisplayName>Gray box</ContainerDisplayName>
+      <ContainerName>Box.Gray</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBox"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>d48d9b0d-12a4-4c3c-9c41-b5a8aefec6ee</ContainerGUID>
+      <ContainerLastModified>2011-01-02T12:21:37.743-08:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>5</ContainerID>
+      <ContainerDisplayName>Orange box</ContainerDisplayName>
+      <ContainerName>OrangeBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="orangeBox"&gt;
+&lt;h3 class="title"&gt;{%ContainerTitle%}&lt;/h3&gt;
+&lt;div class="content"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>e6abcd4b-e99b-4ed9-b23c-041938c4f6be</ContainerGUID>
+      <ContainerLastModified>2011-05-09T06:00:01.073-07:00</ContainerLastModified>
+      <ContainerCSS xml:space="preserve">
+</ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>6</ContainerID>
+      <ContainerDisplayName>Search box</ContainerDisplayName>
+      <ContainerName>SearchBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="boxSearchLeft"&gt;
+  &lt;div class="boxSearchLeftTop"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;div class="boxSearchLeftBot"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>6ef5e754-61f3-4e8b-854e-2299224c007a</ContainerGUID>
+      <ContainerLastModified>2010-09-01T00:51:32.597-07:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>8</ContainerID>
+      <ContainerDisplayName>SS Table View</ContainerDisplayName>
+      <ContainerName>SSTableView</ContainerName>
+      <ContainerTextBefore>				&lt;div class="list clearfix"&gt;
+                  &lt;table class="activityResults fixedWidthSmall"&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th &gt;Rank&lt;/th&gt;
+							&lt;th &gt;Year&lt;/th&gt;
+							&lt;th &gt;Make&lt;/th&gt;
+							&lt;th &gt;Model&lt;/th&gt;
+							&lt;th &gt;HP&lt;/th&gt;
+							&lt;th &gt;$ MSRP&lt;/th&gt;
+							&lt;th &gt;0-60 Time&lt;/th&gt;
+							&lt;th class="compare"&gt;Compare&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					
+					&lt;tfoot&gt;
+						&lt;tr&gt;
+							&lt;td class="first-child" colspan="3"&gt;&lt;p class="total"&gt;17,479 Results&lt;/p&gt;&lt;/td&gt;
+							&lt;td colspan="5"&gt;
+
+								&lt;p class="pagination"&gt;
+									&lt;a href="#"&gt;&amp;laquo; Previous&lt;/a&gt; &amp;nbsp;&amp;nbsp; &lt;a href="#"&gt;1&lt;/a&gt; | 2 | &lt;a href="#"&gt;3&lt;/a&gt; | &lt;a href="#"&gt;4&lt;/a&gt; | &lt;a href="#"&gt;5&lt;/a&gt; &amp;nbsp;&amp;nbsp; &lt;a href="#"&gt;Next &amp;raquo;&lt;/a&gt;
+								&lt;/p&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tfoot&gt;	
+									
+					&lt;tbody&gt;
+  </ContainerTextBefore>
+      <ContainerTextAfter>
+
+                    &lt;/tbody&gt;
+				&lt;/table&gt;
+
+
+				&lt;/div&gt;&lt;!--/.list/--&gt;</ContainerTextAfter>
+      <ContainerGUID>4b4dd58c-029b-4efa-8e39-2f33b5f7f9bd</ContainerGUID>
+      <ContainerLastModified>2012-12-31T20:21:26.053-08:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>9</ContainerID>
+      <ContainerDisplayName>TimeClassStanding</ContainerDisplayName>
+      <ContainerName>TimeClassStanding</ContainerName>
+      <ContainerTextBefore>&lt;div&gt;
+  </ContainerTextBefore>
+      <ContainerTextAfter>
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>c1dfbbd9-9c67-4e72-9617-37fc4d14eb8a</ContainerGUID>
+      <ContainerLastModified>2013-01-31T20:06:25.75-08:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainersite>
+      <ContainerID>1</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>2</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>3</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>4</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>5</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>6</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>8</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>9</ContainerID>
+      <SiteID>1</SiteID>
+    </cms_webpartcontainersite>
+  </NewDataSet>
+</cms_webpartcontainer>

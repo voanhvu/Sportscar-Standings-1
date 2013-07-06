@@ -1,0 +1,16 @@
+﻿<analytics_campaign version="7.0">
+  <NewDataSet>
+    <analytics_campaign>
+      <CampaignID>327</CampaignID>
+      <CampaignName>SampleCampaign</CampaignName>
+      <CampaignDisplayName>Sample campaign</CampaignDisplayName>
+      <CampaignSiteID>110</CampaignSiteID>
+      <CampaignGUID>677c8ba0-ab62-4ff5-8303-aae859065504</CampaignGUID>
+      <CampaignLastModified>2011-11-07T14:13:16.963+01:00</CampaignLastModified>
+      <CampaignUseAllConversions>true</CampaignUseAllConversions>
+      <CampaignEnabled>true</CampaignEnabled>
+      <CampaignGoalVisitorsPercent>false</CampaignGoalVisitorsPercent>
+      <CampaignGoalValuePercent>false</CampaignGoalValuePercent>
+    </analytics_campaign>
+  </NewDataSet>
+</analytics_campaign>

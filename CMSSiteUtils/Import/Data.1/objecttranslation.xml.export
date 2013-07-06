@@ -1,0 +1,14 @@
+﻿<objecttranslation version="7.0">
+  <NewDataSet>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>4455</ID>
+      <CodeName>custom.vehicle</CodeName>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>3440</ID>
+      <CodeName>CMS.MenuItem</CodeName>
+    </objecttranslation>
+  </NewDataSet>
+</objecttranslation>

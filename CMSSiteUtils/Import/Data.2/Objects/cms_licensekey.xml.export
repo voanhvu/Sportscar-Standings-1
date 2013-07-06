@@ -1,0 +1,32 @@
+﻿<cms_licensekey version="6.0">
+  <NewDataSet>
+    <cms_licensekey>
+      <LicenseKeyID>2</LicenseKeyID>
+      <LicenseDomain>127.0.0.1</LicenseDomain>
+      <LicenseKey>DOMAIN:127.0.0.1
+PRODUCT:CF06
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+Mo0XU+buTy0eaW57psUxemEkBfo5pNAzGupE05V+LZmfykV75XnfFxX4Ac5O6kD4QQwDBKMBYf4qNYxOMI6JAXe0j3Qv8W9FJ6TG7TLD4ga/Ru9OOapXH6R86wepeLSdG0PKDL96JR4QNsUz1fZbRodxdOhvIEy8FvpF1JHUj04rc8DVFCJvkcrvmbfd+ZlfjGxo7GnfMOXE4FRlf3joK13jxiJypiGe4Tu71LiQgRlFFIWfXTm/WKgMT+wpQnIm/lUnWug5g0N2CkcEZ/dNfCOGBUqU4ImPjWGKdyfcYyS+F1FgvPI2sdzxIUnLtYu834fqgoEUzBsIuME3tNr8UQ==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>1</LicenseKeyID>
+      <LicenseDomain>localhost</LicenseDomain>
+      <LicenseKey>DOMAIN:localhost
+PRODUCT:CF06
+EXPIRATION:00000000
+PACKAGES:
+SERVERS:1
+DH0g3D1mDvNiMgqujyU5TspX3oB3TlsFUgSgR2p3MHe3VY+xgQvsn1kMRA6w+ZOLwLFbjjziznLX73V2DAzBXBBxQH1sSP6pnvua1qYyPXN5Mb3v9bd53nT1wgwiPvJSGLEKzsV/sf0RgtsrcBJTlGNSOAUG9qnkrSQlrLRkSdUzfZl4HdAidy53yZB4ydmGstxDOZWjCZvl7pOSL+PrOsYv5QbXz3eC4/dQJDNKG+lJkeuq/wXyMmhz/jj+JkSJQnvr9DIuEiYAqp1j4YNRVvGPv7FQqfPIixwQPXn73K7dBGwzUmmGzFUSXR0gLPpdG4nD5eoTOp1qaeKo4qy68A==</LicenseKey>
+      <LicenseEdition>F</LicenseEdition>
+      <LicenseExpiration>LicenseInfoProvider.FullLicense</LicenseExpiration>
+      <LicensePackages></LicensePackages>
+      <LicenseServers>1</LicenseServers>
+    </cms_licensekey>
+  </NewDataSet>
+</cms_licensekey>

@@ -1,0 +1,40 @@
+﻿<polls_poll version="7.0">
+  <NewDataSet>
+    <polls_poll>
+      <PollID>1</PollID>
+      <PollCodeName>CompareCars</PollCodeName>
+      <PollDisplayName>Compare Cars</PollDisplayName>
+      <PollTitle>Monthly Poll</PollTitle>
+      <PollAllowMultipleAnswers>false</PollAllowMultipleAnswers>
+      <PollQuestion>In a battle of American muscle cars, which car would win the 0-60 race?</PollQuestion>
+      <PollAccess>0</PollAccess>
+      <PollResponseMessage>Thanks, your vote has been cast.</PollResponseMessage>
+      <PollGUID>c62b200f-368f-49e3-ae9c-5636e57346d2</PollGUID>
+      <PollLastModified>2013-03-14T22:10:03.667-07:00</PollLastModified>
+      <PollSiteID>1</PollSiteID>
+      <PollLogActivity>true</PollLogActivity>
+    </polls_poll>
+    <polls_pollanswer>
+      <AnswerID>1</AnswerID>
+      <AnswerText>Camaro</AnswerText>
+      <AnswerOrder>1</AnswerOrder>
+      <AnswerCount>14</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>1</AnswerPollID>
+      <AnswerGUID>a6fb0264-d5fc-4ce5-a515-16816ffeffb0</AnswerGUID>
+      <AnswerLastModified>2013-03-14T22:09:55.15-07:00</AnswerLastModified>
+      <AnswerHideForm>false</AnswerHideForm>
+    </polls_pollanswer>
+    <polls_pollanswer>
+      <AnswerID>2</AnswerID>
+      <AnswerText>Mustang</AnswerText>
+      <AnswerOrder>2</AnswerOrder>
+      <AnswerCount>13</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>1</AnswerPollID>
+      <AnswerGUID>43e74360-5c5a-40b7-9509-4d8b11f8e8df</AnswerGUID>
+      <AnswerLastModified>2013-03-14T22:10:03.65-07:00</AnswerLastModified>
+      <AnswerHideForm>false</AnswerHideForm>
+    </polls_pollanswer>
+  </NewDataSet>
+</polls_poll>

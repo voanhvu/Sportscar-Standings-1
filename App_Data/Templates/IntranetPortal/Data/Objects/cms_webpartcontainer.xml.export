@@ -1,0 +1,144 @@
+﻿<cms_webpartcontainer version="7.0">
+  <NewDataSet>
+    <cms_webpartcontainer>
+      <ContainerID>1</ContainerID>
+      <ContainerDisplayName>Gray box</ContainerDisplayName>
+      <ContainerName>Box.Gray</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBox"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>d48d9b0d-12a4-4c3c-9c41-b5a8aefec6ee</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.643+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>179</ContainerID>
+      <ContainerDisplayName>Gray box with header</ContainerDisplayName>
+      <ContainerName>GrayBoxWithHeader</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBoxWH"&gt;&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;
+&lt;div class="inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>91bf2937-b812-4fb8-8589-700e7d8a87e1</ContainerGUID>
+      <ContainerLastModified>2012-09-05T10:48:26.277+02:00</ContainerLastModified>
+      <ContainerCSS>regrgd</ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>90</ContainerID>
+      <ContainerDisplayName>Intranet column box</ContainerDisplayName>
+      <ContainerName>IntranetColumnBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="ColumnBox {%ContainerCSSClass%}"&gt;
+&lt;div class="HeadLeft"&gt;&lt;/div&gt;&lt;h2 class="Header"&gt;{%ContainerTitle%}&lt;/h2&gt;&lt;div class="HeadRight"&gt;&lt;/div&gt;
+&lt;div class="Clear"&gt;&lt;/div&gt;
+&lt;div class="Inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>bf1fbc7a-7820-415e-accd-a4dfa671fb94</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.65+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>91</ContainerID>
+      <ContainerDisplayName>Intranet column box RSS</ContainerDisplayName>
+      <ContainerName>IntranetColumnBoxRSS</ContainerName>
+      <ContainerTextBefore>&lt;div class="ColumnBox {%ContainerCSSClass%}"&gt;
+&lt;div class="HeadLeft"&gt;&lt;/div&gt;&lt;h2 class="Header"&gt;{%ContainerTitle%}&lt;/h2&gt;&lt;div class="HeadRight"&gt;&lt;/div&gt;&lt;a href="{%ContainerCustomContent%}" title="RSS Link" class="RSSLink"&gt;&lt;/a&gt;
+&lt;div class="Clear"&gt;&lt;/div&gt;
+&lt;div class="Inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>1f42e1af-8c4a-4d46-9514-46d1ef91546f</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.657+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>92</ContainerID>
+      <ContainerDisplayName>Intranet content box</ContainerDisplayName>
+      <ContainerName>IntranetContentBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="ContentBox {%ContainerCSSClass%}"&gt;
+&lt;h2 class="Header"&gt;{%ContainerTitle%}&lt;/h2&gt;
+&lt;div class="Clear"&gt;&lt;/div&gt;
+&lt;div class="Inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>a42748e2-c49b-4c96-a780-a02e2b7cf30d</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.66+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>93</ContainerID>
+      <ContainerDisplayName>Intranet content box RSS</ContainerDisplayName>
+      <ContainerName>IntranetContentBoxRSS</ContainerName>
+      <ContainerTextBefore>&lt;div class="ContentBox {%ContainerCSSClass%}"&gt;
+&lt;h2 class="Header"&gt;&lt;span&gt;{%ContainerTitle%}&lt;/span&gt; &lt;a href="{%ContainerCustomContent%}" class="RSSLink"&gt;&amp;nbsp;&lt;/a&gt;&lt;span class="Clear"&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;div class="Clear"&gt;&lt;/div&gt;
+&lt;div class="Inner"&gt;
+&lt;div class="Arrow"&gt;&lt;/div&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>f88911b2-48e5-4d21-9b84-d683719b46e8</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.663+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>94</ContainerID>
+      <ContainerDisplayName>Intranet form box</ContainerDisplayName>
+      <ContainerName>IntranetFormBox</ContainerName>
+      <ContainerTextBefore>{%ContainerCustomContent%}
+&lt;div class="FormBox"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>b5455ec3-92ce-4d23-ae9f-fc41a62969b9</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.67+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>95</ContainerID>
+      <ContainerDisplayName>Intranet simple container</ContainerDisplayName>
+      <ContainerName>IntranetSimpleContainer</ContainerName>
+      <ContainerTextBefore>&lt;div class="SimpleContainer"&gt;
+&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;
+&lt;div class="Inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>14660667-6691-4d74-a849-cfa76d96ed8c</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.673+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>96</ContainerID>
+      <ContainerDisplayName>Intranet simple container (with header line)</ContainerDisplayName>
+      <ContainerName>IntranetSimpleContainerWithHeaderLine</ContainerName>
+      <ContainerTextBefore>&lt;div class="SimpleContainerHeaderLine"&gt;
+&lt;div class="Title"&gt;&lt;span class="Inner"&gt;{%ContainerTitle%}&lt;/span&gt;&lt;/div&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>5ba57b2b-64dc-43e4-8d38-b235572fcc48</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.677+02:00</ContainerLastModified>
+    </cms_webpartcontainer>
+    <cms_webpartcontainersite>
+      <ContainerID>1</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>90</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>91</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>92</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>93</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>94</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>95</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>96</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>179</ContainerID>
+      <SiteID>107</SiteID>
+    </cms_webpartcontainersite>
+  </NewDataSet>
+</cms_webpartcontainer>

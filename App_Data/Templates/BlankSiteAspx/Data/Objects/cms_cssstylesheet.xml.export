@@ -1,0 +1,44 @@
+﻿<cms_cssstylesheet version="7.0">
+  <NewDataSet>
+    <cms_cssstylesheet>
+      <StylesheetID>2</StylesheetID>
+      <StylesheetDisplayName>Corporate site printer styles</StylesheetDisplayName>
+      <StylesheetName>CorporateSitePrinter</StylesheetName>
+      <StylesheetText>.zoneLeft, .zoneRight, .zoneTopInfo, .zoneTop, .horizontalmenu, .zoneBottom
+{
+  display: none;
+}
+.eventCalendarDetail .zoneLeft, .eventCalendarDetail zoneRight
+{
+  display: block;
+}
+.eventCalendarDetail zoneRight
+{
+  float: left;
+}
+.logonReg .zoneLeft, .logonReg .zoneRight
+{
+  display: block;
+}
+.logonReg .zoneRight
+{
+  float: left;
+}  
+.zoneContent
+{
+  float: left !important;
+}
+.productDetail .params
+{
+    background: none !important;
+}</StylesheetText>
+      <StylesheetVersionGUID>87869280-fe2c-4679-a42d-08a8068815ce</StylesheetVersionGUID>
+      <StylesheetGUID>bc4f184a-14d0-4f79-9804-3f65908d12a5</StylesheetGUID>
+      <StylesheetLastModified>2012-08-28T10:36:07.507+02:00</StylesheetLastModified>
+    </cms_cssstylesheet>
+    <cms_cssstylesheetsite>
+      <StylesheetID>2</StylesheetID>
+      <SiteID>2</SiteID>
+    </cms_cssstylesheetsite>
+  </NewDataSet>
+</cms_cssstylesheet>

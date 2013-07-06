@@ -1,0 +1,31 @@
+﻿<cms_site version="7.0">
+  <NewDataSet>
+    <cms_site>
+      <SiteID>135</SiteID>
+      <SiteName>EcommerceSite</SiteName>
+      <SiteDisplayName>E-commerce site</SiteDisplayName>
+      <SiteDescription>Sample E-commerce site</SiteDescription>
+      <SiteStatus>RUNNING</SiteStatus>
+      <SiteDomainName>127.0.0.5</SiteDomainName>
+      <SiteDefaultStylesheetID>267</SiteDefaultStylesheetID>
+      <SiteDefaultVisitorCulture>en-US</SiteDefaultVisitorCulture>
+      <SiteGUID>f25a9368-ce76-4351-a1c4-f1133e2a55e2</SiteGUID>
+      <SiteLastModified>2012-09-12T12:15:23.64+02:00</SiteLastModified>
+    </cms_site>
+    <cms_metafile>
+      <MetaFileID>5569</MetaFileID>
+      <MetaFileObjectID>135</MetaFileObjectID>
+      <MetaFileObjectType>cms.site</MetaFileObjectType>
+      <MetaFileGroupName>Invoice</MetaFileGroupName>
+      <MetaFileName>logo_invoice.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>7159</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>222</MetaFileImageWidth>
+      <MetaFileImageHeight>38</MetaFileImageHeight>
+      <MetaFileGUID>b146c432-efe8-4d9b-ab5d-7adfbc8539bc</MetaFileGUID>
+      <MetaFileLastModified>2012-08-13T14:52:34.797+02:00</MetaFileLastModified>
+      <MetaFileSiteID>135</MetaFileSiteID>
+    </cms_metafile>
+  </NewDataSet>
+</cms_site>

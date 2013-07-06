@@ -1,0 +1,253 @@
+﻿<cms_user version="7.0">
+  <NewDataSet>
+    <cms_user>
+      <UserID>53</UserID>
+      <UserName>administrator</UserName>
+      <FirstName>Global</FirstName>
+      <MiddleName></MiddleName>
+      <LastName>Administrator</LastName>
+      <FullName>Global Administrator</FullName>
+      <Email>administrator@localhost.local</Email>
+      <UserPassword>4cc8efd915690bee6b0e933b9ffd765fe60133ad948516cd4059b4ce1c784ae5</UserPassword>
+      <PreferredCultureCode></PreferredCultureCode>
+      <PreferredUICultureCode>en-us</PreferredUICultureCode>
+      <UserEnabled>true</UserEnabled>
+      <UserIsEditor>false</UserIsEditor>
+      <UserIsGlobalAdministrator>true</UserIsGlobalAdministrator>
+      <UserIsExternal>false</UserIsExternal>
+      <UserPasswordFormat>SHA2SALT</UserPasswordFormat>
+      <LastLogon>2012-12-15T23:00:01.173-08:00</LastLogon>
+      <UserStartingAliasPath></UserStartingAliasPath>
+      <UserGUID>6415b8ce-8072-4bcd-8e48-9d7178b826b7</UserGUID>
+      <UserLastModified>2012-12-15T23:00:01.173-08:00</UserLastModified>
+      <UserLastLogonInfo>&lt;info&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0&lt;/agent&gt;&lt;ip&gt;76.25.34.119&lt;/ip&gt;&lt;/info&gt;</UserLastLogonInfo>
+      <UserIsHidden>true</UserIsHidden>
+      <UserVisibility>&lt;form name="cms.user.editprofilecommunity"&gt;&lt;field column="Email" visibility="authenticated" /&gt;&lt;/form&gt;&lt;form name="cms.user.EditProfileIntranet"&gt;&lt;field column="Email" visibility="authenticated" /&gt;&lt;/form&gt;</UserVisibility>
+      <UserIsDomain>false</UserIsDomain>
+      <UserHasAllowedCultures>true</UserHasAllowedCultures>
+      <UserSiteManagerDisabled>false</UserSiteManagerDisabled>
+    </cms_user>
+    <cms_user>
+      <UserID>65</UserID>
+      <UserName>public</UserName>
+      <FirstName></FirstName>
+      <MiddleName></MiddleName>
+      <LastName></LastName>
+      <FullName>Public Anonymous User</FullName>
+      <Email></Email>
+      <UserPassword></UserPassword>
+      <PreferredCultureCode>en-US</PreferredCultureCode>
+      <PreferredUICultureCode>en-us</PreferredUICultureCode>
+      <UserEnabled>true</UserEnabled>
+      <UserIsEditor>false</UserIsEditor>
+      <UserIsGlobalAdministrator>false</UserIsGlobalAdministrator>
+      <UserIsExternal>false</UserIsExternal>
+      <UserPasswordFormat>SHA1</UserPasswordFormat>
+      <UserStartingAliasPath></UserStartingAliasPath>
+      <UserGUID>3758b9b5-045c-4b7d-b020-80f9b068d990</UserGUID>
+      <UserLastModified>2012-12-10T23:44:15.147-08:00</UserLastModified>
+      <UserLastLogonInfo></UserLastLogonInfo>
+      <UserIsHidden>true</UserIsHidden>
+      <UserVisibility></UserVisibility>
+      <UserIsDomain>false</UserIsDomain>
+    </cms_user>
+    <cms_usersettings>
+      <UserSettingsID>1</UserSettingsID>
+      <UserNickName></UserNickName>
+      <UserPicture></UserPicture>
+      <UserSignature></UserSignature>
+      <UserURLReferrer></UserURLReferrer>
+      <UserCampaign></UserCampaign>
+      <UserMessagingNotificationEmail></UserMessagingNotificationEmail>
+      <UserCustomData></UserCustomData>
+      <UserRegistrationInfo></UserRegistrationInfo>
+      <UserPreferences></UserPreferences>
+      <UserActivationDate>1971-09-10T00:07:07-07:00</UserActivationDate>
+      <UserAvatarID>7</UserAvatarID>
+      <UserBadgeID>46</UserBadgeID>
+      <UserShowSplashScreen>true</UserShowSplashScreen>
+      <UserActivityPoints>226</UserActivityPoints>
+      <UserForumPosts>0</UserForumPosts>
+      <UserBlogComments>0</UserBlogComments>
+      <UserGender>0</UserGender>
+      <UserDateOfBirth>1971-03-10T15:00:00-08:00</UserDateOfBirth>
+      <UserMessageBoardPosts>0</UserMessageBoardPosts>
+      <UserSettingsUserGUID>6415b8ce-8072-4bcd-8e48-9d7178b826b7</UserSettingsUserGUID>
+      <UserSettingsUserID>53</UserSettingsUserID>
+      <WindowsLiveID></WindowsLiveID>
+      <UserBlogPosts>0</UserBlogPosts>
+      <UserWaitingForApproval>false</UserWaitingForApproval>
+      <UserDialogsConfiguration>&lt;data&gt;&lt;selectedtab&gt;content&lt;/selectedtab&gt;&lt;content.viewmode&gt;list&lt;/content.viewmode&gt;&lt;content.sitename&gt;Carz&lt;/content.sitename&gt;&lt;content.path&gt;/images&lt;/content.path&gt;&lt;/data&gt;</UserDialogsConfiguration>
+      <UserDescription></UserDescription>
+      <UserUsedWebParts>editabletext;pageplaceholder;statichtml;poll;repeater</UserUsedWebParts>
+      <UserFacebookID></UserFacebookID>
+      <UserSkype></UserSkype>
+      <UserIM></UserIM>
+      <UserPhone></UserPhone>
+      <UserPosition></UserPosition>
+      <UserLinkedInID></UserLinkedInID>
+      <UserLogActivities>true</UserLogActivities>
+      <UserPasswordRequestHash>b0df98efa6c1e9f1a760861ab7daf6ed10ab8950bb2b5b6a9fbf341465ecf7af</UserPasswordRequestHash>
+      <UserInvalidLogOnAttempts>0</UserInvalidLogOnAttempts>
+      <UserPasswordLastChanged>2012-12-15T12:53:27.84-08:00</UserPasswordLastChanged>
+    </cms_usersettings>
+    <cms_usersettings>
+      <UserSettingsID>144</UserSettingsID>
+      <UserNickName></UserNickName>
+      <UserSignature></UserSignature>
+      <UserURLReferrer></UserURLReferrer>
+      <UserCampaign></UserCampaign>
+      <UserMessagingNotificationEmail></UserMessagingNotificationEmail>
+      <UserCustomData></UserCustomData>
+      <UserRegistrationInfo></UserRegistrationInfo>
+      <UserPreferences></UserPreferences>
+      <UserActivationDate>2012-12-14T23:13:00.197-08:00</UserActivationDate>
+      <UserBadgeID>43</UserBadgeID>
+      <UserShowSplashScreen>true</UserShowSplashScreen>
+      <UserActivityPoints>0</UserActivityPoints>
+      <UserForumPosts>0</UserForumPosts>
+      <UserBlogComments>0</UserBlogComments>
+      <UserGender>0</UserGender>
+      <UserMessageBoardPosts>0</UserMessageBoardPosts>
+      <UserSettingsUserGUID>3758b9b5-045c-4b7d-b020-80f9b068d990</UserSettingsUserGUID>
+      <UserSettingsUserID>65</UserSettingsUserID>
+      <WindowsLiveID></WindowsLiveID>
+      <UserBlogPosts>0</UserBlogPosts>
+      <UserWaitingForApproval>false</UserWaitingForApproval>
+      <UserDialogsConfiguration></UserDialogsConfiguration>
+      <UserDescription></UserDescription>
+      <UserFacebookID></UserFacebookID>
+      <UserSkype></UserSkype>
+      <UserIM></UserIM>
+      <UserPhone></UserPhone>
+      <UserPosition></UserPosition>
+      <UserLinkedInID></UserLinkedInID>
+      <UserLogActivities>true</UserLogActivities>
+    </cms_usersettings>
+    <cms_usersite>
+      <UserSiteID>2</UserSiteID>
+      <UserID>53</UserID>
+      <SiteID>1</SiteID>
+    </cms_usersite>
+    <cms_usersite>
+      <UserSiteID>3</UserSiteID>
+      <UserID>65</UserID>
+      <SiteID>1</SiteID>
+    </cms_usersite>
+    <messaging_contactlist>
+      <ContactListUserID>53</ContactListUserID>
+      <ContactListContactUserID>53</ContactListContactUserID>
+    </messaging_contactlist>
+    <export_task>
+      <TaskID>1</TaskID>
+      <TaskTitle>Delete User 'Andrew Jones'</TaskTitle>
+      <TaskData>&lt;NewDataSet&gt;&lt;CMS_User&gt;
+  &lt;UserID&gt;66&lt;/UserID&gt;
+  &lt;UserName&gt;Andy&lt;/UserName&gt;
+  &lt;FirstName&gt;Andrew&lt;/FirstName&gt;
+  &lt;MiddleName /&gt;
+  &lt;LastName&gt;Jones&lt;/LastName&gt;
+  &lt;FullName&gt;Andrew Jones&lt;/FullName&gt;
+  &lt;Email&gt;andy@localhost.local&lt;/Email&gt;
+  &lt;UserPassword /&gt;
+  &lt;PreferredCultureCode /&gt;
+  &lt;PreferredUICultureCode /&gt;
+  &lt;UserEnabled&gt;true&lt;/UserEnabled&gt;
+  &lt;UserIsEditor&gt;true&lt;/UserIsEditor&gt;
+  &lt;UserIsGlobalAdministrator&gt;false&lt;/UserIsGlobalAdministrator&gt;
+  &lt;UserIsExternal&gt;false&lt;/UserIsExternal&gt;
+  &lt;UserPasswordFormat&gt;SHA1&lt;/UserPasswordFormat&gt;
+  &lt;UserCreated&gt;2012-12-14T23:12:59.79-08:00&lt;/UserCreated&gt;
+  &lt;UserStartingAliasPath /&gt;
+  &lt;UserGUID&gt;c57c9d79-8371-4d16-b977-83c238b84e2d&lt;/UserGUID&gt;
+  &lt;UserLastModified&gt;2012-12-10T23:44:14.807-08:00&lt;/UserLastModified&gt;
+  &lt;UserLastLogonInfo /&gt;
+  &lt;UserIsHidden&gt;false&lt;/UserIsHidden&gt;
+  &lt;UserVisibility /&gt;
+  &lt;UserIsDomain&gt;false&lt;/UserIsDomain&gt;
+  &lt;UserHasAllowedCultures&gt;false&lt;/UserHasAllowedCultures&gt;
+  &lt;UserSiteManagerDisabled&gt;false&lt;/UserSiteManagerDisabled&gt;
+  &lt;UserSettingsID&gt;145&lt;/UserSettingsID&gt;
+  &lt;UserNickName /&gt;
+  &lt;UserSignature /&gt;
+  &lt;UserURLReferrer /&gt;
+  &lt;UserCampaign /&gt;
+  &lt;UserMessagingNotificationEmail /&gt;
+  &lt;UserCustomData /&gt;
+  &lt;UserRegistrationInfo /&gt;
+  &lt;UserPreferences /&gt;
+  &lt;UserActivationDate&gt;2012-12-14T23:12:59.913-08:00&lt;/UserActivationDate&gt;
+  &lt;UserAvatarID&gt;1&lt;/UserAvatarID&gt;
+  &lt;UserBadgeID&gt;44&lt;/UserBadgeID&gt;
+  &lt;UserShowSplashScreen&gt;true&lt;/UserShowSplashScreen&gt;
+  &lt;UserActivityPoints&gt;10&lt;/UserActivityPoints&gt;
+  &lt;UserForumPosts&gt;0&lt;/UserForumPosts&gt;
+  &lt;UserBlogComments&gt;0&lt;/UserBlogComments&gt;
+  &lt;UserGender&gt;0&lt;/UserGender&gt;
+  &lt;UserMessageBoardPosts&gt;0&lt;/UserMessageBoardPosts&gt;
+  &lt;UserSettingsUserGUID&gt;c57c9d79-8371-4d16-b977-83c238b84e2d&lt;/UserSettingsUserGUID&gt;
+  &lt;UserSettingsUserID&gt;66&lt;/UserSettingsUserID&gt;
+  &lt;WindowsLiveID /&gt;
+  &lt;UserBlogPosts&gt;0&lt;/UserBlogPosts&gt;
+  &lt;UserWaitingForApproval&gt;false&lt;/UserWaitingForApproval&gt;
+  &lt;UserDialogsConfiguration /&gt;
+  &lt;UserDescription /&gt;
+  &lt;UserFacebookID /&gt;
+  &lt;UserSkype /&gt;
+  &lt;UserIM /&gt;
+  &lt;UserPhone /&gt;
+  &lt;UserPosition /&gt;
+  &lt;UserLinkedInID /&gt;
+  &lt;UserLogActivities&gt;true&lt;/UserLogActivities&gt;
+&lt;/CMS_User&gt;&lt;CMS_UserSite&gt;
+  &lt;UserSiteID&gt;1&lt;/UserSiteID&gt;
+  &lt;UserID&gt;66&lt;/UserID&gt;
+  &lt;SiteID&gt;1&lt;/SiteID&gt;
+&lt;/CMS_UserSite&gt;&lt;ObjectTranslation&gt;&lt;ClassName&gt;cms_user&lt;/ClassName&gt;&lt;ID&gt;66&lt;/ID&gt;&lt;CodeName&gt;Andy&lt;/CodeName&gt;&lt;/ObjectTranslation&gt;&lt;ObjectTranslation&gt;&lt;ClassName&gt;cms_site&lt;/ClassName&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;CodeName&gt;Carz&lt;/CodeName&gt;&lt;/ObjectTranslation&gt;&lt;/NewDataSet&gt;</TaskData>
+      <TaskTime>2012-12-15T13:07:09.483-08:00</TaskTime>
+      <TaskType>DELETEOBJ</TaskType>
+      <TaskObjectType>cms.user</TaskObjectType>
+      <TaskObjectID>66</TaskObjectID>
+    </export_task>
+    <export_task>
+      <TaskID>3</TaskID>
+      <TaskTitle>Delete User 'editor'</TaskTitle>
+      <TaskData>&lt;NewDataSet&gt;&lt;CMS_User&gt;
+  &lt;UserID&gt;67&lt;/UserID&gt;
+  &lt;UserName&gt;editor&lt;/UserName&gt;
+  &lt;FirstName /&gt;
+  &lt;MiddleName /&gt;
+  &lt;LastName /&gt;
+  &lt;FullName&gt;editor&lt;/FullName&gt;
+  &lt;Email /&gt;
+  &lt;UserPassword&gt;673a6a18b966ed060e2a5e0c1498368b9cc9d0a69b0c7c218efd962c0d721efc&lt;/UserPassword&gt;
+  &lt;PreferredCultureCode /&gt;
+  &lt;UserEnabled&gt;true&lt;/UserEnabled&gt;
+  &lt;UserIsEditor&gt;true&lt;/UserIsEditor&gt;
+  &lt;UserIsGlobalAdministrator&gt;false&lt;/UserIsGlobalAdministrator&gt;
+  &lt;UserIsExternal&gt;false&lt;/UserIsExternal&gt;
+  &lt;UserPasswordFormat&gt;SHA2SALT&lt;/UserPasswordFormat&gt;
+  &lt;UserCreated&gt;2012-12-15T13:08:45.657-08:00&lt;/UserCreated&gt;
+  &lt;UserGUID&gt;9ac0538a-c2ba-4036-a8c4-9cc2b7c3a43a&lt;/UserGUID&gt;
+  &lt;UserLastModified&gt;2012-12-15T13:08:45.657-08:00&lt;/UserLastModified&gt;
+  &lt;UserLastLogonInfo /&gt;
+  &lt;UserSiteManagerDisabled&gt;false&lt;/UserSiteManagerDisabled&gt;
+  &lt;UserSettingsID&gt;146&lt;/UserSettingsID&gt;
+  &lt;UserRegistrationInfo /&gt;
+  &lt;UserPreferences /&gt;
+  &lt;UserActivationDate&gt;2012-12-15T13:08:45.673-08:00&lt;/UserActivationDate&gt;
+  &lt;UserBadgeID&gt;43&lt;/UserBadgeID&gt;
+  &lt;UserShowSplashScreen&gt;true&lt;/UserShowSplashScreen&gt;
+  &lt;UserSettingsUserGUID&gt;9ac0538a-c2ba-4036-a8c4-9cc2b7c3a43a&lt;/UserSettingsUserGUID&gt;
+  &lt;UserSettingsUserID&gt;67&lt;/UserSettingsUserID&gt;
+  &lt;UserDialogsConfiguration /&gt;
+  &lt;UserLogActivities&gt;true&lt;/UserLogActivities&gt;
+  &lt;UserPasswordLastChanged&gt;2012-12-15T13:08:45.657-08:00&lt;/UserPasswordLastChanged&gt;
+&lt;/CMS_User&gt;&lt;/NewDataSet&gt;</TaskData>
+      <TaskTime>2012-12-15T16:52:48.973-08:00</TaskTime>
+      <TaskType>DELETEOBJ</TaskType>
+      <TaskObjectType>cms.user</TaskObjectType>
+      <TaskObjectID>67</TaskObjectID>
+    </export_task>
+  </NewDataSet>
+</cms_user>

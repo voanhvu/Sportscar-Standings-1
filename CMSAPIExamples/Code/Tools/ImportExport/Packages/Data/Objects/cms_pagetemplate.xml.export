@@ -1,0 +1,72 @@
+﻿<cms_pagetemplate version="7.0">
+  <NewDataSet>
+    <cms_pagetemplate>
+      <PageTemplateID>6</PageTemplateID>
+      <PageTemplateDisplayName>Blank master page</PageTemplateDisplayName>
+      <PageTemplateCodeName>cms.blankmasterpage</PageTemplateCodeName>
+      <PageTemplateDescription>Generic default page template.</PageTemplateDescription>
+      <PageTemplateFile>a</PageTemplateFile>
+      <PageTemplateIsPortal>true</PageTemplateIsPortal>
+      <PageTemplateCategoryID>44</PageTemplateCategoryID>
+      <PageTemplateWebParts>&lt;page&gt;&lt;webpartzone id="zoneContent"&gt;&lt;properties /&gt;&lt;webpart controlid="pageplaceholder" type="pageplaceholder" guid="efb02274-7a01-41c7-882d-75a87c6f7591"&gt;&lt;property name="instanceguid"&gt;efb02274-7a01-41c7-882d-75a87c6f7591&lt;/property&gt;&lt;property name="visible"&gt;True&lt;/property&gt;&lt;property name="disablemacros"&gt;False&lt;/property&gt;&lt;property name="webparttype"&gt;pageplaceholder&lt;/property&gt;&lt;property name="checkpermissions"&gt;True&lt;/property&gt;&lt;property name="controlid"&gt;pageplaceholder&lt;/property&gt;&lt;property name="disableviewstate"&gt;False&lt;/property&gt;&lt;property name="timezonetype"&gt;inherit&lt;/property&gt;&lt;property name="hideonsubpages"&gt;False&lt;/property&gt;&lt;/webpart&gt;&lt;/webpartzone&gt;&lt;/page&gt;</PageTemplateWebParts>
+      <PageTemplateIsReusable>true</PageTemplateIsReusable>
+      <PageTemplateShowAsMasterTemplate>true</PageTemplateShowAsMasterTemplate>
+      <PageTemplateInheritPageLevels></PageTemplateInheritPageLevels>
+      <PageTemplateLayout>&lt;div class="topBlock"&gt;
+	&lt;cc1:CMSWebPartZone ID="zoneTop" runat="server" /&gt;
+&lt;/div&gt;
+&lt;div class="mainBlock"&gt;
+	&lt;cc1:CMSWebPartZone ID="zoneContent" runat="server" /&gt;
+&lt;/div&gt;</PageTemplateLayout>
+      <PageTemplateVersionGUID>d5557c68-2438-4c0d-b84c-2282e1e93f0e</PageTemplateVersionGUID>
+      <PageTemplateHeader></PageTemplateHeader>
+      <PageTemplateGUID>b9cc45c2-bced-4ae8-88c7-102ef58ad3b1</PageTemplateGUID>
+      <PageTemplateLastModified>2010-02-16T15:53:26.65+01:00</PageTemplateLastModified>
+    </cms_pagetemplate>
+    <cms_pagetemplatesite>
+      <PageTemplateID>6</PageTemplateID>
+      <SiteID>2</SiteID>
+    </cms_pagetemplatesite>
+    <cms_pagetemplatecategory>
+      <CategoryID>43</CategoryID>
+      <CategoryDisplayName>All page templates</CategoryDisplayName>
+      <CategoryName>/</CategoryName>
+      <CategoryGUID>532264bf-95e9-4035-b4ce-fe403c81781a</CategoryGUID>
+      <CategoryLastModified>2011-07-18T18:04:51.977+02:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryChildCount>27</CategoryChildCount>
+      <CategoryTemplateChildCount>0</CategoryTemplateChildCount>
+      <CategoryPath>/</CategoryPath>
+      <CategoryOrder>1</CategoryOrder>
+      <CategoryLevel>0</CategoryLevel>
+    </cms_pagetemplatecategory>
+    <cms_pagetemplatecategory>
+      <CategoryID>44</CategoryID>
+      <CategoryDisplayName>Master templates</CategoryDisplayName>
+      <CategoryParentID>43</CategoryParentID>
+      <CategoryName>MasterTemplates</CategoryName>
+      <CategoryGUID>1865c5c4-81ad-459b-b1d5-8a24c701035e</CategoryGUID>
+      <CategoryLastModified>2008-04-09T07:49:46.217+02:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryTemplateChildCount>3</CategoryTemplateChildCount>
+      <CategoryPath>/MasterTemplates</CategoryPath>
+      <CategoryOrder>17</CategoryOrder>
+      <CategoryLevel>1</CategoryLevel>
+    </cms_pagetemplatecategory>
+    <cms_metafile>
+      <MetaFileID>5589</MetaFileID>
+      <MetaFileObjectID>6</MetaFileObjectID>
+      <MetaFileObjectType>cms.pagetemplate</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>1.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>1465</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>140</MetaFileImageWidth>
+      <MetaFileImageHeight>108</MetaFileImageHeight>
+      <MetaFileGUID>4ba45305-08b7-4f1a-be40-c21574dd4689</MetaFileGUID>
+      <MetaFileLastModified>2010-08-04T15:49:03.687+02:00</MetaFileLastModified>
+    </cms_metafile>
+  </NewDataSet>
+</cms_pagetemplate>

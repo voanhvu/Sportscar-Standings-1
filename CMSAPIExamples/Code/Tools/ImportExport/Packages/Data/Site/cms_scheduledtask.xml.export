@@ -1,0 +1,100 @@
+﻿<cms_scheduledtask version="7.0">
+  <NewDataSet>
+    <cms_scheduledtask>
+      <TaskID>6905</TaskID>
+      <TaskName>Newsletter.CheckBounces</TaskName>
+      <TaskDisplayName>Check bounced e-mails</TaskDisplayName>
+      <TaskAssemblyName>CMS.Newsletter</TaskAssemblyName>
+      <TaskClass>CMS.Newsletter.BounceChecker</TaskClass>
+      <TaskInterval>hour;3/17/2011 7:42:00 AM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2012-08-21T09:50:17.823+02:00</TaskLastRunTime>
+      <TaskNextRunTime>2012-08-21T10:50:17+02:00</TaskNextRunTime>
+      <TaskLastResult>hostname cannot be empty
+Parameter name: hostname</TaskLastResult>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>2</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>0e5fc4db-2707-40d2-97ef-ef1a3a5c0c04</TaskGUID>
+      <TaskLastModified>2012-08-21T09:50:17.837+02:00</TaskLastModified>
+      <TaskExecutions>1</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6904</TaskID>
+      <TaskName>Content.Publish</TaskName>
+      <TaskDisplayName>Content publishing</TaskDisplayName>
+      <TaskAssemblyName>CMS.WorkflowEngine</TaskAssemblyName>
+      <TaskClass>CMS.WorkflowEngine.ContentPublisher</TaskClass>
+      <TaskInterval>minute;11/3/2010 12:38:30 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData>&lt;data&gt;&lt;/data&gt;</TaskData>
+      <TaskLastRunTime>2012-08-21T09:57:53.05+02:00</TaskLastRunTime>
+      <TaskLastResult>[SchedulingExecutor.ExecuteTask]: Cannot load the provider class 'CMS.WorkflowEngine.ContentPublisher' from the assembly 'CMS.WorkflowEngine'.</TaskLastResult>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>2</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>095ee8d2-8f2d-47b0-9fce-464e39d0aab1</TaskGUID>
+      <TaskLastModified>2012-08-21T09:57:53.057+02:00</TaskLastModified>
+      <TaskExecutions>0</TaskExecutions>
+      <TaskRunInSeparateThread>true</TaskRunInSeparateThread>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6903</TaskID>
+      <TaskName>Staging.Synchronization</TaskName>
+      <TaskDisplayName>Content synchronization</TaskDisplayName>
+      <TaskAssemblyName>CMS.SynchronizationEngine</TaskAssemblyName>
+      <TaskClass>CMS.Synchronization.StagingWorker</TaskClass>
+      <TaskInterval>hour;11/8/2007 3:55:14 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2008-07-09T10:53:38.327+02:00</TaskLastRunTime>
+      <TaskNextRunTime>2007-11-08T15:55:14+01:00</TaskNextRunTime>
+      <TaskEnabled>false</TaskEnabled>
+      <TaskSiteID>2</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>13ec1cf4-3ac0-45c1-93a6-acfdcd6538df</TaskGUID>
+      <TaskLastModified>2011-03-18T13:39:24.17+01:00</TaskLastModified>
+      <TaskExecutions>0</TaskExecutions>
+      <TaskRunInSeparateThread>false</TaskRunInSeparateThread>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6907</TaskID>
+      <TaskName>Ecommerce.DeleteOldShoppingCarts</TaskName>
+      <TaskDisplayName>Delete old shopping carts</TaskDisplayName>
+      <TaskAssemblyName>CMS.Ecommerce</TaskAssemblyName>
+      <TaskClass>CMS.Ecommerce.ShoppingCartCleaner</TaskClass>
+      <TaskInterval>day;1/30/2007 11:50:00 AM;1;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2012-08-21T09:50:17.82+02:00</TaskLastRunTime>
+      <TaskNextRunTime>2012-08-22T09:50:17+02:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>2</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>14caafb9-f4d5-4ee6-9e5d-d6f8c557f98a</TaskGUID>
+      <TaskLastModified>2012-08-21T09:50:17.837+02:00</TaskLastModified>
+      <TaskExecutions>1</TaskExecutions>
+      <TaskResourceID>111</TaskResourceID>
+    </cms_scheduledtask>
+    <cms_scheduledtask>
+      <TaskID>6906</TaskID>
+      <TaskName>UsersDeleteNonActivatedUser</TaskName>
+      <TaskDisplayName>Users delete non activated user</TaskDisplayName>
+      <TaskAssemblyName>CMS.Scheduler</TaskAssemblyName>
+      <TaskClass>CMS.Scheduler.DeleteNonActivatedUser</TaskClass>
+      <TaskInterval>hour;10/2/2008 6:14:26 PM;1;00:00:00;23:59:00;Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</TaskInterval>
+      <TaskData></TaskData>
+      <TaskLastRunTime>2012-08-21T09:50:17.793+02:00</TaskLastRunTime>
+      <TaskNextRunTime>2012-08-21T10:50:17+02:00</TaskNextRunTime>
+      <TaskEnabled>true</TaskEnabled>
+      <TaskSiteID>2</TaskSiteID>
+      <TaskDeleteAfterLastRun>false</TaskDeleteAfterLastRun>
+      <TaskServerName></TaskServerName>
+      <TaskGUID>74689bde-2542-4b11-ac31-ec6345a927e9</TaskGUID>
+      <TaskLastModified>2012-08-21T09:50:17.793+02:00</TaskLastModified>
+      <TaskExecutions>1</TaskExecutions>
+    </cms_scheduledtask>
+  </NewDataSet>
+</cms_scheduledtask>

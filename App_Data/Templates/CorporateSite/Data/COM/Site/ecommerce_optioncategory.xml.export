@@ -1,0 +1,37 @@
+﻿<ecommerce_optioncategory version="7.0">
+  <NewDataSet>
+    <com_optioncategory>
+      <CategoryID>79</CategoryID>
+      <CategoryDisplayName>Inscription on the cover</CategoryDisplayName>
+      <CategoryName>iPhoneInscription</CategoryName>
+      <CategorySelectionType>textbox</CategorySelectionType>
+      <CategoryDefaultOptions></CategoryDefaultOptions>
+      <CategoryDescription></CategoryDescription>
+      <CategoryDefaultRecord></CategoryDefaultRecord>
+      <CategoryEnabled>true</CategoryEnabled>
+      <CategoryGUID>d5e7b444-dea2-4114-b3b8-f874c08eee8e</CategoryGUID>
+      <CategoryLastModified>2012-03-12T13:40:29.42+01:00</CategoryLastModified>
+      <CategoryDisplayPrice>true</CategoryDisplayPrice>
+      <CategorySiteID>110</CategorySiteID>
+      <CategoryTextMaxLength>20</CategoryTextMaxLength>
+    </com_optioncategory>
+    <com_sku>
+      <SKUID>754</SKUID>
+      <SKUNumber></SKUNumber>
+      <SKUName>Inscription on the cover</SKUName>
+      <SKUDescription></SKUDescription>
+      <SKUPrice>10</SKUPrice>
+      <SKUEnabled>true</SKUEnabled>
+      <SKUGUID>30b67f52-804b-4bfe-9266-f7d092a0d61c</SKUGUID>
+      <SKUAvailableItems>-7</SKUAvailableItems>
+      <SKUSellOnlyAvailable>false</SKUSellOnlyAvailable>
+      <SKUCustomData></SKUCustomData>
+      <SKUOptionCategoryID>79</SKUOptionCategoryID>
+      <SKULastModified>2012-03-12T13:40:29.333+01:00</SKULastModified>
+      <SKUCreated>2011-09-05T12:29:02.547+02:00</SKUCreated>
+      <SKUSiteID>110</SKUSiteID>
+      <SKUNeedsShipping>false</SKUNeedsShipping>
+      <SKUProductType>TEXT</SKUProductType>
+    </com_sku>
+  </NewDataSet>
+</ecommerce_optioncategory>

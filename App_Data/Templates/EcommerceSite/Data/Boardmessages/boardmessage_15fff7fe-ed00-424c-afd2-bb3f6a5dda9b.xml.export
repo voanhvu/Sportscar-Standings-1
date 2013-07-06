@@ -1,0 +1,66 @@
+﻿<boardmessage_15fff7fe-ed00-424c-afd2-bb3f6a5dda9b version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3158</MessageID>
+      <MessageUserName>Jenny</MessageUserName>
+      <MessageText>I bought it and material quality is not that good.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4041</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-01T00:58:00.783+02:00</MessageInserted>
+      <MessageLastModified>2012-06-01T00:58:00.847+02:00</MessageLastModified>
+      <MessageGUID>b49a83b7-66e7-40bd-bacf-1473929d5745</MessageGUID>
+      <MessageRatingValue>0.4</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3156</MessageID>
+      <MessageUserName>Gill</MessageUserName>
+      <MessageText>This T-shirt is just gorgeous!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4041</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-05-31T23:41:45.93+02:00</MessageInserted>
+      <MessageLastModified>2012-05-31T23:41:46.057+02:00</MessageLastModified>
+      <MessageGUID>ed60e0c8-b6d4-4a07-8dd7-7a9dcc0d9915</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3269</MessageID>
+      <MessageUserName>Drew</MessageUserName>
+      <MessageText>I'm gonna buy the blue one.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4041</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-29T16:30:06.257+02:00</MessageInserted>
+      <MessageLastModified>2012-08-29T16:30:06.263+02:00</MessageLastModified>
+      <MessageGUID>16909f73-9c6c-4a0f-97ec-a1a42da01c85</MessageGUID>
+      <MessageRatingValue>0.6</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3191</MessageID>
+      <MessageUserName>Laura</MessageUserName>
+      <MessageText>Very nice T-shirt, I love it!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4041</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T01:04:00.43+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T01:04:00.433+02:00</MessageLastModified>
+      <MessageGUID>eca8a930-27d9-4deb-84b0-ad56e48d79c1</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_15fff7fe-ed00-424c-afd2-bb3f6a5dda9b>

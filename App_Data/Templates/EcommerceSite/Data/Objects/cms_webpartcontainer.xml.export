@@ -1,0 +1,96 @@
+﻿<cms_webpartcontainer version="7.0">
+  <NewDataSet>
+    <cms_webpartcontainer>
+      <ContainerID>172</ContainerID>
+      <ContainerDisplayName>E-commerce Site - Gray box</ContainerDisplayName>
+      <ContainerName>EcommerceSite.GrayBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBox"&gt;
+&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;
+{%ContainerCustomContent%}
+</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>65adb1b6-256b-4fa1-9f03-8f2819bccbc5</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.623+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>173</ContainerID>
+      <ContainerDisplayName>E-commerce Site - Product menu</ContainerDisplayName>
+      <ContainerName>EcommerceSite.ProductMenu</ContainerName>
+      <ContainerTextBefore>&lt;div class="productMenu"&gt;
+&lt;h2 class="{%ContainerCSSClass%}"&gt;{%ContainerTitle%}&lt;/h2&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>5361b5ba-6014-44d2-b3f4-5a40efba356a</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.627+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>177</ContainerID>
+      <ContainerDisplayName>E-commerce Site - Simple Box</ContainerDisplayName>
+      <ContainerName>EcommerceSite.SimpleBox</ContainerName>
+      <ContainerTextBefore>&lt;div class="simpleBox {%ContainerCSSClass%}"&gt;
+&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;
+{%ContainerCustomContent%}</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>12928585-7f04-4854-bd11-11ef6dca7b86</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.633+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>174</ContainerID>
+      <ContainerDisplayName>E-commerce Site - Sub Menu</ContainerDisplayName>
+      <ContainerName>EcommerceSite.SubMenu</ContainerName>
+      <ContainerTextBefore>&lt;div class="subMenu"&gt;
+&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>0a2e2bea-3f86-4e27-a7ff-7be52470d477</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.637+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>1</ContainerID>
+      <ContainerDisplayName>Gray box</ContainerDisplayName>
+      <ContainerName>Box.Gray</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBox"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>d48d9b0d-12a4-4c3c-9c41-b5a8aefec6ee</ContainerGUID>
+      <ContainerLastModified>2012-08-28T14:56:59.643+02:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainer>
+      <ContainerID>179</ContainerID>
+      <ContainerDisplayName>Gray box with header</ContainerDisplayName>
+      <ContainerName>GrayBoxWithHeader</ContainerName>
+      <ContainerTextBefore>&lt;div class="grayBoxWH"&gt;&lt;h2&gt;{%ContainerTitle%}&lt;/h2&gt;
+&lt;div class="inner"&gt;</ContainerTextBefore>
+      <ContainerTextAfter>&lt;/div&gt;&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>91bf2937-b812-4fb8-8589-700e7d8a87e1</ContainerGUID>
+      <ContainerLastModified>2012-09-05T10:48:26.277+02:00</ContainerLastModified>
+      <ContainerCSS>regrgd</ContainerCSS>
+    </cms_webpartcontainer>
+    <cms_webpartcontainersite>
+      <ContainerID>1</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>172</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>173</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>174</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>177</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+    <cms_webpartcontainersite>
+      <ContainerID>179</ContainerID>
+      <SiteID>135</SiteID>
+    </cms_webpartcontainersite>
+  </NewDataSet>
+</cms_webpartcontainer>

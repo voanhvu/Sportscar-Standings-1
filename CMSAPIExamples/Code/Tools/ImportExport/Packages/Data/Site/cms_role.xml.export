@@ -1,0 +1,35 @@
+﻿<cms_role version="7.0">
+  <NewDataSet>
+    <cms_role>
+      <RoleID>19</RoleID>
+      <RoleDisplayName>Authenticated users</RoleDisplayName>
+      <RoleName>_authenticated_</RoleName>
+      <RoleDescription>Special role which automatically covers all authenticated users.</RoleDescription>
+      <SiteID>2</SiteID>
+      <RoleGUID>ebb754f5-d9fa-4ff9-a185-d2f38813a0af</RoleGUID>
+      <RoleLastModified>2011-03-01T13:31:43.62+01:00</RoleLastModified>
+    </cms_role>
+    <cms_role>
+      <RoleID>20</RoleID>
+      <RoleDisplayName>Everyone</RoleDisplayName>
+      <RoleName>_everyone_</RoleName>
+      <RoleDescription>Special role which automatically covers all users.</RoleDescription>
+      <SiteID>2</SiteID>
+      <RoleGUID>f95e0f49-ab4c-42aa-a7b8-8c60b6c9c9c0</RoleGUID>
+      <RoleLastModified>2011-02-22T16:35:04.23+01:00</RoleLastModified>
+    </cms_role>
+    <cms_role>
+      <RoleID>21</RoleID>
+      <RoleDisplayName>Not authenticated users</RoleDisplayName>
+      <RoleName>_notauthenticated_</RoleName>
+      <RoleDescription>Special role which automatically covers all not authenticated users.</RoleDescription>
+      <SiteID>2</SiteID>
+      <RoleGUID>f8b74636-d728-4274-844e-a58939287093</RoleGUID>
+      <RoleLastModified>2011-02-17T14:13:48.027+01:00</RoleLastModified>
+    </cms_role>
+    <cms_roleuielement>
+      <RoleID>21</RoleID>
+      <ElementID>1198</ElementID>
+    </cms_roleuielement>
+  </NewDataSet>
+</cms_role>

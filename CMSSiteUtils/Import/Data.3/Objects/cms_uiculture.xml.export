@@ -1,0 +1,18 @@
+﻿<cms_uiculture version="7.0">
+  <NewDataSet>
+    <cms_uiculture>
+      <UICultureID>88</UICultureID>
+      <UICultureName>czech</UICultureName>
+      <UICultureCode>cs-cz</UICultureCode>
+      <UICultureGUID>5b48280b-a434-4876-9b7d-0eec165dcc1b</UICultureGUID>
+      <UICultureLastModified>2011-10-14T13:04:43-07:00</UICultureLastModified>
+    </cms_uiculture>
+    <cms_uiculture>
+      <UICultureID>11</UICultureID>
+      <UICultureName>English</UICultureName>
+      <UICultureCode>en-us</UICultureCode>
+      <UICultureGUID>356a7bb3-5b11-4d83-bbc4-964aafd6d60a</UICultureGUID>
+      <UICultureLastModified>2008-08-20T12:52:32-07:00</UICultureLastModified>
+    </cms_uiculture>
+  </NewDataSet>
+</cms_uiculture>

@@ -1,0 +1,168 @@
+﻿<cms_templatedevicelayout version="7.0">
+  <NewDataSet>
+    <cms_templatedevicelayout>
+      <TemplateDeviceLayoutID>335</TemplateDeviceLayoutID>
+      <PageTemplateID>20427</PageTemplateID>
+      <ProfileID>33</ProfileID>
+      <LayoutCode>&lt;div class="topHome"&gt;
+  &lt;div class="padding"&gt;
+    &lt;cms:CMSWebPartZone runat="server" ZoneID="zT" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Container --&gt;
+&lt;div class="twoColumnsLeft innerContent"&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="left"&gt;
+      &lt;div class="padding"&gt;
+        &lt;cms:CMSWebPartZone runat="server" ZoneID="zL" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="center"&gt;
+      &lt;div class="padding"&gt;
+        &lt;cms:CMSWebPartZone runat="server" ZoneID="zM" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</LayoutCode>
+      <LayoutType>ascx</LayoutType>
+      <LayoutCSS></LayoutCSS>
+      <LayoutLastModified>2012-08-28T10:35:54.62+02:00</LayoutLastModified>
+      <LayoutGUID>e5ec7fed-6107-4811-831f-81725aee341e</LayoutGUID>
+      <LayoutVersionGUID>e5b31b0b-3bde-4443-9910-1d756a1de698</LayoutVersionGUID>
+    </cms_templatedevicelayout>
+    <cms_templatedevicelayout>
+      <TemplateDeviceLayoutID>336</TemplateDeviceLayoutID>
+      <PageTemplateID>20427</PageTemplateID>
+      <ProfileID>32</ProfileID>
+      <LayoutCode>&lt;div class="topHome"&gt;
+  &lt;div class="padding"&gt;
+    &lt;cms:CMSWebPartZone runat="server" ZoneID="zT" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Container --&gt;
+&lt;div class="content"&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="responsiveClear"&gt;&lt;/div&gt;
+    &lt;div class="center"&gt;
+      &lt;div class="padding"&gt;
+        &lt;cms:CMSWebPartZone runat="server" ZoneID="zM" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</LayoutCode>
+      <LayoutType>ascx</LayoutType>
+      <LayoutCSS></LayoutCSS>
+      <LayoutLastModified>2012-08-28T10:35:54.627+02:00</LayoutLastModified>
+      <LayoutGUID>9a412da9-d762-44eb-a655-fc47eded8158</LayoutGUID>
+      <LayoutVersionGUID>b4c9d9a3-dd99-41bc-bd76-63f51c37c183</LayoutVersionGUID>
+    </cms_templatedevicelayout>
+    <cms_templatedevicelayout>
+      <TemplateDeviceLayoutID>337</TemplateDeviceLayoutID>
+      <PageTemplateID>20426</PageTemplateID>
+      <ProfileID>32</ProfileID>
+      <LayoutCode>&lt;!-- Top info --&gt;
+&lt;div class="zoneTopInfo"&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="left"&gt;&lt;cms:CMSWebPartZone ZoneID="zTI" runat="server" /&gt;&lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="zoneTopWrap"&gt;
+  &lt;div class="inner"&gt;
+    &lt;!-- Logo --&gt;
+    &lt;div class="zoneLogo"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zL" runat="server" /&gt;
+    &lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;!-- Menu --&gt;
+    &lt;div class="zoneMenu"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zM" runat="server" /&gt;
+      &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="zoneMenuWrap"&gt;
+  &lt;div class="inner"&gt;
+    &lt;!-- Breadcrumbs --&gt;
+    &lt;div class="zoneBreadcrumbs"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zB" runat="server" /&gt;
+    &lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Content --&gt;
+&lt;div class="zoneMainContent"&gt;
+  &lt;cms:CMSWebPartZone ZoneID="zC" runat="server" /&gt;
+  &lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Footer zone --&gt;
+&lt;div class="zoneFooter"&gt;
+  &lt;div class="inner"&gt;
+    &lt;cms:CMSWebPartZone ZoneID="zF" runat="server" /&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</LayoutCode>
+      <LayoutType>ascx</LayoutType>
+      <LayoutCSS></LayoutCSS>
+      <LayoutLastModified>2012-08-28T10:35:54.637+02:00</LayoutLastModified>
+      <LayoutGUID>4e09627c-f984-4435-901d-b75b57b3f203</LayoutGUID>
+      <LayoutVersionGUID>eda9cb2a-b5c6-4580-8565-b3b7fd8abc80</LayoutVersionGUID>
+    </cms_templatedevicelayout>
+    <cms_templatedevicelayout>
+      <TemplateDeviceLayoutID>348</TemplateDeviceLayoutID>
+      <PageTemplateID>20426</PageTemplateID>
+      <ProfileID>33</ProfileID>
+      <LayoutCode>&lt;!-- Top info --&gt;
+&lt;div class="zoneTopInfo"&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="right"&gt;&lt;cms:CMSWebPartZone ZoneID="zTIR" runat="server" /&gt;&lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="zoneTopWrap"&gt;
+  &lt;div class="inner"&gt;
+    &lt;!-- Logo --&gt;
+    &lt;div class="zoneLogo"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zL" runat="server" /&gt;
+    &lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;!-- Menu --&gt;
+    &lt;div class="zoneMenu"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zM" runat="server" /&gt;
+      &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="zoneMenuWrap"&gt;
+  &lt;div class="inner"&gt;
+    &lt;!-- Breadcrumbs --&gt;
+    &lt;div class="zoneBreadcrumbs"&gt;
+      &lt;cms:CMSWebPartZone ZoneID="zB" runat="server" /&gt;
+    &lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Content --&gt;
+&lt;div class="zoneMainContent"&gt;
+  &lt;cms:CMSWebPartZone ZoneID="zC" runat="server" /&gt;
+  &lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Footer zone --&gt;
+&lt;div class="zoneFooter"&gt;
+  &lt;div class="inner"&gt;
+    &lt;cms:CMSWebPartZone ZoneID="zF" runat="server" /&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</LayoutCode>
+      <LayoutType>ascx</LayoutType>
+      <LayoutCSS></LayoutCSS>
+      <LayoutLastModified>2012-08-28T10:35:54.663+02:00</LayoutLastModified>
+      <LayoutGUID>0e3f462a-5e56-438b-af94-4539d0e62181</LayoutGUID>
+      <LayoutVersionGUID>99f146d2-e1e2-4787-b00c-b2b1106a8349</LayoutVersionGUID>
+    </cms_templatedevicelayout>
+  </NewDataSet>
+</cms_templatedevicelayout>

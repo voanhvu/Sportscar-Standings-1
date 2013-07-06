@@ -1,0 +1,13 @@
+﻿<integration_connector version="7.0">
+  <NewDataSet>
+    <integration_connector>
+      <ConnectorID>1</ConnectorID>
+      <ConnectorName>SampleIntegrationConnector</ConnectorName>
+      <ConnectorDisplayName>Sample Integration Connector</ConnectorDisplayName>
+      <ConnectorAssemblyName>App_Code</ConnectorAssemblyName>
+      <ConnectorClassName>SampleIntegrationConnector</ConnectorClassName>
+      <ConnectorEnabled>false</ConnectorEnabled>
+      <ConnectorLastModified>2010-12-31T15:00:00-06:00</ConnectorLastModified>
+    </integration_connector>
+  </NewDataSet>
+</integration_connector>

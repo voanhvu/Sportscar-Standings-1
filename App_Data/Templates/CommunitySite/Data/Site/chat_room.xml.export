@@ -1,0 +1,40 @@
+﻿<chat_room version="7.0">
+  <NewDataSet>
+    <chat_room>
+      <ChatRoomID>91</ChatRoomID>
+      <ChatRoomName>The_best_place_you_ve_traveled</ChatRoomName>
+      <ChatRoomDisplayName>The best place you've traveled</ChatRoomDisplayName>
+      <ChatRoomSiteID>53</ChatRoomSiteID>
+      <ChatRoomEnabled>true</ChatRoomEnabled>
+      <ChatRoomPrivate>false</ChatRoomPrivate>
+      <ChatRoomAllowAnonym>true</ChatRoomAllowAnonym>
+      <ChatRoomCreatedWhen>2012-06-19T10:37:41.937+02:00</ChatRoomCreatedWhen>
+      <ChatRoomPassword></ChatRoomPassword>
+      <ChatRoomCreatedByChatUserID>1</ChatRoomCreatedByChatUserID>
+      <ChatRoomIsSupport>false</ChatRoomIsSupport>
+      <ChatRoomIsOneToOne>false</ChatRoomIsOneToOne>
+      <ChatRoomDescription></ChatRoomDescription>
+      <ChatRoomLastModification>2012-06-19T10:37:41.937+02:00</ChatRoomLastModification>
+      <ChatRoomPrivateStateLastModification>2012-06-19T10:37:41.937+02:00</ChatRoomPrivateStateLastModification>
+      <ChatRoomGUID>15de74cf-97ce-46e4-8081-95205c444f13</ChatRoomGUID>
+    </chat_room>
+    <chat_room>
+      <ChatRoomID>92</ChatRoomID>
+      <ChatRoomName>Transport_in_Europe</ChatRoomName>
+      <ChatRoomDisplayName>Transport in Europe</ChatRoomDisplayName>
+      <ChatRoomSiteID>53</ChatRoomSiteID>
+      <ChatRoomEnabled>true</ChatRoomEnabled>
+      <ChatRoomPrivate>false</ChatRoomPrivate>
+      <ChatRoomAllowAnonym>true</ChatRoomAllowAnonym>
+      <ChatRoomCreatedWhen>2012-06-19T10:39:50.06+02:00</ChatRoomCreatedWhen>
+      <ChatRoomPassword></ChatRoomPassword>
+      <ChatRoomCreatedByChatUserID>1</ChatRoomCreatedByChatUserID>
+      <ChatRoomIsSupport>false</ChatRoomIsSupport>
+      <ChatRoomIsOneToOne>false</ChatRoomIsOneToOne>
+      <ChatRoomDescription></ChatRoomDescription>
+      <ChatRoomLastModification>2012-06-19T10:39:50.06+02:00</ChatRoomLastModification>
+      <ChatRoomPrivateStateLastModification>2012-06-19T10:39:50.06+02:00</ChatRoomPrivateStateLastModification>
+      <ChatRoomGUID>40655dc9-932d-45b2-8c1f-afde43cc17ab</ChatRoomGUID>
+    </chat_room>
+  </NewDataSet>
+</chat_room>

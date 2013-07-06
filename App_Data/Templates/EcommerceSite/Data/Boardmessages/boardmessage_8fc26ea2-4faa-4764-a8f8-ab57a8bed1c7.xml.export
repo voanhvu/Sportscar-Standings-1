@@ -1,0 +1,34 @@
+﻿<boardmessage_8fc26ea2-4faa-4764-a8f8-ab57a8bed1c7 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3253</MessageID>
+      <MessageUserName>Johny</MessageUserName>
+      <MessageText>iPhone is just classic. This new one beats the version 4 in almost all parameters.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4031</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-27T01:27:18.473+02:00</MessageInserted>
+      <MessageLastModified>2012-08-27T01:27:18.48+02:00</MessageLastModified>
+      <MessageGUID>392afc9d-b254-4316-a304-53f3d5ed9e00</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3252</MessageID>
+      <MessageUserName>Dominic</MessageUserName>
+      <MessageText>Five stars here!</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4031</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0.1&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-08-27T01:25:48.21+02:00</MessageInserted>
+      <MessageLastModified>2012-08-27T01:25:48.577+02:00</MessageLastModified>
+      <MessageGUID>70554954-3c0f-4716-b27f-d9fbbdfc868b</MessageGUID>
+      <MessageRatingValue>1</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_8fc26ea2-4faa-4764-a8f8-ab57a8bed1c7>

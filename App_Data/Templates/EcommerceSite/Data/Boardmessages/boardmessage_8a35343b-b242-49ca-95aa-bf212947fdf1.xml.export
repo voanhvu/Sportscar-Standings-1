@@ -1,0 +1,38 @@
+﻿<boardmessage_8a35343b-b242-49ca-95aa-bf212947fdf1 version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3195</MessageID>
+      <MessageUserName>Boris</MessageUserName>
+      <MessageText>Great gift for every man.</MessageText>
+      <MessageEmail></MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4052</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T01:14:58.183+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T01:14:58.187+02:00</MessageLastModified>
+      <MessageGUID>f25558e7-66f6-44f6-ad2f-24805f6ed2bf</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+    <board_message>
+      <MessageID>3196</MessageID>
+      <MessageUserName>Rick</MessageUserName>
+      <MessageText>Great even for sports - I use them for running.</MessageText>
+      <MessageEmail>rick@localhost.local</MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4052</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-06-07T01:16:21.833+02:00</MessageInserted>
+      <MessageLastModified>2012-06-07T01:16:21.833+02:00</MessageLastModified>
+      <MessageGUID>1d05792b-2bac-46b3-a85b-57b168d85085</MessageGUID>
+      <MessageRatingValue>0.8</MessageRatingValue>
+    </board_message>
+  </NewDataSet>
+</boardmessage_8a35343b-b242-49ca-95aa-bf212947fdf1>

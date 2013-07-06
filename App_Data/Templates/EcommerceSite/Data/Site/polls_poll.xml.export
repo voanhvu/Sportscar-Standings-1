@@ -1,0 +1,58 @@
+﻿<polls_poll version="7.0">
+  <NewDataSet>
+    <polls_poll>
+      <PollID>100513</PollID>
+      <PollCodeName>How_did_you_find_this_site</PollCodeName>
+      <PollDisplayName>How did you find this site?</PollDisplayName>
+      <PollTitle>How did you find this site?</PollTitle>
+      <PollAllowMultipleAnswers>false</PollAllowMultipleAnswers>
+      <PollQuestion>How did you find this site?</PollQuestion>
+      <PollAccess>0</PollAccess>
+      <PollResponseMessage>Thank you!</PollResponseMessage>
+      <PollGUID>258d6539-49a1-492a-bd3a-0cbde3f24dda</PollGUID>
+      <PollLastModified>2012-08-27T14:10:07.653+02:00</PollLastModified>
+      <PollSiteID>135</PollSiteID>
+      <PollLogActivity>true</PollLogActivity>
+    </polls_poll>
+    <polls_pollanswer>
+      <AnswerID>578</AnswerID>
+      <AnswerText>Print advertising</AnswerText>
+      <AnswerOrder>1</AnswerOrder>
+      <AnswerCount>10</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>100513</AnswerPollID>
+      <AnswerGUID>528e4626-525a-4a7d-acfa-b2d973d5b8ce</AnswerGUID>
+      <AnswerLastModified>2012-07-18T10:56:11.463+02:00</AnswerLastModified>
+    </polls_pollanswer>
+    <polls_pollanswer>
+      <AnswerID>579</AnswerID>
+      <AnswerText>Link from another web site</AnswerText>
+      <AnswerOrder>2</AnswerOrder>
+      <AnswerCount>9</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>100513</AnswerPollID>
+      <AnswerGUID>686c3d19-5a86-4257-9294-06edb46774f3</AnswerGUID>
+      <AnswerLastModified>2012-07-18T10:56:25.16+02:00</AnswerLastModified>
+    </polls_pollanswer>
+    <polls_pollanswer>
+      <AnswerID>580</AnswerID>
+      <AnswerText>Referred by a friend</AnswerText>
+      <AnswerOrder>3</AnswerOrder>
+      <AnswerCount>14</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>100513</AnswerPollID>
+      <AnswerGUID>57b781dd-2e6b-43b9-9730-06a85fb12435</AnswerGUID>
+      <AnswerLastModified>2012-07-18T10:56:40.06+02:00</AnswerLastModified>
+    </polls_pollanswer>
+    <polls_pollanswer>
+      <AnswerID>581</AnswerID>
+      <AnswerText>Search engine</AnswerText>
+      <AnswerOrder>4</AnswerOrder>
+      <AnswerCount>11</AnswerCount>
+      <AnswerEnabled>true</AnswerEnabled>
+      <AnswerPollID>100513</AnswerPollID>
+      <AnswerGUID>e5961194-61cf-4df6-90df-6e358bbb945f</AnswerGUID>
+      <AnswerLastModified>2012-07-18T10:56:53.86+02:00</AnswerLastModified>
+    </polls_pollanswer>
+  </NewDataSet>
+</polls_poll>

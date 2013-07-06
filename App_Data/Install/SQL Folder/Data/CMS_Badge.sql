@@ -1,0 +1,6 @@
+SET IDENTITY_INSERT [CMS_Badge] ON
+INSERT INTO [CMS_Badge] ([BadgeID], [BadgeName], [BadgeDisplayName], [BadgeImageURL], [BadgeIsAutomatic], [BadgeTopLimit], [BadgeGUID], [BadgeLastModified]) VALUES (45, N'AdvancedMember', N'Advanced member', N'/Objects/CMS_Badge/Default/advancedmember.gif', 1, 100000, '90cba1a8-38e3-47c8-ab98-2790a05d39d4', '20120626 13:28:43')
+INSERT INTO [CMS_Badge] ([BadgeID], [BadgeName], [BadgeDisplayName], [BadgeImageURL], [BadgeIsAutomatic], [BadgeTopLimit], [BadgeGUID], [BadgeLastModified]) VALUES (44, N'ValuedMember', N'Valued member', N'/Objects/CMS_Badge/Default/valuedmember.gif', 1, 30, 'e7e4c1ce-a292-483a-af6d-8594548b01a4', '20120626 13:28:50')
+INSERT INTO [CMS_Badge] ([BadgeID], [BadgeName], [BadgeDisplayName], [BadgeImageURL], [BadgeIsAutomatic], [BadgeTopLimit], [BadgeGUID], [BadgeLastModified]) VALUES (43, N'Member', N'Member', N'/Objects/CMS_Badge/Default/member.gif', 1, 10, '2988a647-9f0e-4c4e-b740-5576021683f8', '20120626 13:28:59')
+INSERT INTO [CMS_Badge] ([BadgeID], [BadgeName], [BadgeDisplayName], [BadgeImageURL], [BadgeIsAutomatic], [BadgeTopLimit], [BadgeGUID], [BadgeLastModified]) VALUES (46, N'Admin', N'Site admin', N'/Objects/CMS_Badge/Default/siteadmin.gif', 0, 0, '1f57161b-6d6f-46f4-8519-faffd2ce9eef', '20120626 13:29:08')
+SET IDENTITY_INSERT [CMS_Badge] OFF

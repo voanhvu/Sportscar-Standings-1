@@ -1,0 +1,24 @@
+﻿<cms_membership version="7.0">
+  <NewDataSet>
+    <cms_membership>
+      <MembershipID>137</MembershipID>
+      <MembershipName>EcommerceSite.ResellerMembership</MembershipName>
+      <MembershipDisplayName>Reseller Membership</MembershipDisplayName>
+      <MembershipDescription>Sample membership</MembershipDescription>
+      <MembershipLastModified>2012-09-05T09:30:07.763+02:00</MembershipLastModified>
+      <MembershipGUID>663aed60-529a-4b5b-b0b7-308fb270b55f</MembershipGUID>
+      <MembershipSiteID>135</MembershipSiteID>
+    </cms_membership>
+    <cms_membershipuser>
+      <MembershipUserID>705</MembershipUserID>
+      <MembershipID>137</MembershipID>
+      <UserID>53</UserID>
+      <ValidTo>2012-09-05T09:29:26.68+02:00</ValidTo>
+      <SendNotification>true</SendNotification>
+    </cms_membershipuser>
+    <cms_membershiprole>
+      <MembershipID>137</MembershipID>
+      <RoleID>3723</RoleID>
+    </cms_membershiprole>
+  </NewDataSet>
+</cms_membership>

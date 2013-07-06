@@ -1,0 +1,20 @@
+﻿<boardmessage_889d2ea4-f01e-4b53-b5db-8a4a0ab0e94e version="7.0">
+  <NewDataSet>
+    <board_message>
+      <MessageID>3129</MessageID>
+      <MessageUserName>Global Administrator</MessageUserName>
+      <MessageText>Best buy phone</MessageText>
+      <MessageEmail>administrator@localhost.local</MessageEmail>
+      <MessageURL></MessageURL>
+      <MessageIsSpam>false</MessageIsSpam>
+      <MessageBoardID>4034</MessageBoardID>
+      <MessageApproved>true</MessageApproved>
+      <MessageApprovedByUserID>53</MessageApprovedByUserID>
+      <MessageUserID>53</MessageUserID>
+      <MessageUserInfo>&lt;info&gt;&lt;ip&gt;127.0.0.1&lt;/ip&gt;&lt;agent&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.152 Safari/535.19&lt;/agent&gt;&lt;/info&gt;</MessageUserInfo>
+      <MessageInserted>2012-04-16T01:31:11.473+02:00</MessageInserted>
+      <MessageLastModified>2012-04-16T01:31:11.487+02:00</MessageLastModified>
+      <MessageGUID>d0a79fcf-b6fb-42df-8b77-18e0fb73cb9b</MessageGUID>
+    </board_message>
+  </NewDataSet>
+</boardmessage_889d2ea4-f01e-4b53-b5db-8a4a0ab0e94e>
