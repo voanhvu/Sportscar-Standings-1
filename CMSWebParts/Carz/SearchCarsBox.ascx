@@ -116,6 +116,16 @@
                         }
 
                     });
+					//---added by holly 7-6-13
+					function sortMakes(a, b) {    
+					    if (a.innerHTML == 'All') {
+					        return -1;   
+					    }       
+					    return (a.innerHTML > b.innerHTML) ? 1 : -1;
+					};
+					$('#ddlMake option').sort(sortMakes).appendTo('#ddlMake'); //sort alphabetically
+					$('#ddlMake').val('1'); //default value
+					//---end added by holly
                      get_model();
                 }else
                 {
