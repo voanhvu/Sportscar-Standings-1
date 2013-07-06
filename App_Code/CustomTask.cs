@@ -97,7 +97,7 @@ namespace Custom
 							" 	 iif(MT1of4MileTime is null,Best1of4MileTime,iif(MT1of4MileTime<Best1of4MileTime,MT1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 							" 	 iif(MT1of4MileSpeed is null,Best1of4MileSpeed,iif(MT1of4MileSpeed<Best1of4MileSpeed,MT1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
 							" 	 iif(MTTopSpeed is null,BestTopSpeed,iif(MTTopSpeed<BestTopSpeed,MTTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
-							" 	 iif(MTSkidPad is null,BestSkidPad,iif(MTSkidPad<BestSkidPad,MTSkidPad,BestSkidPad)) as BestSkidPad \n" +
+							" 	 iif(MTSkidPad is null,BestSkidPad,iif(MTSkidPad>BestSkidPad,MTSkidPad,BestSkidPad)) as BestSkidPad \n" +
                              "        FROM [dbo].[customtable_carz]  \n" +
                              "     Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable1].Best060Time, \n" +
@@ -120,7 +120,7 @@ namespace Custom
 								"  iif(CD1of4MileTime is null,Best1of4MileTime,iif(CD1of4MileTime<Best1of4MileTime,CD1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 								"  iif(CD1of4MileSpeed is null,Best1of4MileSpeed,iif(CD1of4MileSpeed<Best1of4MileSpeed,CD1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
 								"  iif(CDTopSpeed is null,BestTopSpeed,iif(CDTopSpeed<BestTopSpeed,CDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
-								"  iif(CDSkidPad is null,BestSkidPad,iif(CDSkidPad<BestSkidPad,CDSkidPad,BestSkidPad)) as BestSkidPad \n" +
+								"  iif(CDSkidPad is null,BestSkidPad,iif(CDSkidPad>BestSkidPad,CDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                "      FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable2].Best060Time, \n" +
@@ -143,7 +143,7 @@ namespace Custom
 								"  iif(ED1of4MileTime is null,Best1of4MileTime,iif(ED1of4MileTime<Best1of4MileTime,ED1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 								"  iif(ED1of4MileSpeed is null,Best1of4MileSpeed,iif(ED1of4MileSpeed<Best1of4MileSpeed,ED1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
 								"  iif(EDTopSpeed is null,BestTopSpeed,iif(EDTopSpeed<BestTopSpeed,EDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
-								"  iif(EDSkidPad is null,BestSkidPad,iif(EDSkidPad<BestSkidPad,EDSkidPad,BestSkidPad)) as BestSkidPad \n" +
+								"  iif(EDSkidPad is null,BestSkidPad,iif(EDSkidPad>BestSkidPad,EDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable3].Best060Time, \n" +
@@ -166,7 +166,7 @@ namespace Custom
 							" 	 iif(Other1of4MileTime is null,iif(Best1of4MileTime = 1000,0,Best1of4MileTime),iif(Other1of4MileTime<Best1of4MileTime,Other1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
 							" 	 iif(Other1of4MileSpeed is null,iif(Best1of4MileSpeed = 1000,0,Best1of4MileSpeed),iif(Other1of4MileSpeed<Best1of4MileSpeed,Other1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
 							" 	 iif(OtherTopSpeed is null,iif(BestTopSpeed = 1000,0,BestTopSpeed),iif(OtherTopSpeed<BestTopSpeed,OtherTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
-							" 	 iif(OtherSkidPad is null,iif(BestSkidPad = 1000,0,BestSkidPad),iif(OtherSkidPad<BestSkidPad,OtherSkidPad,BestSkidPad)) as BestSkidPad \n" +
+							" 	 iif(OtherSkidPad is null,iif(BestSkidPad = 1000,0,BestSkidPad),iif(OtherSkidPad>BestSkidPad,OtherSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
 								"   Best060Time=[@TempTableVariable4].Best060Time, \n" +
