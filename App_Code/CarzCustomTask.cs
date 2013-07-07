@@ -21,7 +21,7 @@ namespace Custom
     /// Custom task class.
     /// </summary>
         
-    public class CustomTask: ITask
+    public class CarzCustomTask: ITask
     {
        
         /// <summary>
@@ -210,8 +210,8 @@ namespace Custom
                                 "ItemID int, \n" +
                                 "STT int);\n" +
                             "INSERT INTO @TempTableVariable (ItemID, STT)\n" +
-                                //--------*** edit by holly 7-6-13 use best 1/4 mi time as tie-breaker for rankings --------
-                                "SELECT ItemID, ROW_NUMBER() OVER (Order by Best060Time,Average060Time,Best1of4MileTime) as STT \n" +
+                                //--------*** edit by holly 7-6-13 also use best 1/4 mi time and top speed as tie-breakers for rankings --------
+                                "SELECT ItemID, ROW_NUMBER() OVER (Order by Best060Time,Average060Time,Best1of4MileTime,BestTopSpeed) as STT \n" +
                                     "FROM [dbo].[customtable_carz] \n" +
                                     "Where ({0});	\n" +
                             "Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT \n" +
