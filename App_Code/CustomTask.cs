@@ -50,6 +50,12 @@ namespace Custom
         }
         public void get_query_task(TaskInfo ti)
         {
+
+
+//--------*** this populates the calculated fields --------
+
+//--------*** this calculates the Average 0-60 time, for all 5 source fields combined --------
+
             string avg="Declare @TempTableVariable5 TABLE(  \n" +
                                " ItemID int,  \n" +
                                " Average060Time float); \n" +
@@ -61,6 +67,11 @@ namespace Custom
 								"  Average060Time=[@TempTableVariable5].Average060Time \n" +
                           "  FROM [dbo].[customtable_carz] \n" +
                            " RIGHT OUTER JOIN @TempTableVariable5 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable5].[ItemID];";
+
+//--------*** this calculates the Best 0-60, 1/4 time, 1/4 speed, top speed and skid pad, for all 5 source fields combined --------
+
+			//--------*** this is the Road & Track (RT) section --------
+            
             string speed= "Declare @TempTableVariable TABLE(  \n" +
                                 "ItemID int,  \n" +
                                " Best060Time float, \n" +
@@ -84,7 +95,10 @@ namespace Custom
 								"  BestSkidPad=[@TempTableVariable].BestSkidPad \n" +
                            " FROM [dbo].[customtable_carz] \n" +
                           "  RIGHT OUTER JOIN @TempTableVariable ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable].[ItemID]; \n" +
-"Declare @TempTableVariable1 TABLE(  \n" +
+
+			//--------*** this is the MotorTrend (MT) section --------
+
+			"Declare @TempTableVariable1 TABLE(  \n" +
                            "     ItemID int,  \n" +
                             "   Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
@@ -95,7 +109,8 @@ namespace Custom
                            "      SELECT ItemID, \n" +
 							" 	 iif(MT060Time is null,Best060Time,iif(MT060Time<Best060Time,MT060Time,Best060Time)) as Best060Time, \n" +
 							" 	 iif(MT1of4MileTime is null,Best1of4MileTime,iif(MT1of4MileTime<Best1of4MileTime,MT1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
-							" 	 iif(MT1of4MileSpeed is null,Best1of4MileSpeed,iif(MT1of4MileSpeed<Best1of4MileSpeed,MT1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
+							//--------*** edit by holly 7-6-13 use best 1/4 mi speed from the source with best 1/4 time --------
+							" 	 iif(MT1of4MileSpeed is null,Best1of4MileSpeed,iif(MT1of4MileTime<Best1of4MileTime,MT1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" + 
 							" 	 iif(MTTopSpeed is null,BestTopSpeed,iif(MTTopSpeed<BestTopSpeed,MTTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
 							" 	 iif(MTSkidPad is null,BestSkidPad,iif(MTSkidPad>BestSkidPad,MTSkidPad,BestSkidPad)) as BestSkidPad \n" +
                              "        FROM [dbo].[customtable_carz]  \n" +
@@ -107,7 +122,10 @@ namespace Custom
 								"   BestSkidPad=[@TempTableVariable1].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable1 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable1].[ItemID]; \n" +
-" Declare @TempTableVariable2 TABLE(  \n" +
+
+			//--------*** this is the Car & Driver (CD) section --------
+
+			" Declare @TempTableVariable2 TABLE(  \n" +
                              "    ItemID int,  \n" +
                              "    Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
@@ -118,8 +136,8 @@ namespace Custom
                             "     SELECT ItemID, \n" +
 								"  iif(CD060Time is null,Best060Time,iif(CD060Time<Best060Time,CD060Time,Best060Time)) as Best060Time, \n" +
 								"  iif(CD1of4MileTime is null,Best1of4MileTime,iif(CD1of4MileTime<Best1of4MileTime,CD1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
-								"  iif(CD1of4MileSpeed is null,Best1of4MileSpeed,iif(CD1of4MileSpeed<Best1of4MileSpeed,CD1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-								"  iif(CDTopSpeed is null,BestTopSpeed,iif(CDTopSpeed<BestTopSpeed,CDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+							//--------*** edit by holly 7-6-13 use best 1/4 mi speed from the source with best 1/4 time --------
+							" 	 iif(CD1of4MileSpeed is null,Best1of4MileSpeed,iif(CD1of4MileTime<Best1of4MileTime,CD1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" + 								"  iif(CDTopSpeed is null,BestTopSpeed,iif(CDTopSpeed<BestTopSpeed,CDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
 								"  iif(CDSkidPad is null,BestSkidPad,iif(CDSkidPad>BestSkidPad,CDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                "      FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
@@ -130,7 +148,10 @@ namespace Custom
 								"   BestSkidPad=[@TempTableVariable2].BestSkidPad \n" +
                             " FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable2 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable2].[ItemID]; \n" +
-" Declare @TempTableVariable3 TABLE(  \n" +
+
+			//--------*** this is the Edmunds (ED) source section --------
+
+			" Declare @TempTableVariable3 TABLE(  \n" +
                             "     ItemID int,  \n" +
                                "  Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
@@ -141,8 +162,8 @@ namespace Custom
                             "     SELECT ItemID, \n" +
 								"  iif(ED060Time is null,Best060Time,iif(ED060Time<Best060Time,ED060Time,Best060Time)) as Best060Time, \n" +
 								"  iif(ED1of4MileTime is null,Best1of4MileTime,iif(ED1of4MileTime<Best1of4MileTime,ED1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
-								"  iif(ED1of4MileSpeed is null,Best1of4MileSpeed,iif(ED1of4MileSpeed<Best1of4MileSpeed,ED1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-								"  iif(EDTopSpeed is null,BestTopSpeed,iif(EDTopSpeed<BestTopSpeed,EDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+							//--------*** edit by holly 7-6-13 use best 1/4 mi speed from the source with best 1/4 time --------
+							" 	 iif(ED1of4MileSpeed is null,Best1of4MileSpeed,iif(ED1of4MileTime<Best1of4MileTime,ED1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" + 								"  iif(EDTopSpeed is null,BestTopSpeed,iif(EDTopSpeed<BestTopSpeed,EDTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
 								"  iif(EDSkidPad is null,BestSkidPad,iif(EDSkidPad>BestSkidPad,EDSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
@@ -153,7 +174,10 @@ namespace Custom
 								"   BestSkidPad=[@TempTableVariable3].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable3 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable3].[ItemID]; \n" +
-" Declare @TempTableVariable4 TABLE(  \n" +
+
+			//--------*** this is the Other source section --------
+
+			" Declare @TempTableVariable4 TABLE(  \n" +
                             "     ItemID int,  \n" +
                                "  Best060Time float, \n" +
 							" 	Best1of4MileTime float, \n" +
@@ -164,8 +188,8 @@ namespace Custom
                             "     SELECT ItemID, \n" +
 							" 	 iif(Other060Time is null,iif(Best060Time = 1000,0,Best060Time),iif(Other060Time<Best060Time,Other060Time,Best060Time)) as Best060Time, \n" +
 							" 	 iif(Other1of4MileTime is null,iif(Best1of4MileTime = 1000,0,Best1of4MileTime),iif(Other1of4MileTime<Best1of4MileTime,Other1of4MileTime,Best1of4MileTime)) as Best1of4MileTime, \n" +
-							" 	 iif(Other1of4MileSpeed is null,iif(Best1of4MileSpeed = 1000,0,Best1of4MileSpeed),iif(Other1of4MileSpeed<Best1of4MileSpeed,Other1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" +
-							" 	 iif(OtherTopSpeed is null,iif(BestTopSpeed = 1000,0,BestTopSpeed),iif(OtherTopSpeed<BestTopSpeed,OtherTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
+							//--------*** edit by holly 7-6-13 use best 1/4 mi speed from the source with best 1/4 time --------
+							" 	 iif(Other1of4MileSpeed is null,Best1of4MileSpeed,iif(Other1of4MileTime<Best1of4MileTime,Other1of4MileSpeed,Best1of4MileSpeed)) as Best1of4MileSpeed, \n" + 							" 	 iif(OtherTopSpeed is null,iif(BestTopSpeed = 1000,0,BestTopSpeed),iif(OtherTopSpeed<BestTopSpeed,OtherTopSpeed,BestTopSpeed)) as BestTopSpeed, \n" +
 							" 	 iif(OtherSkidPad is null,iif(BestSkidPad = 1000,0,BestSkidPad),iif(OtherSkidPad>BestSkidPad,OtherSkidPad,BestSkidPad)) as BestSkidPad \n" +
                                 "     FROM [dbo].[customtable_carz]  \n" +
                                "   Update [dbo].[customtable_carz] SET  \n" +
@@ -176,6 +200,9 @@ namespace Custom
 								"   BestSkidPad=[@TempTableVariable4].BestSkidPad \n" +
                            "  FROM [dbo].[customtable_carz] \n" +
                           "   RIGHT OUTER JOIN @TempTableVariable4 ON [dbo].[customtable_carz].[ItemID] = [@TempTableVariable4].[ItemID];";
+
+//--------*** this calculates the final Rankings for each car within its default time class (super fast, fast, spirited, mellow, tame) --------
+
             GeneralConnection cn = ConnectionHelper.GetConnection();
             string qryname = "";
             string clsname = "";
@@ -183,7 +210,8 @@ namespace Custom
                                 "ItemID int, \n" +
                                 "STT int);\n" +
                             "INSERT INTO @TempTableVariable (ItemID, STT)\n" +
-                                "SELECT ItemID, ROW_NUMBER() OVER (Order by Best060Time,Average060Time) as STT \n" +
+                                //--------*** edit by holly 7-6-13 use best 1/4 mi time as tie-breaker for rankings --------
+                                "SELECT ItemID, ROW_NUMBER() OVER (Order by Best060Time,Average060Time,Best1of4MileTime) as STT \n" +
                                     "FROM [dbo].[customtable_carz] \n" +
                                     "Where ({0});	\n" +
                             "Update [dbo].[customtable_carz] SET TimeClassRank=[@TempTableVariable].STT \n" +
