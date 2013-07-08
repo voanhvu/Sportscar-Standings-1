@@ -350,81 +350,71 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
 
 //--------*** This sets up the winner's circle text on the detail page--------
 
-            class_ = Session["classname_search"].ToString();
-            string custompath = "/Top-10-Fastest-Cars/" + class_;
-            if (CarzHelpers.URLDecode(class_, true) == "Custom-Search") custompath = (Session["path_result"] != null ? Session["path_result"].ToString() : "");
             cid = dr["ItemID"].ToString();
             View = (dr["Views"].ToString() == "" ? "0" : dr["Views"].ToString());
-            link_detail = "/Top-10-Fastest-Cars" + (class_ != null ? "/" + class_ : "") + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) ;
-            
+            link_detail = "/Popular-Lineups" + (Request.Params["class"] != null ? "/" + Request.Params["class"].ToString() : "") + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) ;
+
             //--------*** Section Intro --------
-            string default_text = "The top 10 fastest cars from <strong><a href='{9}' title='{5}'>{5}</a></strong> are ranked from fastest to slowest by their 0 to 60 times. Our data is based on test results from several of the premier sources, including Motor Trend, Road & Track, Car & Driver and more.</p><p>Coming in at #{4} on the list is the <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong>, which races 0-60 mph in {8} seconds. Sports cars with this rate of acceleration are classified as <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a>. ";
-            
-            string path1 = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            string default_text = "The top 10 fastest cars from <strong><a href='/Popular-Lineups/{6}' title='{5}'>{5}</a></strong> are ranked from fastest to slowest by their 0 to 60 times. Our data is based on several of the premier sources, including Motor Trend, Road & Track, Car & Driver and more.</p><p>Coming in at #{4} on the list is the <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong>, which races 0-60 mph in {8} seconds. Sports cars with this rate of acceleration are classified as <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a>.";
+
+            string path1 = "/Popular-Lineups/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rank = int.Parse(dr["STT"].ToString());
-            default_text = string.Format(default_text, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rank.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, path1, dr["Best060Time"].ToString(), custompath);
-            
-            
+            default_text = string.Format(default_text, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rank.ToString(), class_.Replace("-", " "), class_, path1, dr["Best060Time"].ToString());
+
             //--------*** Section Winners --------
             //--------*** winner 1 --------
-            string path2 = "/Top-10-Fastest-Cars/" + class_ + "/" + y2 + "-" + CarzHelpers.URLEncode(m2) + "-" + CarzHelpers.URLEncode(md2, true);
-            string path3 = "/Top-10-Fastest-Cars/" + class_ + "/" + y3 + "-" + CarzHelpers.URLEncode(m3) + "-" + CarzHelpers.URLEncode(md3, true);
-
+            string path2 = "/Popular-Lineups/" + class_ + "/" + y2 + "-" + CarzHelpers.URLEncode(m2) + "-" + CarzHelpers.URLEncode(md2, true);
+            string path3 = "/Popular-Lineups/" + class_ + "/" + y3 + "-" + CarzHelpers.URLEncode(m3) + "-" + CarzHelpers.URLEncode(md3, true);
             string winner1 = "It pulls ahead of the #2 ranked <a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a> by {6}";
             if (y3 != "") winner1 += " and the #3 ranked <a href='{11}' title='{7} {8} {9}{10}'>{7} {8} {9}{10}</a> by {12}.";
             else winner1 += ".";
             if (y2 == "") winner1 = "";
-            winner1 = string.Format(winner1, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-            string winner1B = "<a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a>, you would <strong>WIN</strong> by {6} seconds!";
-			winner1B = string.Format(winner1B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+
+            winner1 = string.Format(winner1, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (compare(time60) ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+            string winner1B = "";
 
 
             //--------*** winner2 --------
             string winner2 = "It falls behind the #{6} ranked <a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a> by {7}";
             if (y3 != "") winner2 += " and pulls ahead of the #{8} ranked <a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a> by {14}.";
             else winner2 += ".";
-            winner2 = string.Format(winner2, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-			string winner2B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>WIN</strong> by {14} seconds!";
-			winner2B = string.Format(winner2B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-			
+            winner2 = string.Format(winner2, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (compare(time60) ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+			string winner2B = "";
+
 
             //--------*** winner3 --------
             string winner3 = "It falls behind the #{6} ranked <a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a> by {7}";
             if (y3 != "") winner3 += " and the #{8} ranked <a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a> by {14}.";
             else winner3 += ".";
-            winner3 = string.Format(winner3, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-			string winner3B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>LOSE</strong> by {14} seconds!";
-			winner3B = string.Format(winner3B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-            
-            
+            winner3 = string.Format(winner3, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (compare(time60) ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+			string winner3B = "";
+
             //--------*** Image --------
             string link_media = CarzHelpers.getMediaURL(dr["Image"].ToString());
+
             previewimage = (link_media != "" ? link_media : default_image);
+
             if (previewimage != "") previewimage = string.Format("<div class='ResultImage'><img   border='0'  alt='' src='{0}'/></div>", previewimage);
-            string view_de = " {0}<div class='ResultTitle'><p>0482</p><p><strong>Rank:</strong> #{1}</p><p><strong>Class:</strong>  <a href='{2}' title='{3}'>{3}</a></p><p><strong>0-60 Time:</strong> {4} seconds</p></div><div class='clear'></div>";
+            string view_de = " {0}<div class='ResultTitle'><p>0482</p><p>Rank: #{1}</p><p>Class:  <a href='{2}' title='{3}'>{3}</a></p><p>0-60 Time: {4} seconds</p></div><div class='clear'></div>";
+            view_de = string.Format(view_de, previewimage, rank, "/Popular-Lineups/" + class_, class_.Replace("-", " "), Parse_double(dr["Best060Time"].ToString()).ToString("0.0"));
 
-            view_de = string.Format(view_de, previewimage, rank, custompath, CarzHelpers.URLDecode(class_, true).Replace("-", " "), Parse_double(dr["Best060Time"].ToString()).ToString("0.0"));
 
-            
             //--------*** Section 3 --------
             string default_textB = "If you drive a <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong>, you should know where you stand. In a race from 0-60 mph between your <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
-            string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            string pathB = "/Popular-Lineups/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankB = int.Parse(dr["STT"].ToString());
-            default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankB.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathB, dr["Best060Time"].ToString(), custompath);
+            default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rank.ToString(), class_.Replace("-", " "), class_, pathB, dr["Best060Time"].ToString());
 
 
             //--------*** Section 4 --------
             string default_textC = "What if you were to race against any other <strong><a href='{1}' title='{1}'>{1}</a></strong>, would you win? Or find out where your car ranks against the top 10 fastest cars from <strong><a href='{0}' title='{0}'>{0}</a></strong>.";
-            string pathC = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            string pathC = "/Popular-Lineups/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankC = int.Parse(dr["STT"].ToString());
-            default_textC = string.Format(default_textC, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankC.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathC, dr["Best060Time"].ToString(), custompath);
+            default_textC = string.Format(default_textC, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rank.ToString(), class_.Replace("-", " "), class_, pathC, dr["Best060Time"].ToString());
+            
 
-
-            //--------*** Output HTML --------            
+            //--------*** Output HTML -------- 
             string html_content = "";
-
-            //html_content = view_de + "<div class='ResultContent'><h2>Winner’s Circle</h2><p>" + default_text + "</p></div>";
-
             if (rank == 1)
                 html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner1 + "</p><p>" + default_textB + winner1B + "<p>" + default_textC + "</p></div>";
             else
@@ -432,6 +422,7 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
                     html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner2 + "</p><p>" + default_textB + winner2B + "<p>" + default_textC + "</p></div>";
                 else
                     html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner3 + "</p><p>" + default_textB + winner3B + "<p>" + default_textC + "</p></div>";
+
 
            
           
