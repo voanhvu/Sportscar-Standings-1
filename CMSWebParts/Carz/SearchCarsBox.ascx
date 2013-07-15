@@ -8,8 +8,8 @@
 
      <asp:Literal ID="Literalparam1223" runat="server"></asp:Literal>
      <dl>
-				<dt>Search Cars</dt>
-				<dd>Choose a specific car or compare a group of cars by year, make or model.</dd>
+				<dt>Create Your Own Lineup</dt>
+				<dd>Compare 0-60 times for a group of cars side-by-side within the selected year, make or model.</dd>
 	  </dl>
      <fieldset class="sideSearch">
 						<div class="wrapper-field clearfix">
@@ -28,7 +28,7 @@
                             <select id="ddlModel"  name="model" onchange="check_url();"><option value="All">All</option></select>
 						</div>
 						<div class="grid_2 container-buttons">
-                            <a title="Search" href='/Top-10-Fastest-Cars/' class="btn green" id="Search_Link">Search</a>
+                            <a title="Search" href='/Top-10-Fastest-Cars/' class="btn green" id="Search_Link">GO</a>
 						</div>
 					</fieldset>
 <script type="text/javascript">
