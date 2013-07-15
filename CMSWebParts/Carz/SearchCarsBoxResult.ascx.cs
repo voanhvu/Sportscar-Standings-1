@@ -399,7 +399,7 @@ debug+="-11";
             link_detail = "/Top-10-Fastest-Cars" + (class_ != null ? "/" + class_ : "") + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) ;
             
             //--------*** Section Intro --------
-            string default_text = "The top 10 fastest cars from <strong><a href='/Top-10-Fastest-Cars/{6}' title='{5}'>{5}</a></strong> are ranked from fastest to slowest by their 0 to 60 times. Our data is based on several of the premier sources, including Motor Trend, Road & Track, Car & Driver and more.</p><p>Coming in at #{4} on the list is the <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong>, which races 0-60 mph in {8} seconds. Sports cars with this rate of acceleration are classified as <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a>. ";
+            string default_text = "The top 10 fastest cars from <a href='/Top-10-Fastest-Cars/{6}' title='{5}'>{5}</a> are ranked from fastest to slowest based on their 0-60 times. We crunched the numbers from the best estimates of several premier resources, including Motor Trend, Road & Track, Car & Driver and more.</p><p>Pulling up at <strong>#{4}</strong> in this class is the <a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a>, which races 0-60 mph in {8} seconds. Sports cars with this rate of acceleration are generally classified as <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a>.</p><p> ";
             
             string path1 = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rank = int.Parse(dr["STT"].ToString());
@@ -448,14 +448,14 @@ debug+="-11";
 
             
             //--------*** Section 3 --------
-            string default_textB = "If you drive a <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong>, you should know where you stand. In a race from 0-60 mph between your <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
+            string default_textB = "Whether you are behind the wheel of one of these cars or happen to spot one in the next lane over, think twice before you step on the gas pedal. In a race from 0-60 mph between <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
             string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankB = int.Parse(dr["STT"].ToString());
             default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankB.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathB, dr["Best060Time"].ToString(), custompath);
 
 
             //--------*** Section 4 --------
-            string default_textC = "What if you were to race against any other <strong><a href='{1}' title='{1}'>{1}</a></strong>, would you win? Or find out where your car ranks against the top 10 fastest cars from <strong><a href='{0}' title='{0}'>{0}</a></strong>.";
+            string default_textC = "If you happen to roll up next to another <a href='{1}' title='{1}'>{1}</a>, be sure you know what you're up against. Find out where your car stands among the <a href='{0}' title='{0}'>top 10 fastest cars from {0}</a>.";
             string pathC = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankC = int.Parse(dr["STT"].ToString());
             default_textC = string.Format(default_textC, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankC.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathC, dr["Best060Time"].ToString(), custompath);
@@ -506,7 +506,7 @@ debug+="-11";
      "<p><strong>Best &#188;  Mile:</strong> " + Parse_double(dr["Best1of4MileTime"].ToString()).ToString("0.0") + " seconds </p>" +
      "<p><strong>@  speed:</strong> " + Parse_double(dr["Best1of4MileSpeed"].ToString()).ToString("0.0") + " mph </p>" +
      "<p><strong>Best Top Speed:</strong> " + Parse_double(dr["BestTopSpeed"].ToString()).ToString("0.0") + " mph </p>" +
-     "<p><strong>Best Skid Pad:</strong> " + Parse_double(dr["BestSkidPad"].ToString()).ToString("0.0") + " fts </p>"
+     "<p><strong>Best Skid Pad:</strong> " + Parse_double(dr["BestSkidPad"].ToString()).ToString("0.0") + " G </p>"
                     );
 
 
