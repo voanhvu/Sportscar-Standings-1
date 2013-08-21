@@ -92,6 +92,7 @@
              </asp:BoundField>
 
              <asp:BoundField DataField="ItemID" HeaderText="ItemID" Visible="false" />
+              <asp:BoundField DataField="ItemID" HeaderText="ItemID" Visible="false" />
 
          </Columns>
        

@@ -62,6 +62,10 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
     string md3 = "";
     string bd3 = "";
     string r3 = "";
+    string id1 = "";
+    string id2 = "";
+    string id3 = "";
+
     float time60 = 0;
     float time601 = 0;
     string default_image = "/App_Themes/carz/images/Photo_Coming_Soon.jpg";
@@ -105,23 +109,29 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
 
 
     }
-    
+   
+
     protected void lodding()
     {
 
 //--------*** This sets up the variables pulled from the URL--------
 
-        clsC.init_value(Request.Params["year"], Request.Params["make"], Request.Params["model"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"]);
+        //init_value(Request.Params["year"], Request.Params["make"], Request.Params["model"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"]);
+        clsC.init_value2(Request.Params["year"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"], "search");
         year = Session["year"].ToString();
         make = Session["make"].ToString();
         model = Session["model"].ToString();
-        class_ = Session["classname"].ToString();
+        //class_ = (Request.Params["class"] != null ? Request.Params["class"].ToString() : "");
+		//class_ = (Request.Params["other"] != null ? (Request.Params["other"].ToString()=="all"?"All":class_) : class_);
+        //Response.Write(Request.Params["class"]);
+        
         searchtext = Session["searchtext"].ToString();
         nparam = Session["nparam"] != null ? int.Parse(Session["nparam"].ToString()) : 0;
-
+        class_=Session["classname"].ToString();
         clsC.get_sql(year, make, model, other, searchtext);
-
-        sql = Session["sql"].ToString();
+        if (Session["detailid"] != null) sql = "ItemID='" + Session["detailid"] .ToString()+ "'";
+        else sql = Session["sql"].ToString();
+         //Response.Write("class="+class_);
         title = Session["title"].ToString();
 
         get_query();
@@ -240,8 +250,9 @@ debug+="-11";
                             //begin
                             if (dtb.Rows.Count > 1)
                             {
-                                next = dtb.Rows[1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[1]["Model"].ToString(), true)  ;
                                 cidn_ = dtb.Rows[1]["ItemID"].ToString();
+                                next = dtb.Rows[1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[1]["Model"].ToString(), true) + "-" + cidn_;
+                               
                             }
                             preview = "";
                         }
@@ -251,16 +262,18 @@ debug+="-11";
                                 //the end
                                 if (dtb.Rows.Count > 1)
                                 {
-                                    preview = dtb.Rows[dtb.Rows.Count - 2]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[dtb.Rows.Count - 2]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[dtb.Rows.Count - 2]["Model"].ToString(), true)  ;
                                     cidp_ = dtb.Rows[dtb.Rows.Count - 2]["ItemID"].ToString();
+                                    preview = dtb.Rows[dtb.Rows.Count - 2]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[dtb.Rows.Count - 2]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[dtb.Rows.Count - 2]["Model"].ToString(), true) + "-" + cidp_;
+                                    
                                 }
                             }
                             else
                             {
-                                preview = dtb.Rows[i - 1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[i - 1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[i - 1]["Model"].ToString(), true)  ;
                                 cidp_ = dtb.Rows[i - 1]["ItemID"].ToString();
-                                next = dtb.Rows[i + 1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[i + 1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[i + 1]["Model"].ToString(), true)  ;
+                                preview = dtb.Rows[i - 1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[i - 1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[i - 1]["Model"].ToString(), true) + "-" + cidp_;
                                 cidn_ = dtb.Rows[i + 1]["ItemID"].ToString();
+                                next = dtb.Rows[i + 1]["Year"].ToString() + "-" + CarzHelpers.URLEncode(dtb.Rows[i + 1]["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dtb.Rows[i + 1]["Model"].ToString(), true) + "-" + cidn_;
+                               
                                 //center
                             }
                     }
@@ -282,21 +295,24 @@ debug+="-11";
                             {
                                 if (dtb.Rows.Count == 2)
                                 {
+                                    id2 = dtb.Rows[i - 1]["ItemID"].ToString();
                                     y2 = dtb.Rows[i - 1]["Year"].ToString();
-                                    m2 = dtb.Rows[i - 1]["Make"].ToString();
+                                    m2 = (string.IsNullOrEmpty(dtb.Rows[i - 1]["URLslug"].ToString()) == true ? dtb.Rows[i - 1]["Make"].ToString() : dtb.Rows[i - 1]["URLslug"].ToString());
                                     md2 = dtb.Rows[i - 1]["Model"].ToString();
                                     r2 = dtb.Rows[i - 1]["STT"].ToString();
                                     time60 = Parse_double(dtb.Rows[i]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i - 1]["Best060Time"].ToString());
                                 }
                                 else
                                 {
+                                    id2 = dtb.Rows[i - 2]["ItemID"].ToString();
                                     y2 = dtb.Rows[i - 2]["Year"].ToString();
-                                    m2 = dtb.Rows[i - 2]["Make"].ToString();
+                                    m2 = (string.IsNullOrEmpty(dtb.Rows[i - 2]["URLslug"].ToString()) == true ? dtb.Rows[i - 2]["Make"].ToString() : dtb.Rows[i - 2]["URLslug"].ToString());
                                     md2 = dtb.Rows[i - 2]["Model"].ToString();
                                     r2 = dtb.Rows[i - 2]["STT"].ToString();
                                     time60 = Parse_double(dtb.Rows[i]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i - 2]["Best060Time"].ToString());
+                                    id3 = dtb.Rows[i - 1]["ItemID"].ToString();
                                     y3 = dtb.Rows[i - 1]["Year"].ToString();
-                                    m3 = dtb.Rows[i - 1]["Make"].ToString();
+                                    m3 = (string.IsNullOrEmpty(dtb.Rows[i - 1]["URLslug"].ToString()) == true ? dtb.Rows[i - 1]["Make"].ToString() : dtb.Rows[i - 1]["URLslug"].ToString());
                                     md3 = dtb.Rows[i - 1]["Model"].ToString();
                                     r3 = dtb.Rows[i - 1]["STT"].ToString();
                                     time601 = Parse_double(dtb.Rows[i]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i - 1]["Best060Time"].ToString());
@@ -308,22 +324,25 @@ debug+="-11";
                                 {
                                     if (dtb.Rows.Count == 2)
                                     {
+                                        id2 = dtb.Rows[i + 1]["ItemID"].ToString();
                                         y2 = dtb.Rows[i + 1]["Year"].ToString();
-                                        m2 = dtb.Rows[i + 1]["Make"].ToString();
+                                        m2 = (string.IsNullOrEmpty(dtb.Rows[i + 1]["URLslug"].ToString()) == true ? dtb.Rows[i + 1]["Make"].ToString() : dtb.Rows[i + 1]["URLslug"].ToString());
                                         md2 = dtb.Rows[i + 1]["Model"].ToString();
                                         r2 = dtb.Rows[i + 1]["STT"].ToString();
                                         time60 = Parse_double(dtb.Rows[i + 1]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i]["Best060Time"].ToString());
                                     }
                                     else
                                     {
+                                        id2 = dtb.Rows[i + 1]["ItemID"].ToString();
                                         y2 = dtb.Rows[i + 1]["Year"].ToString();
-                                        m2 = dtb.Rows[i + 1]["Make"].ToString();
+                                        m2 = (string.IsNullOrEmpty(dtb.Rows[i + 1]["URLslug"].ToString()) == true ? dtb.Rows[i + 1]["Make"].ToString() : dtb.Rows[i + 1]["URLslug"].ToString());
                                         md2 = dtb.Rows[i + 1]["Model"].ToString();
                                         bd2 = dtb.Rows[i + 1]["BodyText"].ToString();
                                         r2 = dtb.Rows[i + 1]["STT"].ToString();
                                         time60 = Parse_double(dtb.Rows[i + 1]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i]["Best060Time"].ToString());
+                                        id3 = dtb.Rows[i + 2]["ItemID"].ToString();
                                         y3 = dtb.Rows[i + 2]["Year"].ToString();
-                                        m3 = dtb.Rows[i + 2]["Make"].ToString();
+                                        m3 = (string.IsNullOrEmpty(dtb.Rows[i + 2]["URLslug"].ToString()) == true ? dtb.Rows[i + 2]["Make"].ToString() : dtb.Rows[i + 2]["URLslug"].ToString());
                                         md3 = dtb.Rows[i + 2]["Model"].ToString();
                                         bd3 = dtb.Rows[i + 2]["BodyText"].ToString();
                                         r3 = dtb.Rows[i + 2]["STT"].ToString();
@@ -332,16 +351,18 @@ debug+="-11";
                                 }
                                 else
                                 {
+                                    id2 = dtb.Rows[i - 1]["ItemID"].ToString();
                                     y2 = dtb.Rows[i - 1]["Year"].ToString();
-                                    m2 = dtb.Rows[i - 1]["Make"].ToString();
+                                    m2 = (string.IsNullOrEmpty(dtb.Rows[i - 1]["URLslug"].ToString()) == true ? dtb.Rows[i - 1]["Make"].ToString() : dtb.Rows[i - 1]["URLslug"].ToString());
                                     md2 = dtb.Rows[i - 1]["Model"].ToString();
                                     bd2 = dtb.Rows[i - 1]["BodyText"].ToString();
                                     r2 = dtb.Rows[i - 1]["STT"].ToString();
                                     time60 = Parse_double(dtb.Rows[i]["Best060Time"].ToString()) - Parse_double(dtb.Rows[i - 1]["Best060Time"].ToString());
                                     try
                                     {
+                                        id2 = dtb.Rows[i + 1]["ItemID"].ToString();
                                         y3 = dtb.Rows[i + 1]["Year"].ToString();
-                                        m3 = dtb.Rows[i + 1]["Make"].ToString();
+                                        m3 = (string.IsNullOrEmpty(dtb.Rows[i + 1]["URLslug"].ToString()) == true ? dtb.Rows[i + 1]["Make"].ToString() : dtb.Rows[i + 1]["URLslug"].ToString());
                                         md3 = dtb.Rows[i + 1]["Model"].ToString();
                                         bd3 = dtb.Rows[i + 1]["BodyText"].ToString();
                                         r3 = dtb.Rows[i + 1]["STT"].ToString();
@@ -364,13 +385,15 @@ debug+="-11";
 //--------*** This sets up the results for the keyword search on the top right--------
 
             Session["classname_search"] = (Request.Params["class"] != null ? Request.Params["class"].ToString() : "");
+
+
             if (n_row > 0 && nparam < 3)
             {
                 string path = "";
                 if (Request.Params["searchtext"] == null)
                 {                                
                     path = (year != "" ? year : "") + (make != "" ? (year != "" ? "-" + CarzHelpers.URLEncode(make) : CarzHelpers.URLEncode(make)) : "") + (model != "" ? (year != "" ? "-" + CarzHelpers.URLEncode(model, true) : (make != "" ? "-" + CarzHelpers.URLEncode(model, true) : CarzHelpers.URLEncode(model, true))) : "");
-                    if (Session["classname_search"].ToString() == "all") path = "all";
+                    if (Session["classname_search"].ToString() == "All") path = "All";
                     Session["path_result"] = "/Top-10-Fastest-Cars/" + path;
 
                     Session["classname_search"] = path;
@@ -392,24 +415,26 @@ debug+="-11";
 //--------*** This sets up the winner's circle text on the detail page--------
 
             class_ = Session["classname_search"].ToString();
+			//class_=(class_==""?"All":class_);
             string custompath = "/Top-10-Fastest-Cars/" + class_;
             if (CarzHelpers.URLDecode(class_, true) == "Custom-Search") custompath = (Session["path_result"] != null ? Session["path_result"].ToString() : "");
             cid = dr["ItemID"].ToString();
             View = (dr["Views"].ToString() == "" ? "0" : dr["Views"].ToString());
-            link_detail = "/Top-10-Fastest-Cars" + (class_ != null ? "/" + class_ : "") + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) ;
+            string make_encode = CarzHelpers.URLEncode(string.IsNullOrEmpty(dr["URLslug"].ToString()) == true ? dr["Make"].ToString() : dr["URLslug"].ToString());
+            link_detail = "/Top-10-Fastest-Cars" + (class_ != null ? "/" + class_ : "") + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) ;
             
             //--------*** Section Intro --------
             string default_text = "The top 10 fastest cars from <a href='/Top-10-Fastest-Cars/{6}' title='{5}'>{5}</a> are ranked from fastest to slowest based on their 0-60 times. We crunched the numbers from the best estimates of several premier resources, including Motor Trend, Road & Track, Car & Driver and more.</p><p>Pulling up at <strong>#{4}</strong> in this class is the <a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a>, which races 0-60 mph in {8} seconds. Sports cars with this rate of acceleration are generally classified as <a href='/Popular-Lineups/" + dr["TimeClass"].ToString() + "' title='" + dr["TimeClass"].ToString() + "' >" + dr["TimeClass"].ToString().Replace("-", " ") + "</a>.</p><p> ";
-            
-            string path1 = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+
+            string path1 = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true) + "-" + dr["ItemID"].ToString();
             int rank = int.Parse(dr["STT"].ToString());
             default_text = string.Format(default_text, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rank.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, path1, dr["Best060Time"].ToString(), custompath);
             
             
             //--------*** Section Winners --------
             //--------*** winner 1 --------
-            string path2 = "/Top-10-Fastest-Cars/" + class_ + "/" + y2 + "-" + CarzHelpers.URLEncode(m2) + "-" + CarzHelpers.URLEncode(md2, true);
-            string path3 = "/Top-10-Fastest-Cars/" + class_ + "/" + y3 + "-" + CarzHelpers.URLEncode(m3) + "-" + CarzHelpers.URLEncode(md3, true);
+            string path2 = "/Top-10-Fastest-Cars/" + class_ + "/" + y2 + "-" + CarzHelpers.URLEncode(m2) + "-" + CarzHelpers.URLEncode(md2, true) + "-" + id2;
+            string path3 = "/Top-10-Fastest-Cars/" + class_ + "/" + y3 + "-" + CarzHelpers.URLEncode(m3) + "-" + CarzHelpers.URLEncode(md3, true) + "-" + id3;
 
             string winner1 = "It darts ahead of the #2 ranked <a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a> by {6}";
             if (y3 != "") winner1 += " and the #3 ranked <a href='{11}' title='{7} {8} {9}{10}'>{7} {8} {9}{10}</a> by {12}.";
@@ -449,14 +474,14 @@ debug+="-11";
             
             //--------*** Section 3 --------
             string default_textB = "Whether you are behind the wheel of one of these cars or happen to spot one in the next lane over, think twice before you step on the gas pedal. In a race from 0-60 mph between <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
-            string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankB = int.Parse(dr["STT"].ToString());
             default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankB.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathB, dr["Best060Time"].ToString(), custompath);
 
 
             //--------*** Section 4 --------
             string default_textC = "If you happen to roll up next to another <a href='{1}' title='{1}'>{1}</a>, be sure you know what you're up against. Find out where your car stands among the <a href='{0}' title='{0}'>top 10 fastest cars from {0}</a>.";
-            string pathC = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + CarzHelpers.URLEncode(dr["Make"].ToString()) + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            string pathC = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
             int rankC = int.Parse(dr["STT"].ToString());
             default_textC = string.Format(default_textC, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankC.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathC, dr["Best060Time"].ToString(), custompath);
 
@@ -638,7 +663,16 @@ debug+="-11";
 
 
         if (searchtext != "") LiteralTitle.Text = string.Format("<h1>{0}</h1>", "Search results for " + searchtext + " " + title);
-        if (searchtext == "") LiteralTitle.Text = string.Format("<h1>{0}</h1>", "Top 10 Fastest Cars from " + searchtext + " " + title);
+        if (searchtext == "")
+        {
+           
+            if (Session["make_URLslug"] != null)
+                if (!string.IsNullOrEmpty(Session["make_URLslug"].ToString()))
+                    title = title.Replace(Session["make_URLslug"].ToString(), Session["make_main"].ToString());
+		    if (title == "") title="All Time";	 		
+            LiteralTitle.Text = string.Format("<h1>{0}</h1>", "Top 10 Fastest Cars from " + title);
+
+        }
                 
     }
     protected float Parse_double(string value)
@@ -875,26 +909,32 @@ debug+="-11";
         string rank = "";
         string path_STT = "";
         string classname = (Request.Params["class"] != null ? Request.Params["class"].ToString().Replace(".aspx", "") + "/" : "");
+        object URLslug = (object)DataBinder.Eval(e.Row.DataItem, "URLslug");
+        object ItemID = (object)DataBinder.Eval(e.Row.DataItem, "ItemID");
+
+
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-
-//--------*** This sets up the text links for table rows on the results page--------
+            
+            //--------*** This sets up the text links for table rows on the results page--------
 
             rank = e.Row.Cells[0].Text.Trim();
             y = e.Row.Cells[1].Text.Trim();
             m = e.Row.Cells[2].Text.Trim();
             md = e.Row.Cells[3].Text.Trim();
+            if (string.IsNullOrEmpty(ItemID.ToString())) ItemID = "";
+            if (string.IsNullOrEmpty(URLslug.ToString())) URLslug = CarzHelpers.URLEncode(m);
             //class_ = e.Row.Cells[7].Text.Trim();
-            path_STT = "<a href='/Top-10-Fastest-Cars/" + classname + CarzHelpers.URLEncode(y) + "-" + CarzHelpers.URLEncode(m) + "-" + CarzHelpers.URLEncode(md, true) + "' title='" + rank + "'>" + rank + "</a>";
+            path_STT = "<a href='/Top-10-Fastest-Cars/" + classname + CarzHelpers.URLEncode(y) + "-" + URLslug + "-" + CarzHelpers.URLEncode(md, true) + "-" + ItemID + "' title='" + rank + "'>" + rank + "</a>";
             e.Row.Cells[0].Text = path_STT;
 
             path_STT = "<a href='/Top-10-Fastest-Cars/" + CarzHelpers.URLEncode(y) + "' title='" + e.Row.Cells[1].Text + "'>" + e.Row.Cells[1].Text + "</a>";
             e.Row.Cells[1].Text = path_STT;
-
-            path_STT = "<a href='/Top-10-Fastest-Cars/" + CarzHelpers.URLEncode(m) + "' title='" + e.Row.Cells[2].Text + "'>" + e.Row.Cells[2].Text + "</a>";
+            
+            path_STT = "<a href='/Top-10-Fastest-Cars/" + URLslug + "' title='" + e.Row.Cells[2].Text + "'>" + e.Row.Cells[2].Text + "</a>";
             e.Row.Cells[2].Text = path_STT;
 
-            path_STT = "<a href='/Top-10-Fastest-Cars/" + classname + CarzHelpers.URLEncode(y) + "-" + CarzHelpers.URLEncode(m) + "-" + CarzHelpers.URLEncode(md, true) + "' title='" + e.Row.Cells[3].Text + "'>" + e.Row.Cells[3].Text + "</a>";
+            path_STT = "<a href='/Top-10-Fastest-Cars/" + classname + CarzHelpers.URLEncode(y) + "-" + URLslug + "-" + CarzHelpers.URLEncode(md, true) + "-" + ItemID + "' title='" + e.Row.Cells[3].Text + "'>" + e.Row.Cells[3].Text + "</a>";
             e.Row.Cells[3].Text = path_STT;
 
 
@@ -907,7 +947,7 @@ debug+="-11";
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        clsC.init_value(Request.Params["year"], Request.Params["make"], Request.Params["model"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"]);
+        clsC.init_value2(Request.Params["year"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"], "search");
         year = Session["year"].ToString();
         make = Session["make"].ToString();
         model = Session["model"].ToString();
@@ -917,7 +957,7 @@ debug+="-11";
 
         if (Request.Params["searchtext"] == null)
         {
-            CMSContext.CurrentTitle = "Top 10 Fastest Cars from " + (name.Replace(".aspx", "") == "" ? "All" : name.Replace(".aspx", "").Replace(" All", ""));
+            CMSContext.CurrentTitle = "Top 10 Fastest Cars from " + (name.Replace(".aspx", "") == "" ? "All Time" : name.Replace(".aspx", "").Replace(" All Time", ""));
 
         }
         else

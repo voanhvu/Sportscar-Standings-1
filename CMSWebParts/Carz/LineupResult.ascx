@@ -92,9 +92,10 @@
 
              <HeaderStyle Wrap="False" />
              </asp:BoundField>
-
+             
              <asp:BoundField DataField="ItemID" HeaderText="ItemID" Visible="false" />
 
+             <asp:BoundField DataField="URLslug" HeaderText="URLslug" Visible="False"></asp:BoundField>
          </Columns>
        
         

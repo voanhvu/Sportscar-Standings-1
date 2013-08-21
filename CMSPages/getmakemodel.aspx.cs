@@ -68,7 +68,7 @@ public partial class getmakemodel : System.Web.UI.Page
                         sql += "";
                     }
                     else
-                        sql += " and Make = '" + make + "'";
+                        sql += " and (Make = '" + make + "' or URLslug = '" + make + "')";
                 }
 
             }
@@ -77,7 +77,7 @@ public partial class getmakemodel : System.Web.UI.Page
                 {
                     if (make == "All") sql = "";
                     else
-                    sql = " Make ='" + make + "'";
+                        sql = " Make ='" + make + "' or URLslug = '" + make + "'";
                   
                 }
 
@@ -93,9 +93,9 @@ public partial class getmakemodel : System.Web.UI.Page
        
         string column_name = "";
         if (make == "")
-            column_name = "Make";
-        else column_name = "Model";
-        if (make == "All") column_name = "Model";
+            column_name = "Make,URLslug";
+        else column_name = "Model,ItemID";
+        if (make == "All") column_name = "Model,ItemID";
         GeneralConnection cn = null;
         if (Session["GeneralConnection"] != null)
         {
@@ -117,15 +117,35 @@ public partial class getmakemodel : System.Web.UI.Page
             string[] JaggedArray = new string[myTableApp.Rows.Count];
             int i = 0;
             string value = "";
-           
+            string temp = "";
+            string temp2 = "";
             foreach (DataRow ItemRow in ds.Tables[0].Rows)
             {
-                if (ItemRow[column_name].ToString() != value)
+
+                if (column_name == "Make,URLslug")
                 {
-                    JaggedArray[i] = ItemRow[column_name].ToString().Trim();
+                    temp = ItemRow["Make"].ToString().Trim() + (string.IsNullOrEmpty(ItemRow["URLslug"].ToString().Trim()) ? "" : "|" + ItemRow["URLslug"].ToString().Trim());
+                }
+                if (column_name == "Model,ItemID")
+                {
+                    temp = ItemRow["ItemID"].ToString().Trim() + "|" + ItemRow["Model"].ToString().Trim();
+                }
+
+                if (temp != value)
+                {
+                    
+                        if (column_name == "Make,URLslug" || column_name == "Model,ItemID")
+                        {
+                            JaggedArray[i] = temp;
+                        }
+                        else
+                            JaggedArray[i] = ItemRow[column_name].ToString().Trim();
+
+                        temp2 = JaggedArray[i];
+
                     i++;
                 }
-                value = ItemRow[column_name].ToString().Trim();
+                value = temp2;
                
             }
            

@@ -1,5 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="CMSWebParts_Carz_SearchCarsBox" CodeFile="SearchCarsBox.ascx.cs" %>
-  <div id="popupContact">
+
+ <div id="popupContact">
     <div style="position: absolute; left: 32%; top: 9%;" >  
                    <img width="64px" height="64px" src="~/App_Themes/carz/images/loading.gif" alt="Loading ... "/>
      </div>
@@ -55,18 +56,28 @@
         var param = "";
         var make = jQuery('#ddlMake').val();
         var model=jQuery('#ddlModel').val();
+        var id='';
+        var arr=model.split('|');
+        if(arr.length>1) 
+        {
+            model=arr[1];
+            id='-'+arr[0];
+        }
+       
+        model=model.split('  ').join(' ');
+        model=model.split(' ').join('-');
         if (jQuery('#ddlYear').val() != 'All') {
             param = jQuery('#ddlYear').val();
            
             if (make != null) {
                 if (make != 'All') {
-                    param = param + "-" + jQuery.URLEncode(make.split('-').join('_'));
+                    param = param + "-" + jQuery.URLEncode(make);
                     if (model != null) {
-                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('-').join('_').split('.').join(','));
+                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('.').join('-')) + id;
                     }
                 } else {
                     if (model != null) {
-                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('-').join('_').split('.').join(','));
+                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('.').join('-'))+ id;
                     }
                 }
             }
@@ -75,13 +86,13 @@
         } else {
             if (make != null) {
                 if (make != 'All') {
-                    param = jQuery.URLEncode(make.split('-').join('_'));
+                    param = jQuery.URLEncode(make);
                     if (model != null) {
-                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('-').join('_')).split('.').join(',');
+                        if (model != 'All') param = param + "-" + jQuery.URLEncode(model.split('.').join('-'))+ id;
                     }
                 } else {
                     if (model != null) {
-                        if (model != 'All') param =  jQuery.URLEncode(model.split('-').join('_')).split('.')[0];
+                        if (model != 'All') param =  jQuery.URLEncode(model.split('.').join('-'))+ id;
                     }
                 }
             }
@@ -104,11 +115,19 @@
                     jQuery('#ddlMake').html('');
                     jQuery('#ddlModel').html('');
                     jQuery('#ddlMake').append(jQuery('<option value="All">All</option>'));
+                    var page_name='';
+                    var page_make='';
                     jQuery.each(json, function (i, page) {
                         try {
                             if (page.length > 0)
-							{
-								var option=jQuery('<option value="'+page+'">'+page+'</option>');
+                            {
+                                page_make=page;
+                                URLslug=page;
+                                if(page.split('|').length>1) {
+                                    page_make=page.split('|')[0];
+                                    URLslug=page.split('|')[1];
+                                }
+                                var option=jQuery('<option value="'+URLslug+'">'+page_make+'</option>');
                                 jQuery('#ddlMake').append(option);
 							}
                         }
@@ -117,14 +136,17 @@
 
                     });
 					//---added by holly 7-6-13
+					/*
 					function sortMakes(a, b) {    
 					    if (a.innerHTML == 'All') {
+						
 					        return -1;   
 					    }       
 					    return (a.innerHTML > b.innerHTML) ? 1 : -1;
 					};
-					$('#ddlMake option').sort(sortMakes).appendTo('#ddlMake'); //sort alphabetically
-					$('#ddlMake').val('1'); //default value
+					jQuery('#ddlMake option').sort(sortMakes).appendTo('#ddlMake'); //sort alphabetically
+					jQuery('#ddlMake').val('1'); //default value
+					*/
 					//---end added by holly
                      get_model();
                 }else
@@ -162,13 +184,16 @@
                     var json = jQuery.parseJSON(text);
                     jQuery('#ddlModel').html('');
                     jQuery('#ddlModel').append(jQuery('<option value="All">All</option>'));
+                    var page_name='';
                     jQuery.each(json, function (i, page) {
                         try
                         {
                         
                             if (page.length > 0)
-							{
-								var option=jQuery('<option value="'+page+'">'+page+'</option>');
+                            {
+                                page_name=page;
+                                if(page.split('|').length>1) page_name=page.split('|')[1];
+                                var option=jQuery('<option value="'+page+'">'+page_name+'</option>');
                                 jQuery('#ddlModel').append(option);
 							}
                         }
