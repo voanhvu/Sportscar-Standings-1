@@ -32,8 +32,8 @@ public partial class CMSModuleLoader
                 switch (e.ClassName)
                 {
                     // Gets an instance of the CustomTask class.
-                    case "Custom.CustomTask":
-                        e.Object = new Custom.CustomTask();
+                    case "Custom.CarzCustomTask":
+                        e.Object = new Custom.CarzCustomTask();
                         break;
                 }
             }
