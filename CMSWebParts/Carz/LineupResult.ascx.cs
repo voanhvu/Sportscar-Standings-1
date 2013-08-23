@@ -120,7 +120,7 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
         clsC.get_sql(year, make, model, other,"");
 
         sql = Session["sql"].ToString();
-        Response.Write(sql);
+        //Response.Write(sql);
         title = Session["title"].ToString();
 
         get_query();
