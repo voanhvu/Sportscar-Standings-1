@@ -20,22 +20,22 @@ public static class CarzHelpers
     public static string URLReplace(string link)
     {
         link = link.Trim();
-        link = link.Replace("-", "_").Replace(".", ",");
+        link = link.Replace(".", "-");
         link = HttpContext.Current.Server.UrlPathEncode(link);
         return link;
     }
     public static string URLEncode(string link, Boolean b = false)
     {
         link = link.Trim();
-        link = link.Replace("-", "_");
-        if (b) link = link.Replace(".", ",");
+        //link = link.Replace("-", "_");
+        if (b) link = link.Replace(".", "-").Trim().Replace(" ","-");
         link = HttpContext.Current.Server.UrlPathEncode(link);
         return link;
     }
     public static string URLDecode(string link,Boolean b=false)
     {
         link = link.Trim();
-         link = link.Replace("_", "-");
+        //link = link.Replace("_", "-");
         if (b) 
             link = link.Replace(",", ".");
         else link = link.Replace("/", "");
