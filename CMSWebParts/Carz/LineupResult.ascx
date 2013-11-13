@@ -36,20 +36,38 @@
 </asp:UpdateProgress>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
  <ContentTemplate>
-<p  class="searchfilter" ><strong>0-60 mph Standings</strong>
 
+<div style="float:left;clear:both;width:100%;">
+
+<p  class="searchfilter" style="float:left;" ><strong>0-60 mph Standings</strong>
+
+      <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style " style="float:right;">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527c86a23018d570"></script>
+<!-- AddThis Button END -->
    
-     
+    <div style="float:right;margin-right:45px;">
+    
        <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl="/App_Themes/carz/images/btn-search.gif" CssClass="button ImageButton" OnClick="ImageButton1_Click" AutoPostBack="True"/>
           
       <asp:TextBox ID="TextBoxFilter" runat="server" CssClass="inputbox" Text="Keyword filter"  onblur="if (this.value=='') this.value='Keyword filter';" onfocus="if (this.value=='Keyword filter') this.value='';"></asp:TextBox>
        
      
+    </div>  
+   
   
 
-</p>
+</div>
 
-         
+ <div style="float:left;">
+        
 
                  <asp:GridView ID="GridViewResult" EmptyDataText="No data available." runat="server" DataKeyNames="ItemID" AutoGenerateColumns="False" GridLines="None" AllowPaging="True" CssClass="activityResults fixedWidthSmall" PageSize="20" Width="677px" OnPageIndexChanging="GridViewResult_PageIndexChanging" AllowSorting="True" OnRowCreated="GridViewResult_RowCreated" OnSorting="GridViewResult_Sorting" OnRowDataBound="GridViewResult_RowDataBound" PagerSettings-Mode="NumericFirstLast" AlternatingRowStyle-BackColor="WhiteSmoke" CellPadding="4" ForeColor="#333333">
          <AlternatingRowStyle BackColor="White" />

@@ -421,16 +421,18 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
                     html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + "</p><p>" + winner2 + "</p></div>";
                 else
                     html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + "</p><p>" + winner3 + "</p></div>";
+                    
+
 
            
           
 
 
             h1 = string.Format("{0} {1} {2}", dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString());
-            LiteralResultDetail.Text = html_content;
+            LiteralResultDetail.Text = html_content;            
             if (n_row == 1)
             {
-                string html = "<div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
+                string html = "<div style='margin-bottom:10px;' class='addthis_toolbox addthis_default_style'><a class='addthis_button_preferred_1'></a><a class='addthis_button_preferred_2'></a><a class='addthis_button_preferred_3'></a><a class='addthis_button_preferred_4'></a><a class='addthis_button_compact'></a><a class='addthis_counter addthis_bubble_style'></a></div><div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
                 LiteralResultDetail2.Text = string.Format(html, "<p>Year: " + dr["Year"].ToString() +
                     "</p>" + "<p>Make: " + dr["Make"].ToString() + "</p>" +
                     "<p>Model: " + dr["Model"].ToString() + "</p>" +

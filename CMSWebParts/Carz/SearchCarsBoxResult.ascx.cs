@@ -441,8 +441,8 @@ debug+="-11";
             else winner1 += ".";
             if (y2 == "") winner1 = "";
             winner1 = string.Format(winner1, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-            string winner1B = "<a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a>, you would <strong>WIN</strong> by {6}!";
-			winner1B = string.Format(winner1B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+            //string winner1B = "<a href='{5}' title='{1} {2} {3}{4}'>{1} {2} {3}{4}</a>, you would <strong>WIN</strong> by {6}!";
+			//winner1B = string.Format(winner1B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
 
 
             //--------*** winner2 --------
@@ -450,8 +450,8 @@ debug+="-11";
             if (y3 != "") winner2 += " and darts ahead of the #{8} ranked <a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a> by {14}.";
             else winner2 += ".";
             winner2 = string.Format(winner2, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-			string winner2B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>WIN</strong> by {14}!";
-			winner2B = string.Format(winner2B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+			//string winner2B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>WIN</strong> by {14}!";
+			//winner2B = string.Format(winner2B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
 			
 
             //--------*** winner3 --------
@@ -459,8 +459,8 @@ debug+="-11";
             if (y3 != "") winner3 += " and the #{8} ranked <a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a> by {14}.";
             else winner3 += ".";
             winner3 = string.Format(winner3, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
-			string winner3B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>LOSE</strong> by {14}!";
-			winner3B = string.Format(winner3B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
+			//string winner3B = "<a href='{13}' title='{9} {10} {11}{12}'>{9} {10} {11}{12}</a>, you would <strong>LOSE</strong> by {14}!";
+			//winner3B = string.Format(winner3B, "", y2, m2, md2, bd2 == "" ? "" : " " + bd2, path2, r2, (time60 <= 0.099999 ? "just hundredths of a second" : time60.ToString("0.0") + " seconds"), r3, y3, m3, md3, bd3, path3, (compare(time601) ? " just hundredths of a second" : time601.ToString("0.0") + " seconds"));
             
             
             //--------*** Image --------
@@ -473,10 +473,10 @@ debug+="-11";
 
             
             //--------*** Section 3 --------
-            string default_textB = "Whether you are behind the wheel of one of these cars or happen to spot one in the next lane over, think twice before you step on the gas pedal. In a race from 0-60 mph between <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
-            string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
-            int rankB = int.Parse(dr["STT"].ToString());
-            default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankB.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathB, dr["Best060Time"].ToString(), custompath);
+            //string default_textB = "Whether you are behind the wheel of one of these cars or happen to spot one in the next lane over, think twice before you step on the gas pedal. In a race from 0-60 mph between <strong><a href='{7}' title='{0} {1} {2}{3}'>{0} {1} {2}{3}</a></strong> vs. ";
+            //string pathB = "/Top-10-Fastest-Cars/" + class_ + "/" + dr["Year"].ToString() + "-" + make_encode + "-" + CarzHelpers.URLEncode(dr["Model"].ToString(), true);
+            //int rankB = int.Parse(dr["STT"].ToString());
+            //default_textB = string.Format(default_textB, dr["Year"].ToString(), dr["Make"].ToString(), dr["Model"].ToString(), dr["BodyText"].ToString() == "" ? "" : " " + dr["BodyText"].ToString(), rankB.ToString(), CarzHelpers.URLDecode(class_, true).Replace("-", " "), class_, pathB, dr["Best060Time"].ToString(), custompath);
 
 
             //--------*** Section 4 --------
@@ -489,15 +489,15 @@ debug+="-11";
             //--------*** Output HTML --------            
             string html_content = "";
 
-            //html_content = view_de + "<div class='ResultContent'><h2>Winner’s Circle</h2><p>" + default_text + "</p></div>";
+            //html_content = view_de + "<div class='ResultContent'><h2>Winner's Circle</h2><p>" + default_text + "</p></div>";
 
             if (rank == 1)
-                html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner1 + "</p><p>" + default_textB + winner1B + "<p>" + default_textC + "</p></div>";
+                html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner's Circle</h2><p>" + default_text + winner1 + "</p><p>" + default_textC + "</p></div>";
             else
                 if (rank > 1 && rank < (dtb.Rows.Count))
-                    html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner2 + "</p><p>" + default_textB + winner2B + "<p>" + default_textC + "</p></div>";
+                    html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner's Circle</h2><p>" + default_text + winner2 + "</p><p>" + default_textC + "</p></div>";
                 else
-                    html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner’s Circle</h2><p>" + default_text + winner3 + "</p><p>" + default_textB + winner3B + "<p>" + default_textC + "</p></div>";
+                    html_content = view_de + "<div class='ResultContent'><h2 style='0122'>Winner's Circle</h2><p>" + default_text + winner3 + "</p><p>" + default_textC + "</p></div>";
 
 
             LiteralResultDetail.Text = html_content;
@@ -512,7 +512,7 @@ debug+="-11";
 
 //--------*** This sets up the vehicle info/ perf stats on the detail page--------
 
-                string html = "<div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
+                string html = "<div style='margin-bottom:10px;' class='addthis_toolbox addthis_default_style'><a class='addthis_button_preferred_1'></a><a class='addthis_button_preferred_2'></a><a class='addthis_button_preferred_3'></a><a class='addthis_button_preferred_4'></a><a class='addthis_button_compact'></a><a class='addthis_counter addthis_bubble_style'></a></div><div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
                 LiteralResultDetail2.Text = string.Format(html, "<p><strong>Year:</strong> " + dr["Year"].ToString() + "</p>" + 
                     "<p><strong>Make:</strong> " + dr["Make"].ToString() + "</p>" +
                     "<p><strong>Model:</strong> " + dr["Model"].ToString() + "</p>" +
