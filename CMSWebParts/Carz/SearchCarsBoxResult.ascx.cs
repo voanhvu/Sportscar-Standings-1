@@ -20,11 +20,8 @@ using CMS.MediaLibrary;
 
 
 
-
 public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
 {
-
-
     HttpCookie CookieTempMsg = null;
     HttpCookie CookieFilter = null;
     CustomTableItemProvider tp = new CustomTableItemProvider(CMSContext.CurrentUser);
@@ -72,50 +69,164 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
     Boolean bSecond = false;
     GeneralConnection cn = null;
     int n_row = 0;
+    int page = 1;
     string searchtext = "";
     int nparam = 0;
     clsSearch clsC = new clsSearch();
 	string debug="";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["GeneralConnection"] != null)
         {
             cn = (GeneralConnection)Session["GeneralConnection"];
-
         }
         else
         {
             cn = ConnectionHelper.GetConnection();
-
         }
-
-      
-       
       
         if (!IsPostBack)
         {
-            Session["SortExpression"] = null;
-            lodding();
-            if (Session["list_result"] != null)
+            Session["filter_key"] = null;
+            Session["filter_path"] = null;
+
+            if (Request.Params["page"] != null)
             {
+                int.TryParse(Request.Params["page"].ToString(), out page);
 
-                GridViewResult.DataSource = (DataTable)Session["list_result"];
-                GridViewResult.DataBind();
+                if (page == 1)
+                {
+                    if (Request.Params["searchtext"] != null)
+                    {
+                        Response.Redirect(Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?"))) + "/searchtext=" + Request.Params["searchtext"].ToString().Replace(".aspx", "").Replace("?", ""));
+                    }
+                    else
+                    {
+                        if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                        {
+                            Session["Next_Url"] = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
 
-                get_detail();
+                            if (Session["filter_keyword"] != null)
+                            {
+                                Session["Clear"] = "True";
+                            }
+                            Response.Redirect(Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?"))));
+                        }
+                    }
+                }
+                else
+                {
+                    GridViewResult.PageIndex = page - 1;
+                }
+            }
+            else
+            {
+                if (Session["Next_Url"] != null)
+                {
+                    string curent_url = "";
+                    if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                    {
+                        curent_url = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+                    }
+                    else
+                    {
+                        curent_url = HttpContext.Current.Request.RawUrl.ToString();
+                    }
+
+                    if (Session["Next_Url"].ToString() != curent_url.Replace(".aspx", ""))
+                    {
+                        Session["SortExpression"] = null;
+                    }
+
+                    Session["Next_Url"] = null;
+                }
+                else
+                {
+                    Session["SortExpression"] = null;
+                }
             }
 
+            if (HttpContext.Current.Request.RawUrl.ToString() == "/Top-10-Fastest-Cars/All" || HttpContext.Current.Request.RawUrl.ToString() == "/Top-10-Fastest-Cars/all")
+            {
+                if (Session["Clear"] != null)
+                {
+                    Session["Clear"] = null;
+                }
+                else
+                {
+                    if (Session["Redirect"] != null)
+                    {
+                        Session["Redirect"] = null;
+                    }
+                    else
+                    {
+                        Session["filter_keyword"] = null;
+                        Session["path"] = null;
+                    }
+                }
+            }
+
+            if (Session["path"] != null)
+            {
+                string new_url = "";
+                if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                {
+                    new_url = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+                }
+                else
+                {
+                    new_url = HttpContext.Current.Request.RawUrl.ToString();
+                }
+
+                if (Session["path"].ToString().Replace(".aspx", "") != new_url.Replace(".aspx", ""))
+                {
+                    Session["filter_keyword"] = null;
+                    Session["path"] = null;
+                    TextBoxFilter.Text = "Keyword filter";
+                    Session["path"] = new_url;
+                    Session["SortExpression"] = null;
+                }
+            }
+            lodding();
+
+
+            if (Session["list_result"] != null)
+            {
+                GridViewResult.DataSource = (DataTable)Session["list_result"];
+                GridViewResult.DataBind();
+                get_detail();
+
+                if (Session["filter_keyword"] != null)
+                {
+                    TextBoxFilter.Text = Session["filter_keyword"].ToString();
+                    filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+                    dtb = get_data();
+
+                    if (dtb != null)
+                    {
+                        GridViewResult.DataSource = dtb.Select(filter).CopyToDataTable();
+                        GridViewResult.DataBind();
+                    }
+                }
+
+                if (Session["SortExpression"] != null)
+                {
+                    filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+                    //Retrieve the table from the session object.
+                    dtb = get_data();
+                    DataTable dtsort = dtb.Select(filter).CopyToDataTable();
+                    dtsort.DefaultView.Sort = Session["SortExpression"].ToString();
+                    GridViewResult.DataSource = dtsort;
+                    GridViewResult.DataBind();
+                }
+            }
         }
-
-
     }
-   
 
     protected void lodding()
     {
-
-//--------*** This sets up the variables pulled from the URL--------
-
+        //--------*** This sets up the variables pulled from the URL--------
         //init_value(Request.Params["year"], Request.Params["make"], Request.Params["model"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"]);
         clsC.init_value2(Request.Params["year"], Request.Params["other"], Request.Params["class"], Request.Params["searchtext"], "search");
         year = Session["year"].ToString();
@@ -156,7 +267,7 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
                     {
                         LiteralResultDetail.Text = "<div class='ResultTitle'><h1>Crash and Burn</h1><p>Sorry, the car was not found. Please try another car.</p></div>";
                         Session["list_result"] = null;
-						 debug+="9";
+                        debug += "9";
                         //Uri url = Request.Url;
                         //LiteralResultDetail.Text = url.AbsoluteUri;
 
@@ -164,40 +275,40 @@ public partial class CMSWebParts_Carz_SearchCarsBoxResult : CMSAbstractWebPart
                     }
                     else
                     {
-					   debug="1";
+                        debug = "1";
                         if (ds_.Tables[0].Rows.Count > 0)
                         {
                             if (ds_.Tables[0].Rows.Count > 0 && nparam < 3)
                             {
- debug+="2";
+                                debug += "2";
                                 Session["list_result"] = ds_.Tables[0];
 
                             }
                             else
                                 if (Session["list_result"] == null && ds_.Tables[0].Rows.Count == 1)
                                 {
-                                    Session["list_result"] = ds_.Tables[0]; debug+="3";
+                                    Session["list_result"] = ds_.Tables[0]; debug += "3";
                                 }
                             n_row = ds_.Tables[0].Rows.Count;
                             Session["list_result_detail"] = ds_.Tables[0].Rows[0];
                             class_ = ds_.Tables[0].Rows[0]["TimeClass"].ToString().Trim();
- debug+="4";
+                            debug += "4";
 
                         }
 
                         try
                         {
                             dtb = (DataTable)Session["list_result"];
-							debug+="-10";
+                            debug += "-10";
                         }
                         catch
                         {
-debug+="-11";
+                            debug += "-11";
                         }
 
                         //for (int i = 0; i < ds_.Tables[0].Rows.Count; i++)
                         //{
-                            //ds_.Tables[0].Rows[i]["STT"] = ds_.Tables[0].Rows[i]["TimeClassRank"];
+                        //ds_.Tables[0].Rows[i]["STT"] = ds_.Tables[0].Rows[i]["TimeClassRank"];
                         //}
 
 
@@ -205,26 +316,25 @@ debug+="-11";
                         {
                             if (dtb.Rows.Count > 1)
                             {
- debug+="5";
+                                debug += "5";
                                 Session["list_result"] = dtb.Select("", "STT ASC").CopyToDataTable();
 
                             }
-							 debug+="6";
+                            debug += "6";
                             n_row = ds_.Tables[0].Rows.Count;
                             Session["list_result_detail"] = ds_.Tables[0].Rows[0];
                         }
-						 debug+="7";
-						
+                        debug += "7";
+
                     }
                 }
 
             }
         }
-
     }
 
 
-//--------*** This sets up the results table page--------
+    //--------*** This sets up the results table page--------
 
     private void get_detail()
     {
@@ -382,7 +492,7 @@ debug+="-11";
                 }
             }
 
-//--------*** This sets up the results for the keyword search on the top right--------
+            //--------*** This sets up the results for the keyword search on the top right--------
 
             Session["classname_search"] = (Request.Params["class"] != null ? Request.Params["class"].ToString() : "");
 
@@ -412,7 +522,7 @@ debug+="-11";
 
             getimage_class(Session["classname_search"].ToString());
 
-//--------*** This sets up the winner's circle text on the detail page--------
+            //--------*** This sets up the winner's circle text on the detail page--------
 
             class_ = Session["classname_search"].ToString();
 			//class_=(class_==""?"All":class_);
@@ -510,7 +620,7 @@ debug+="-11";
             {
 
 
-//--------*** This sets up the vehicle info/ perf stats on the detail page--------
+            //--------*** This sets up the vehicle info/ perf stats on the detail page--------
 
                 string html = "<div style='margin-bottom:10px;' class='addthis_toolbox addthis_default_style'><a class='addthis_button_preferred_1'></a><a class='addthis_button_preferred_2'></a><a class='addthis_button_preferred_3'></a><a class='addthis_button_preferred_4'></a><a class='addthis_button_compact'></a><a class='addthis_counter addthis_bubble_style'></a></div><div class='Car_Details list clearfix'><div class='Vehicle_information' > <h2>Vehicle information</h2><div class='conten'>{0}</div></div><div class='performance_statistics'><h2>Performance statistics</h2><div class='conten'>{1}</div></div></div><p style='clear:both;'>" + View + " people have viewed this car.</p> ";
                 LiteralResultDetail2.Text = string.Format(html, "<p><strong>Year:</strong> " + dr["Year"].ToString() + "</p>" + 
@@ -568,7 +678,7 @@ debug+="-11";
                 LiteralResultDetail2.Visible = true;
                 LiteralTitle.Text = "<h1>" + h1 + "</h1>";
 
-//--------*** This sets up the individual subnav on the detail page--------
+            //--------*** This sets up the individual subnav on the detail page--------
 
 
                 string back = "<a title='Back to Results' href='" + (Session["path_result"] != null ? Session["path_result"].ToString() : "javascript:history.back();") + "'>Back to Results</a> | ";
@@ -580,7 +690,6 @@ debug+="-11";
             }
             else
             {
-
 
                 LiteralResultDetail.Text = LiteralResultDetail.Text.Replace("0482", string.Format("<a href='{0}' title='{1}'>{1}</a>", path1, h1));
 
@@ -643,7 +752,7 @@ debug+="-11";
 
                     //html result detail
 
-//--------*** This sets up the h1 headings on the detail page--------
+        //--------*** This sets up the h1 headings on the detail page--------
 
                     if (searchtext != "")
                         LiteralTitle.Text = string.Format("<h1>{0}</h1>", "Search results for " + (classname != "" ? CarzHelpers.URLDecode(classname.Replace("-", " ")) + " " + title : CarzHelpers.URLDecode(cls.Replace("-", " "))));
@@ -696,36 +805,25 @@ debug+="-11";
     }
     protected void GridViewResult_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
+        int index = e.NewPageIndex + 1;
+        string url = "";
+        Response.Clear();
 
-
-//--------*** This sets up the AJAX table sorting etc. on the results page--------
-
-        string filter = "";
-        filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
-
-        //Retrieve the table from the session object.
-        dtb = get_data();
-
-        if (dtb != null)
+        if (!string.IsNullOrEmpty(Request.QueryString["class"]))
         {
-
-            GridViewResult.PageIndex = e.NewPageIndex;
-            DataTable dt = dtb.Select(filter).CopyToDataTable();
-            if (Session["SortExpression"] != null)
+            if (Request.Params["searchtext"] == null)
             {
-                string sort=Session["SortExpression"].ToString();
-                //if (sort.LastIndexOf("ASC") > -1) sort = sort.Replace("ASC", "DESC");
-                //else if (sort.LastIndexOf("DESC") > -1) sort = sort.Replace("DESC", "ASC");
-                dt.DefaultView.Sort = sort;
-                
-                
+                url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Top-10-Fastest-Cars/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "");
+                Response.Redirect(string.Format("{0}?page={1}", url, index));
             }
-            
-            GridViewResult.DataSource = dt;
-
-            GridViewResult.DataBind();
+            else
+            {
+                url = "/Search/Custom-Search?searchtext=" + Request.Params["searchtext"].ToString().Replace(".aspx", "").Replace("?", "");
+                Response.Redirect(string.Format("{0}&page={1}", url, index));  
+            }
         }
 
+    //--------*** This sets up the AJAX table sorting etc. on the results page--------
     }
     private string GetSortDirection(string column)
     {
@@ -799,7 +897,7 @@ debug+="-11";
 
             sort = string.Format(sort, "~/App_Themes/carz/images/bg.png", "Order");
 
-//--------*** This sets up the column headings on the results page--------
+       //--------*** This sets up the column headings on the results page--------
 
             // Add the image to the appropriate header cell.
             e.Row.Cells[0].Controls[0].Controls.Add(new LiteralControl("Rank<span style='margin-left: 5px;' >" + sort + "</span>"));
@@ -871,9 +969,30 @@ debug+="-11";
     }
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
+        Session["SortExpression"] = null;
         string filter = "";
         filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
 
+        if (!string.IsNullOrEmpty(TextBoxFilter.Text))
+        {
+            Session["filter_keyword"] = null;
+            Session["filter_keyword"] = TextBoxFilter.Text.Trim();
+            Session["path"] = null;
+            if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+            {
+                Session["path"] = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+            }
+            else
+            {
+                Session["path"] = HttpContext.Current.Request.RawUrl.ToString();
+            }
+        }
+        else
+        {
+            Session["filter_keyword"] = null;
+            Session["filter_keyword"] = TextBoxFilter.Text;
+        }
+        
         //Retrieve the table from the session object.
         dtb = get_data();
 
@@ -883,22 +1002,36 @@ debug+="-11";
             {
                 GridViewResult.PageIndex = 0;
                 GridViewResult.DataSource = dtb.Select(filter).CopyToDataTable();
-                
+                GridViewResult.DataBind();
+
+                if (!string.IsNullOrEmpty(Request.QueryString["class"]))
+                {
+                    if (Request.Params["searchtext"] == null)
+                    {
+                        string url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Top-10-Fastest-Cars/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "");
+                        Session["Redirect"] = "True";
+                        Response.Redirect(string.Format("{0}", url));
+                    }
+                    else
+                    {
+                        string url = "/Search/Custom-Search?searchtext=" + Request.Params["searchtext"].ToString().Replace(".aspx", "").Replace("?", "");
+                        Session["Redirect"] = "True";
+                        Response.Redirect(string.Format("{0}&page={1}", url, "1"));
+                    }
+                }
             }
             catch
             {
                 GridViewResult.DataSource = null;
+                GridViewResult.DataBind();
             }
            
         }
         else
         {
             GridViewResult.DataSource = null;
-           
+            GridViewResult.DataBind();
         }
-        GridViewResult.DataBind();
-        
-
     }
     protected void GridViewResult_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -937,11 +1070,7 @@ debug+="-11";
             path_STT = "<a href='/Top-10-Fastest-Cars/" + classname + CarzHelpers.URLEncode(y) + "-" + URLslug + "-" + CarzHelpers.URLEncode(md, true) + "-" + ItemID + "' title='" + e.Row.Cells[3].Text + "'>" + e.Row.Cells[3].Text + "</a>";
             e.Row.Cells[3].Text = path_STT;
 
-
             //LiteralTitle.Text+= e.Row.Cells[0].Text;
-
-
-
         }
     }
     protected override void OnInit(EventArgs e)
@@ -953,7 +1082,7 @@ debug+="-11";
         model = Session["model"].ToString();
         string name = (year != "" ? year : "") + (make != "" ? (year != "" ? " " + CarzHelpers.URLDecode(make) : CarzHelpers.URLDecode(make)) : "") + (model != "" ? (year != "" ? " " + CarzHelpers.URLDecode(model, true).Replace("_", "-") : (make != "" ? " " + CarzHelpers.URLDecode(model, true).Replace("_", "-") : CarzHelpers.URLDecode(model, true).Replace("_", "-"))) : "");
 
-//--------*** This sets up the meta title headings on the results page--------
+        //--------*** This sets up the meta title headings on the results page--------
 
         if (Request.Params["searchtext"] == null)
         {

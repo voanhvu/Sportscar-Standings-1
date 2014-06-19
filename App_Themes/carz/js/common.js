@@ -16,17 +16,17 @@
             return s;
         }
     });
- function  search_fill()
-           {
-             if(jQuery("#txtWord").val()!='')
-			 { var s=jQuery("#txtWord").val().replace('.','');
-			   s=s.split('>').join('');
-				s=s.split('<').join('');
-				s=s.split('*').join('');
-				s=s.split('&').join('');
-               window.location.href ='/Search/Custom-Search/searchtext='+ jQuery.URLEncode(s);
-			 }
-           }
+  function  search_fill()
+    {
+        if (jQuery("#txtWord").val().replace(/\s+/g, '') != '') {
+            var s = jQuery("#txtWord").val().replace('.', '').trim(); ;
+		    s=s.split('>').join('');
+		    s=s.split('<').join('');
+		    s=s.split('*').join('');
+		    s=s.split('&').join('');
+            window.location.href ='/Search/Custom-Search/searchtext='+ jQuery.URLEncode(s);
+		}
+    }
 		   
 	function next(url, id) {
 		if (id != "") {

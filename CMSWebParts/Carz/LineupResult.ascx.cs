@@ -23,7 +23,6 @@ using CMS.MediaLibrary;
 
 
 
-
 public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
 {
     HttpCookie CookieTempMsg = null;
@@ -66,6 +65,7 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
     string id2 = "";
     string id3 = "";
 
+    int page = 0;
     float time60 = 0;
     float time601 = 0;
     string default_image = "/App_Themes/carz/images/Photo_Coming_Soon.jpg";
@@ -88,17 +88,121 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
         }
         if (!IsPostBack)
         {
-            Session["SortExpression"] = null;
+            Session["filter_keyword"] = null;
+            Session["path"] = null;
+            if (Request.Params["page"] != null)
+            {
+                int.TryParse(Request.Params["page"].ToString(), out page);
+                if (page == 1)
+                {
+
+                    if (Request.Params["searchtext"] != null)
+                    {
+                        Response.Redirect(Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?"))) + "/searchtext=" + Request.Params["searchtext"].ToString().Replace(".aspx", "").Replace("?", ""));
+                    }
+                    else
+                    {
+                        if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                        {
+                            Session["Next_Url"] = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+                            Response.Redirect(Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?"))));
+                        }
+                    }
+                }
+                else
+                {
+                    GridViewResult.PageIndex = page - 1;
+                }
+            }
+            else
+            {
+                if (Session["Next_Url"] != null)
+                {
+                    string curent_url = "";
+                    if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                    {
+                        curent_url = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+                    }
+                    else
+                    {
+                        curent_url = HttpContext.Current.Request.RawUrl.ToString();
+                    }
+
+                    if (Session["Next_Url"].ToString() != curent_url.Replace(".aspx", ""))
+                    {
+                        Session["SortExpression"] = null;
+                    }
+
+                    Session["Next_Url"] = null;
+                }
+                else
+                {
+                    Session["SortExpression"] = null;
+                }
+            }
+
+
+            if (HttpContext.Current.Request.RawUrl.ToString() == "/Popular-Lineups")
+            {
+                Session["filter_key"] = null;
+                Session["filter_path"] = null;
+            }
+
+            if (Session["filter_path"] != null)
+            {
+                string new_url = "";
+                if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+                {
+                    new_url = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+                }
+                else
+                {
+                    new_url = HttpContext.Current.Request.RawUrl.ToString();
+                }
+
+                if (Session["filter_path"].ToString().Replace(".aspx", "") != new_url.Replace(".aspx", ""))
+                {
+                    Session["filter_key"] = null;
+                    Session["filter_path"] = null;
+                    TextBoxFilter.Text = "Keyword filter";
+                    Session["filter_path"] = new_url;
+                    Session["SortExpression"] = null;
+                }
+            }
+
             lodding();
+
             if (Session["list_result"] != null)
             {
-
                 GridViewResult.DataSource = (DataTable)Session["list_result"];
                 GridViewResult.DataBind();
-               
                 get_detail();
+
+                if (Session["filter_key"] != null)
+                {
+                    TextBoxFilter.Text = Session["filter_key"].ToString();
+                    filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+                    dtb = get_data();
+
+                    if (dtb != null)
+                    {
+                        GridViewResult.DataSource = dtb.Select(filter).CopyToDataTable();
+                        GridViewResult.DataBind();
+                    }
+                }
+
+
+                if (Session["SortExpression"] != null)
+                {
+                    filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+                    //Retrieve the table from the session object.
+                    dtb = get_data();
+                    DataTable dtsort = dtb.Select(filter).CopyToDataTable();
+                    dtsort.DefaultView.Sort = Session["SortExpression"].ToString();
+                    GridViewResult.DataSource = dtsort;
+                    GridViewResult.DataBind();
+                }
             }
-            
         }
        
       
@@ -600,29 +704,27 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
     }
     protected void GridViewResult_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
-        string filter = "";
-        filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+        int index = e.NewPageIndex + 1;
+        string url = "";
+        Response.Clear();
 
-        //Retrieve the table from the session object.
-        dtb = get_data();
-
-        if (dtb != null)
+        if (!string.IsNullOrEmpty(Request.QueryString["class"]))
         {
-
-            GridViewResult.PageIndex = e.NewPageIndex;
-            DataTable dt = dtb.Select(filter).CopyToDataTable();
-            if (Session["SortExpression"] != null)
+            if (!string.IsNullOrEmpty(Request.QueryString["other"]))
             {
-                string sort = Session["SortExpression"].ToString();
-                //if (sort.LastIndexOf("ASC") > -1) sort = sort.Replace("ASC", "DESC");
-                //else if (sort.LastIndexOf("DESC") > -1) sort = sort.Replace("DESC", "ASC");
-                dt.DefaultView.Sort = sort;
-
-
+                url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "") + "/" + Request.QueryString["other"].ToString().Replace(".aspx", "").Replace("?", "");
+                Response.Redirect(string.Format("{0}?page={1}", url, index));
             }
-
-            GridViewResult.DataSource = dt;
-            GridViewResult.DataBind();
+            else if (!string.IsNullOrEmpty(Request.QueryString["year"]))
+            {
+                url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "") + "/" + Request.QueryString["year"].ToString().Replace(".aspx", "").Replace("?", "");
+                Response.Redirect(string.Format("{0}?page={1}", url, index));
+            }
+            else
+            {
+                url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "");
+                Response.Redirect(string.Format("{0}?page={1}", url, index));
+            }
         }
     }
     private string GetSortDirection(string column)
@@ -771,8 +873,30 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
     }                                                                                        
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
+        Session["SortExpression"] = null;
         string filter="";
         filter = string.Format(" Make like '%{0}%'  or Model like '%{0}%'  or Year like '%{0}%' ", (TextBoxFilter.Text.Trim() == "Keyword filter") ? "" : TextBoxFilter.Text.Trim());
+
+        if (!string.IsNullOrEmpty(TextBoxFilter.Text))
+        {
+            Session["filter_key"] = null;
+            Session["filter_key"] = TextBoxFilter.Text.Trim();
+            Session["filter_path"] = null;
+
+            if (HttpContext.Current.Request.RawUrl.ToString().IndexOf("?") != -1)
+            {
+                Session["filter_path"] = Request.RawUrl.Substring(0, (Request.RawUrl.IndexOf("?")));
+            }
+            else
+            {
+                Session["filter_path"] = HttpContext.Current.Request.RawUrl.ToString();
+            }
+        }
+        else
+        {
+            Session["filter_key"] = null;
+            Session["filter_key"] = TextBoxFilter.Text;
+        }
 
         //Retrieve the table from the session object.
         dtb = get_data();
@@ -784,21 +908,39 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
             {
                 GridViewResult.PageIndex = 0;
                 GridViewResult.DataSource = dtb.Select(filter).CopyToDataTable();
+                GridViewResult.DataBind();
+
+                if (!string.IsNullOrEmpty(Request.QueryString["class"]))
+                {
+                    if (!string.IsNullOrEmpty(Request.QueryString["other"]))
+                    {
+                        string url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "") + "/" + Request.QueryString["other"].ToString().Replace(".aspx", "").Replace("?", "");
+                        Response.Redirect(string.Format("{0}", url));
+                    }
+                    else if (!string.IsNullOrEmpty(Request.QueryString["year"]))
+                    {
+                        string url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "") + "/" + Request.QueryString["year"].ToString().Replace(".aspx", "").Replace("?", "");
+                        Response.Redirect(string.Format("{0}", url));
+                    }
+                    else
+                    {
+                        string url = "http://" + HttpContext.Current.Request.Url.Host.ToLower() + "/Popular-Lineups/" + Request.QueryString["class"].ToString().Replace(".aspx", "").Replace("?", "");
+                        Response.Redirect(string.Format("{0}", url));
+                    }
+                }
             }
             catch
             {
                 GridViewResult.DataSource = null;
+                GridViewResult.DataBind();
             }
 
         }
         else
         {
             GridViewResult.DataSource = null;
-
-        }
-        GridViewResult.DataBind();
-        
-       
+            GridViewResult.DataBind();
+        }       
     }
     protected void GridViewResult_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -884,12 +1026,8 @@ public partial class CMSWebParts_Carz_LineupResult : CMSAbstractWebPart
         name = name.Trim();
         if (Request.Params["class"] != null )
         {
-
-
             CMSContext.CurrentTitle = CarzHelpers.URLDecode(Request.Params["class"].ToString()).Replace("-"," ") + (name == "" ? "" : " - " + name.Replace(".aspx", "")); 
         }
-        
-
     }
     
 }
